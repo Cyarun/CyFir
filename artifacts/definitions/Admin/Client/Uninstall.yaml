@@ -2,7 +2,7 @@ name: Admin.Client.Uninstall
 description: |
   Uninstall Velociraptor from the endpoint.
 
-  This artifact uninstalls a Velociraptor client (or any other MSI
+  This artifact uninstalls a CyFir client (or any other MSI
   package) from the endpoint.
 
   Typically the client will be hard terminated during the uninstall

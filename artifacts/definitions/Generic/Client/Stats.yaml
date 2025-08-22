@@ -82,7 +82,7 @@ reports:
       # Client Footprint for {{ Get $client_info "0.os_info.fqdn" }}
 
       The client has a client ID of {{ Get $client_info "0.client_id" }}.
-      Clients report the Velociraptor process footprint to the
+      Clients report the CyFir process footprint to the
       server every 10 seconds. The data includes the total CPU
       utilization, and the resident memory size used by the client.
 
@@ -106,7 +106,7 @@ reports:
       {{ template "resources" }}
       ```
 
-      > To learn about managing end point performance with Velociraptor see
+      > To learn about managing end point performance with CyFir see
         the [blog post](https://cyfir.cynorsense.com/blog/html/2019/02/10/velociraptor_performance.html).
 
 column_types:

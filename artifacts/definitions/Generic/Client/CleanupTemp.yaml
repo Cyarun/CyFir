@@ -1,6 +1,6 @@
 name: Generic.Client.CleanupTemp
 description: |
-  This artifact cleans up the temp folder in the Velociraptor client.
+  This artifact cleans up the temp folder in the CyFir client.
 
 parameters:
   - name: TempGlob

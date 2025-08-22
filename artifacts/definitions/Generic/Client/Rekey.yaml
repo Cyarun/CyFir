@@ -3,7 +3,7 @@ description: |
   This artifact forces the client to regenerate its client id.
 
   This is normally not needed! You will only need to use this artifact in very
-  specific situations, such as when the Velociraptor client was accidentally
+  specific situations, such as when the CyFir client was accidentally
   incorporated into a VM image with an existing writeback file. This will cause
   multiple cloned systems to connect with the same client id, and the server
   will then reject those clients with a HTTP "409 Rejected" message.
