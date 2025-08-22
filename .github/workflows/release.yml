@@ -1,0 +1,192 @@
+name: CyFir Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version (e.g., v1.0.0)'
+        required: true
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Install dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y gcc-multilib mingw-w64
+    
+    - name: Build GUI
+      working-directory: gui/velociraptor
+      run: |
+        npm install
+        npm run build
+    
+    - name: Build Linux binaries
+      run: |
+        make linux
+        mv output/velociraptor cyfir-linux-amd64
+        
+        # Build ARM64
+        GOARCH=arm64 make linux
+        mv output/velociraptor cyfir-linux-arm64
+    
+    - name: Create Linux packages
+      run: |
+        # Create DEB packages
+        ./cyfir-linux-amd64 debian client --binary cyfir-linux-amd64 --output cyfir-client-amd64.deb
+        ./cyfir-linux-amd64 debian server --binary cyfir-linux-amd64 --output cyfir-server-amd64.deb
+        
+        # Create RPM packages
+        ./cyfir-linux-amd64 rpm client --binary cyfir-linux-amd64 --output cyfir-client-amd64.rpm
+        ./cyfir-linux-amd64 rpm server --binary cyfir-linux-amd64 --output cyfir-server-amd64.rpm
+    
+    - name: Upload Linux artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: linux-artifacts
+        path: |
+          cyfir-linux-*
+          *.deb
+          *.rpm
+
+  build-windows:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Install MinGW
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y mingw-w64
+    
+    - name: Build GUI
+      working-directory: gui/velociraptor
+      run: |
+        npm install
+        npm run build
+    
+    - name: Build Windows binaries
+      run: |
+        make windows
+        mv output/velociraptor.exe cyfir-windows-amd64.exe
+        
+        # Build 32-bit
+        GOARCH=386 make windows
+        mv output/velociraptor.exe cyfir-windows-386.exe
+    
+    - name: Upload Windows artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: windows-artifacts
+        path: cyfir-windows-*.exe
+
+  build-darwin:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.21'
+    
+    - name: Build GUI
+      working-directory: gui/velociraptor
+      run: |
+        npm install
+        npm run build
+    
+    - name: Build macOS binaries
+      run: |
+        make darwin
+        mv output/velociraptor cyfir-darwin-amd64
+        
+        # Build ARM64 (Apple Silicon)
+        GOARCH=arm64 make darwin
+        mv output/velociraptor cyfir-darwin-arm64
+    
+    - name: Upload macOS artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: darwin-artifacts
+        path: cyfir-darwin-*
+
+  create-release:
+    needs: [build-linux, build-windows, build-darwin]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Download all artifacts
+      uses: actions/download-artifact@v3
+    
+    - name: Create checksums
+      run: |
+        find . -name 'cyfir-*' -o -name '*.deb' -o -name '*.rpm' | xargs sha256sum > SHA256SUMS
+    
+    - name: Create Release Notes
+      run: |
+        cat > RELEASE_NOTES.md << EOF
+        # CyFir ${{ github.event.inputs.version || github.ref_name }}
+        
+        ## What's New
+        - Enhanced cyber forensics capabilities
+        - Improved incident response workflows
+        - Updated CyFir branding throughout
+        
+        ## Downloads
+        
+        ### Binaries
+        - Linux AMD64: \`cyfir-linux-amd64\`
+        - Linux ARM64: \`cyfir-linux-arm64\`
+        - Windows AMD64: \`cyfir-windows-amd64.exe\`
+        - Windows 386: \`cyfir-windows-386.exe\`
+        - macOS AMD64: \`cyfir-darwin-amd64\`
+        - macOS ARM64: \`cyfir-darwin-arm64\`
+        
+        ### Packages
+        - Debian/Ubuntu: \`cyfir-client-amd64.deb\`, \`cyfir-server-amd64.deb\`
+        - RHEL/Fedora: \`cyfir-client-amd64.rpm\`, \`cyfir-server-amd64.rpm\`
+        
+        ## Installation
+        
+        See the [Migration Guide](https://github.com/Cyarun/CyFir/blob/master/docs/CyFirMigrationGuide.md) for upgrading from Velociraptor.
+        
+        ## Checksums
+        
+        Verify downloads using the SHA256SUMS file.
+        
+        ---
+        *CyFir - Cyber Forensics & IR Platform by CynorSense Solutions*
+        EOF
+    
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v1
+      with:
+        name: CyFir ${{ github.event.inputs.version || github.ref_name }}
+        body_path: RELEASE_NOTES.md
+        draft: true
+        prerelease: false
+        files: |
+          linux-artifacts/*
+          windows-artifacts/*
+          darwin-artifacts/*
+          SHA256SUMS
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
