@@ -2,7 +2,7 @@
 // +build mage
 
 /*
-   Velociraptor - Dig Deeper
+   CyFir - Cyber Forensics & IR Platform
    Copyright (C) 2019-2025 Rapid7 Inc.
 
    This program is free software: you can redistribute it and/or modify
@@ -60,7 +60,7 @@ var (
 	// apt-get install gcc-mingw-w64
 	mingw_xcompiler_32 = "i686-w64-mingw32-gcc"
 	musl_xcompiler     = "musl-gcc"
-	name               = "velociraptor"
+	name               = "cyfir"
 	version            = "v" + constants.VERSION
 	base_tags          = " server_vql extras "
 )
@@ -173,7 +173,7 @@ func (self Builder) Run() error {
 
 func Auto() error {
 	return Builder{goos: runtime.GOOS,
-		filename:   "velociraptor",
+		filename:   "cyfir",
 		extra_tags: " release yara ",
 		arch:       runtime.GOARCH}.Run()
 }
@@ -182,7 +182,7 @@ func AutoDev() error {
 	return Builder{goos: runtime.GOOS,
 		arch:        runtime.GOARCH,
 		extra_tags:  " yara ",
-		filename:    "velociraptor",
+		filename:    "cyfir",
 		extra_flags: []string{"-race"}}.Run()
 }
 

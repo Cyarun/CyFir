@@ -13,7 +13,7 @@ description: |
   From a forensics perspective, being able to decode this information
   can be very useful.
 
-  Limitations: Additional data not parsed by Velociraptor is the FocusTime
+  Limitations: Additional data not parsed by CyFir is the FocusTime
   and FocusCount however these are not reliable.
   Also please note that some methods of viewing an executable will update
   the associated UserAssist key, and some methods of accessing an executable

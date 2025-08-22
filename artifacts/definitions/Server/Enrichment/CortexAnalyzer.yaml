@@ -37,7 +37,7 @@ parameters:
      default: True
    - name: JobMessage
      description: Message to be used when running analyzer job
-     default: Job submmitted by Velociraptor
+     default: Job submmitted by CyFir
    - name: JobWaitTime
      description: Amount of time to wait for a report from Cortex.
      default: 10minute

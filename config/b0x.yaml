@@ -1,15 +1,17 @@
 pkg: config
-
-# We assume we are run from the toplevel directory:
-# fileb0x gui/b0x.yaml
-dest: "config/"
-
-fmt: false
+dest: "./"
+fmt: true
 compression:
-    compress: false
-
+  compress: false
+  method: "bestcompression"
+  keep: false
+clean: false
 output: "ab0x.go"
+unexporTed: false
+spread: true
+lcf: true
 custom:
-  - files:
-      - "config/default.yaml"
-init: Init
+- files:
+  - "../docs/references/*.yaml"
+  base: "../docs/references/"
+  prefix: "data"

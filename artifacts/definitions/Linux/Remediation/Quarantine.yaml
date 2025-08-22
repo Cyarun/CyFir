@@ -8,7 +8,7 @@ description: |
   The artifact will create a table, with the default name
   `vrr_quarantine_table`, which contains three chains: One for inbound traffic,
   one for outbound traffic, and the other for forwarding traffic. The chains
-  will cut off all traffic except those for DNS lookup and to the Velociraptor
+  will cut off all traffic except those for DNS lookup and to the CyFir
   server.
 
   To unquarantine the system, set the `RemovePolicy` parameter to `True`.
@@ -149,7 +149,7 @@ sources:
          FROM execve(argv=delete_table_cmd, length=10000)
          WHERE ClearInstalled
 
-       // add tcp rule to inbound_chain to allow connections from Velociraptor
+       // add tcp rule to inbound_chain to allow connections from CyFir
        // FIXME(gye): may need to add IPv6 rules if DstAddr is an IPv6 address
        LET add_velociraptor_rule_to_inbound_chain = SELECT *
          FROM foreach(row={
@@ -165,7 +165,7 @@ sources:
                               TableName + ' table.')
          })
 
-       // add tcp rule to inbound_chain to allow connections from Velociraptor
+       // add tcp rule to inbound_chain to allow connections from CyFir
        // FIXME(gye): may need to add IPv6 rules if DstAddr is an IPv6 address
        LET add_velociraptor_rule_to_outbound_chain = SELECT *
          FROM foreach(row={

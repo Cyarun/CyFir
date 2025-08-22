@@ -1,6 +1,6 @@
 name: Server.Import.PreviousReleases
 description: |
-  When upgrading the Velociraptor server, the built-in artifacts may change and
+  When upgrading the CyFir server, the built-in artifacts may change and
   use newer VQL features that are not present in older clients.
 
   If you have some older clients that cannot be upgraded, sometimes collection
@@ -21,7 +21,7 @@ required_permissions:
 parameters:
   - name: VelociraptorRelease
     description: |
-      The Velociraptor Release to import.
+      The CyFir Release to import.
     type: choices
     default: v0.73
     choices:

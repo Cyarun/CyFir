@@ -17,7 +17,7 @@ description: |
      filesystem, the artifact can then be used to automatically upload
      the binaries as tools to the server.
 
-  NOTE that in Velociraptor each org is completely separated, so you
+  NOTE that in CyFir each org is completely separated, so you
   will need to re-upload the binaries when you create each org.
 
 type: SERVER

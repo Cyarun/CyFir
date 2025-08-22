@@ -1,6 +1,6 @@
 name: Server.Utils.DeadDiskClient
 description: |
-  Automates the analysis of dead disk images in Velociraptor
+  Automates the analysis of dead disk images in CyFir
 
   Velociraptor can analyze dead disk images by using accessor
   remapping. The process involves detecting a suitable remapping

@@ -3,7 +3,7 @@ description: |
   This artifact imports additional artifacts maintained outside the
   Velociraptor tree.
 
-  * [The Velociraptor Sigma Project](https://sigma.velocidex.com/)
+  * [The CyFir Sigma Project](https://sigma.velocidex.com/)
   * [The Artifact Exchange](https://cyfir.cynorsense.com/exchange/)
   * [Rapid7 Labs](https://github.com/rapid7/Rapid7-Labs)
   * [The Registry Hunter](https://registry-hunter.velocidex.com/)
@@ -20,8 +20,8 @@ parameters:
     type: csv
     default: |
       Name,Tag,URL
-      The Velociraptor Sigma Project,Extras,https://sigma.velocidex.com/Velociraptor.Sigma.Artifacts.zip
-      Artifact Exchange,Exchange,https://github.com/Velocidex/velociraptor-docs/raw/gh-pages/exchange/artifact_exchange_v2.zip
+      The CyFir Sigma Project,Extras,https://sigma.velocidex.com/Velociraptor.Sigma.Artifacts.zip
+      Artifact Exchange,Exchange,https://github.com/Cyarun/CyFir-docs/raw/gh-pages/exchange/artifact_exchange_v2.zip
       Rapid7Labs,Exchange,https://github.com/rapid7/Rapid7-Labs/raw/main/Vql/release/Rapid7LabsVQL.zip
       The Registry Hunter,Extras,https://registry-hunter.velocidex.com/Windows.Registry.Hunter.zip
       The SQLiteHunter,Extras,https://sqlitehunter.velocidex.com/SQLiteHunter.zip

@@ -1,15 +1,17 @@
 pkg: assets
-
-# We assume we are run from the toplevel directory:
-# fileb0x gui/b0x.yaml
-dest: "artifacts/assets/"
-
-fmt: false
+dest: "./artifacts/assets/"
+fmt: true
 compression:
-    compress: true
-
+  compress: false
+  method: "bestcompression"
+  keep: false
+clean: false
 output: "ab0x.go"
+unexporTed: false
+spread: false
+lcf: true
 custom:
-  - files:
-      - "artifacts/definitions/**/*.yaml"
-      - "docs/references/vql.yaml"
+- files:
+  - "./definitions/**/*.yaml"
+  base: "definitions"
+  prefix: "artifacts"

@@ -12,7 +12,7 @@ YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # Check if binary exists
-if [ -f "output/velociraptor" ]; then
+if [ -f "output/cyfir" ]; then
     echo -e "${GREEN}✓${NC} Binary build successful"
 else
     echo -e "${RED}✗${NC} Binary not found. Run 'make' first."
@@ -22,7 +22,7 @@ fi
 # Check binary version info
 echo
 echo "Checking binary version info..."
-./output/velociraptor version 2>&1 | grep -E "(CyFir|Velociraptor)" | head -5
+./output/cyfir version 2>&1 | grep -E "(CyFir|Velociraptor)" | head -5
 
 # Check import paths
 echo

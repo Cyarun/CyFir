@@ -3,7 +3,7 @@ type: SERVER_EVENT
 description: |
   Forces conflicting clients to rekey themselves.
 
-  Sometimes the Velociraptor client is installed into a VM template image with
+  Sometimes the CyFir client is installed into a VM template image with
   an existing writeback file. In this case each cloned instance will start the
   client with the same client id. When multiple clients attempt to
   simultaneously connect to the server with the same client id, the server will

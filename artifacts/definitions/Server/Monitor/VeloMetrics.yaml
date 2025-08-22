@@ -1,6 +1,6 @@
 name: Server.Monitor.VeloMetrics
 description: |
-  Get Velociraptor server metrics.
+  Get CyFir server metrics.
 
 type: SERVER
 

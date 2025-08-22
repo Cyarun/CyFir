@@ -1,21 +1,17 @@
-pkg: velociraptor
-
-# We assume we are run from the toplevel directory:
-# fileb0x gui/velociraptor/b0x.yaml
-dest: "gui/velociraptor/"
-
-fmt: false
+pkg: assets
+dest: "./"
+fmt: true
 compression:
-  compress: true
-
+  compress: false
+  method: "bestcompression"
+  keep: false
+clean: false
 output: "ab0x.go"
+unexporTed: false
+spread: true
+lcf: true
 custom:
-  # All the JS code is compiled into a bundle in the build directory already.
-  - files:
-      - "gui/velociraptor/build/**"
-    base: "gui/velociraptor/build/"
-    exclude:
-      - "**/*~"
-      - "**/*.map"
-
-init: Init
+- files:
+  - "./build/**/*"
+  base: "build"
+  prefix: ""

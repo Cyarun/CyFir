@@ -10,7 +10,7 @@ description: |
    community. The quality, security and stability of artifacts from
    the exchange is not guaranteed. Some artifacts from the exchange
    will fetch external binaries and run them on your endpoints! These
-   binaries are not reviewed or endorsed by the Velociraptor team or
+   binaries are not reviewed or endorsed by the CyFir team or
    Rapid7!
 
    Contributions to the exchange must meet a lower quality bar than
@@ -30,7 +30,7 @@ required_permissions:
 
 parameters:
    - name: ExchangeURL
-     default: https://github.com/Velocidex/velociraptor-docs/raw/gh-pages/exchange/artifact_exchange_v2.zip
+     default: https://github.com/Cyarun/CyFir-docs/raw/gh-pages/exchange/artifact_exchange_v2.zip
    - name: ArchiveGlob
      default: "/**/*.{yaml,yml}"
    - name: Tag

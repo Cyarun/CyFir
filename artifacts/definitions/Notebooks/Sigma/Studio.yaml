@@ -35,12 +35,12 @@ sources:
           # Sigma Studio
 
           This notebook is designed to help you write and test Sigma
-          Rules for detection within Velociraptor!
+          Rules for detection within CyFir!
 
           ## What is Sigma?
 
           Sigma is an open notation for writing detection rules - It
-          is supported natively in Velociraptor as described in [our
+          is supported natively in CyFir as described in [our
           blog post](https://cyfir.cynorsense.com/blog/2024/2024-05-09-detection-engineering/)
 
           Sigma relies on a set of `Log Sources` (defining possible

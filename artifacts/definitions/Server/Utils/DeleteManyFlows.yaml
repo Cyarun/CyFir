@@ -1,6 +1,6 @@
 name: Server.Utils.DeleteManyFlows
 description: |
-   Sometimes the Velociraptor server accumulates a lot of data that is
+   Sometimes the CyFir server accumulates a lot of data that is
    no longer needed.
 
    This artifact will enumerate all flows from all clients and matches

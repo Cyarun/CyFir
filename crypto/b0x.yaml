@@ -1,12 +1,17 @@
 pkg: crypto
-
-dest: "crypto/"
-
-fmt: false
-output: "ab0x.go"
+dest: "./"
+fmt: true
 compression:
-  compress: true
-
+  compress: false
+  method: "bestcompression"
+  keep: false
+clean: false
+output: "ab0x.go"
+unexporTed: false
+spread: true
+lcf: true
 custom:
-  - files:
-      - crypto/ca-certificates.crt
+- files:
+  - "*.pem"
+  base: "./"
+  prefix: ""

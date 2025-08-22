@@ -21,7 +21,7 @@ parameters:
   default: A test email
 
 - name: Subject
-  default: A message from Velociraptor
+  default: A message from CyFir
 
 export: |
    LET Boundary = format(format="-----------------------------9051914041544843%v",

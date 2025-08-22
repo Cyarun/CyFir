@@ -15,7 +15,7 @@ parameters:
    - name: CCAddress
      default:
    - name: Subject
-     default: "Deployment statistics for Velociraptor"
+     default: "Deployment statistics for CyFir"
    - name: Period
      default: "3600"
 

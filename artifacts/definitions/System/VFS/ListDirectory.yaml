@@ -67,7 +67,7 @@ sources:
         then=Components, else=Path)
 
       // Old versions do not have the root parameter to glob()
-      // Fixes https://github.com/Velocidex/velociraptor/issues/322
+      // Fixes https://github.com/Cyarun/CyFir/issues/322
       LET LegacyQuery = SELECT OSPath as _OSPath,
            Accessor as _Accessor,
            Data as _Data,

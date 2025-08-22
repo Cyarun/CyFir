@@ -16,7 +16,7 @@ description: |
 
         - The message will be truncated to 256 characters.
 
-      - After policy application, connection back to the Velociraptor
+      - After policy application, connection back to the CyFir
         frontend is tested and the policy removed if connection
         unavailable.
 
@@ -72,7 +72,7 @@ parameters:
   - name: VelociraptorURL
     description: |
       A URL for allowing connections back to the
-      Velociraptor server. If not specified we use the first URL in the
+      CyFir server. If not specified we use the first URL in the
       client's configuration file.
 
 sources:

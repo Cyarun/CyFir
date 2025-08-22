@@ -9,7 +9,7 @@ sources:
     - type: markdown
       name: Welcome page
       template: |
-        # Welcome to Velociraptor notebooks!
+        # Welcome to CyFir notebooks!
 
         * Update this notebook with any VQL or markdown cells.
         * You can copy cells into this notebook from other collection or hunt notebooks.

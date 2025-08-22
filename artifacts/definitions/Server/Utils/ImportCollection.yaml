@@ -1,15 +1,15 @@
 name: Server.Utils.ImportCollection
 description: |
-  The Velociraptor offline collector is an automated, preconfigured
+  The CyFir offline collector is an automated, preconfigured
   collection tool. Users can use the collector to automatically
-  collect any artifacts on endpoints that do not have the Velociraptor
+  collect any artifacts on endpoints that do not have the CyFir
   client (offline endpoints).
 
   The collector creates a ZIP archive with the results of the
   collection in JSON files (and any uploaded files).
 
   This artifact allows for these offline collections to be imported
-  back into the Velociraptor GUI. The collected data can then treated
+  back into the CyFir GUI. The collected data can then treated
   exactly the same as if it was collected by the regular Velociraptor
   client (i.e. post-processed through the notebook interface), except
   it was collected via the Sneakernet.
