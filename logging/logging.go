@@ -1,5 +1,5 @@
 /*
-Velociraptor - Dig Deeper
+CyFir - Cyber Forensics & IR Platform
 Copyright (C) 2019-2025 Rapid7 Inc.
 
 This program is free software: you can redistribute it and/or modify
@@ -44,15 +44,15 @@ var (
 	SuppressLogging = false
 	NoColor         = false
 
-	GenericComponent  = "Velociraptor"
-	FrontendComponent = "VelociraptorFrontend"
-	ClientComponent   = "VelociraptorClient"
-	GUIComponent      = "VelociraptorGUI"
-	ToolComponent     = "Velociraptor"
-	APICmponent       = "VelociraptorAPI"
+	GenericComponent  = "CyFir"
+	FrontendComponent = "CyFirFrontend"
+	ClientComponent   = "CyFirClient"
+	GUIComponent      = "CyFirGUI"
+	ToolComponent     = "CyFir"
+	APICmponent       = "CyFirAPI"
 
 	// Used for high value audit related events.
-	Audit = "VelociraptorAudit"
+	Audit = "CyFirAudit"
 
 	// Lock for log manager.
 	mu                   sync.Mutex

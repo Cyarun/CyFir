@@ -1,5 +1,5 @@
 /*
-Velociraptor - Dig Deeper
+CyFir - Cyber Forensics & IR Platform
 Copyright (C) 2019-2025 Rapid7 Inc.
 
 This program is free software: you can redistribute it and/or modify

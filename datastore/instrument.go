@@ -60,7 +60,7 @@ func InstrumentWithDelay(
 }
 
 func init() {
-	delay_str, pres := os.LookupEnv("VELOCIRAPTOR_SLOW_FILESYSTEM")
+	delay_str, pres := os.LookupEnv("CYFIR_SLOW_FILESYSTEM")
 	if pres {
 		delay, err := strconv.Atoi(delay_str)
 		if err == nil {
