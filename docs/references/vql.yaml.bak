@@ -256,7 +256,7 @@
     This VQL function is used to clean up the artifact search screen
     and guide users to assist with investigations.
 
-    CyFir comes with a lot of built in artifacts which may be
+    Velociraptor comes with a lot of built in artifacts which may be
     confusing to some users and in specialized deployments it may be
     preferable to guide users into a small subset of artifacts and
     hide the rest.
@@ -406,7 +406,7 @@
     accessor automatically tries the `ntfs` accessor to access the file
     using raw level filesystem parsing.
 
-    The overall effect is that CyFir is able to transparently
+    The overall effect is that the Velociraptor is able to transparently
     access files that are locked (for example registry hives) or are
     protected by filter drivers (e.g. some endpoint security software). In
     general you should use the `auto` accessor to open files on the local
@@ -889,7 +889,7 @@
 
     You can use this function to enrich information about clients in VQL output.
 
-    CyFir maintains basic information about the client in the data store,
+    Velociraptor maintains basic information about the client in the data store,
     such as its hostname, OS etc. This function queries the internal in-memory
     database so it is very fast and suitable to be called frequently on each
     row.
@@ -898,7 +898,7 @@
 
     **1. Enriching hostnames**
 
-    Internally, CyFir uses client id to uniquely identify the client. But
+    Internally, Velociraptor uses client id to uniquely identify the client. But
     often we want to provide a hostname as well. In the below we look at
     collection output from the `source()` plugin and add an additional Hostname
     column by resolving the client id on each row to its hostname.
@@ -1360,7 +1360,7 @@
 
     ```vql
     SELECT
-      commandline_split(command='''"C:\Program Files\CyFir\cyfir.exe" service run'''),
+      commandline_split(command='''"C:\Program Files\Velociraptor\Velociraptor.exe" service run'''),
       commandline_split(command="/usr/bin/ls -l 'file with space.txt'", bash_style=TRUE)
     FROM scope()
     ```
@@ -2267,7 +2267,7 @@
     We do not actually transfer the external program to the system
     automatically. If you need to run programs which are not usually
     installed (e.g. Sysinternal's autoruns.exe) you will need to use
-    CyFir's external tools feature to deliver and manage the
+    Velociraptor's external tools feature to deliver and manage the
     tools on the client. See
     https://cyfir.cynorsense.com/docs/vql/extending_vql/
     for more information.
@@ -2340,7 +2340,7 @@
 
     This function expands environment variables into the path. It is
     normally needed after using registry values of type REG_EXPAND_SZ as
-    they typically contain environment strings. CyFir does not
+    they typically contain environment strings. Velociraptor does not
     automatically expand such values since environment variables typically
     depend on the specific user account which reads the registry value
     (different user accounts can have different environment variables).
@@ -2356,7 +2356,7 @@
 
     ### Notes
 
-    The environment strings are set per user and CyFir's
+    The environment strings are set per user and Velociraptor's
     own environment may not reflect any other process's
     environment. See `Windows.Forensics.ProcessInfo` for a
     forensically sound manner of obtaining the environment from any
@@ -5095,7 +5095,7 @@
     on its content, not its name.
 
     Detection is facilitated via libmagic - a common library powering
-    the unix "file" utility. CyFir comes with all of "file"
+    the unix "file" utility. Velociraptor comes with all of "file"
     basic magic signatures.
 
     You can also write your own signatures using the magic syntax (see

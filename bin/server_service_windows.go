@@ -45,12 +45,12 @@ import (
 
 var (
 	server_service_command = app.Command(
-		"server_service", "Manipulate the Velociraptor service.")
+		"server_service", "Manipulate the CyFir service.")
 	server_service_installl_command = server_service_command.Command(
-		"install", "Install Velociraptor frontend as a Windows service.")
+		"install", "Install CyFir frontend as a Windows service.")
 
 	server_service_remove_command = server_service_command.Command(
-		"remove", "Remove the Velociraptor Windows service.")
+		"remove", "Remove the CyFir Windows service.")
 
 	server_service_start_command = server_service_command.Command(
 		"start", "Start the service")
@@ -352,7 +352,7 @@ func loadServerConfig() (*config_proto.Config, error) {
 }
 
 func doRunServerService() error {
-	name := "Velociraptor"
+	name := "CyFir"
 	config_obj, err := loadServerConfig()
 	if err == nil {
 		name = config_obj.Client.WindowsInstaller.ServiceName

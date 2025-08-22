@@ -37,11 +37,11 @@ import (
 
 var (
 	service_command = app.Command(
-		"service", "Manipulate the Velociraptor service.")
+		"service", "Manipulate the CyFir service.")
 	install_command = service_command.Command(
 		"install", "Install Velociraptor as a service.")
 	remove_command = service_command.Command(
-		"remove", "Remove the Velociraptor service.")
+		"remove", "Remove the CyFir service.")
 )
 
 func doRemove() error {

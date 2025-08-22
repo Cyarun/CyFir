@@ -18,7 +18,7 @@
 ---
 
 CyFir is an advanced endpoint visibility and collection tool by CynorSense Solutions,
-designed for cyber forensics and incident response using The Velociraptor Query Language (VQL).
+designed for cyber forensics and incident response using CyFir Query Language (VQL).
 
 To learn more about CyFir, read the documentation on:
 

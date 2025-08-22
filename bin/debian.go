@@ -2,12 +2,12 @@
 // +build !aix
 
 // This command creates a customized server deb package which may be
-// used to automatically deploy Velociraptor server (e.g. in a Docker
+// used to automatically deploy CyFir server (e.g. in a Docker
 // container or on its own VM). The intention is to make this as self
 // contained as possible to speed up real deployments. The normal way
 // to use it is to:
 
-// 1. Create a Velociraptor server config file (velociraptor config generate)
+// 1. Create a CyFir server config file (velociraptor config generate)
 // 2. Edit it as needed.
 // 3. build a deb package
 // 4. Push the package to a new cloud vm instance. You will need to

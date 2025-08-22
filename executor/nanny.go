@@ -62,7 +62,7 @@ func (self *NannyService) UpdateReadFromServer() {
 
 func (self *NannyService) _CheckMemory(message string) bool {
 	// We need to make sure our memory footprint is as
-	// small as possible. The Velociraptor client
+	// small as possible. The CyFir client
 	// prioritizes low memory footprint over latency. We
 	// just sent data to the server and we wont need that
 	// for a while so we can free our memory to the OS.

@@ -11,7 +11,7 @@ package services
 // a path manager to figure out exactly where).
 
 // Similarly callers can watch for new rows to appear in any
-// artifact. This allows Velociraptor server queries to receive rows
+// artifact. This allows CyFir server queries to receive rows
 // in real time from client event artifacts.
 
 import (

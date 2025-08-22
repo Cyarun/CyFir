@@ -416,13 +416,13 @@ const French = {
     <>
     L'outil a été téléchargé manuellement par un administrateur
     - il ne sera pas automatiquement mis à jour
-    lors de la prochaine mise à jour du serveur Velociraptor
+    lors de la prochaine mise à jour du serveur CyFir
     </>,
     "ToolError":
     <>
     Le hachage de l'outil n'est pas connu et aucune URL
     n'est définie. Il sera impossible d'utiliser cet outil
-    dans un artefact car Velociraptor est incapable de le résoudre.
+    dans un artefact car CyFir est incapable de le résoudre.
     Vous pouvez télécharger manuellement un fichier.
     </>,
     "OverrideToolDesc":
@@ -505,10 +505,10 @@ const French = {
 
     "Theme":"Thème",
     "Select a theme":"Sélectionnez un thème",
-    "Default Velociraptor":"Vélociraptor standard",
-    "Velociraptor Classic (light)": "Vélociraptor Classique (léger)",
-    "Velociraptor (light)":"Vélociraptor (léger)",
-    "Velociraptor (dark)":"Vélociraptor (foncé)",
+    "Default Velociraptor":"CyFir standard",
+    "Velociraptor Classic (light)": "CyFir Classique (léger)",
+    "Velociraptor (light)":"CyFir (léger)",
+    "Velociraptor (dark)":"CyFir (foncé)",
     "Github (light)": "Github (léger)",
     "Github dimmed (dark)":"Github estompé (foncé)",
     "Ncurses (dark)": "Ncurses (foncé)",
@@ -660,7 +660,7 @@ const French = {
      "ToolPerm_LABEL_CLIENT": "Peut manipuler les étiquettes et les métadonnées des clients",
      "ToolPerm_COLLECT_CLIENT": "Planifier ou annuler de nouvelles collectes sur les clients",
      "ToolPerm_START_HUNT": "Démarrer une nouvelle chasse",
-     "ToolPerm_COLLECT_SERVER": "Planifier de nouvelles collections d'artefacts sur les serveurs Velociraptor",
+     "ToolPerm_COLLECT_SERVER": "Planifier de nouvelles collections d'artefacts sur les serveurs CyFir",
      "ToolPerm_ARTIFACT_WRITER": "Ajouter ou modifier des artefacts personnalisés qui s'exécutent sur le serveur",
      "ToolPerm_SERVER_ARTIFACT_WRITER": "Ajouter ou modifier des artefacts personnalisés qui s'exécutent sur le serveur",
      "ToolPerm_EXECVE": "Autorisé à exécuter des commandes arbitraires sur les clients",

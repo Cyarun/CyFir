@@ -113,7 +113,7 @@ var (
 			check: func(t *testing.T, response *artifacts_proto.Artifact,
 				spec *flows_proto.ArtifactSpec) {
 				AssertDictRegex(t,
-					"Welcome to Velociraptor",
+					"Welcome to CyFir",
 					"Sources.0.Notebook.0.Template", response)
 			},
 		},

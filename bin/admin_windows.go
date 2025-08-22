@@ -42,7 +42,7 @@ func logArgv(argv []string) error {
 	}
 	defer logger.Close()
 
-	msg := fmt.Sprintf("Velociraptor startup ARGV: %v\n",
+	msg := fmt.Sprintf("CyFir startup ARGV: %v\n",
 		json.MustMarshalString(argv))
 
 	return logger.Info(1000, msg)

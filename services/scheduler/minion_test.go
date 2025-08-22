@@ -35,7 +35,7 @@ sources:
 - notebook:
   - type: markdown
     template: |
-      # Welcome to Velociraptor notebooks!
+      # Welcome to CyFir notebooks!
 `}
 )
 

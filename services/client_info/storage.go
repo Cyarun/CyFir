@@ -2,7 +2,7 @@ package client_info
 
 // Manage storage of all client info records
 //
-// Since 0.6.8 Velociraptor clients periodically update the client
+// Since 0.6.8 CyFir clients periodically update the client
 // records without needing an explicit interrogation step. This allows
 // us to be more relaxed about the client info database, since if it
 // falls out of date, the client will just update itself at a later

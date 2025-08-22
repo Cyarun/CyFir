@@ -271,7 +271,7 @@ const Deutsch = {
     "Google Cloud Bucket":"Google Cloud Bucket",
     "AWS Bucket":"AWS Bucket",
     "SFTP Upload":"SFTP Upload",
-    "Velociraptor Binary":"Velociraptor Binary",
+    "Velociraptor Binary":"CyFir Binary",
     "Temp directory":"Temp-Verzeichnis",
     "Temp location":"Temp Ort",
     "Compression Level":"Komprimierungslevel",
@@ -375,7 +375,7 @@ const Deutsch = {
     "This is a notebook for processing a hunt.":"Dies ist ein Notizbuch zur Abwicklung einer Hunt.",
     "ToolLocalDesc":
     <>
-    Das Tool wird bei Bedarf vom Velociraptor-Server an die Clients
+    Das Tool wird bei Bedarf vom CyFir-Server an die Clients
     ausgeliefert. Der Client speichert das Tool auf seiner eigenen
     Festplatte und vergleicht den Hash, wenn es das nächste Mal
     benötigt wird. Die Tools werden nur heruntergeladen, wenn sich ihr
@@ -397,7 +397,7 @@ const Deutsch = {
     "PlaceHolder":
     <>
     Der Hash-Wert des Tools ist derzeit unbekannt. Das erste Mal,
-    wenn das Tool benötigt wird, lädt Velociraptor es von seiner
+    wenn das Tool benötigt wird, lädt CyFir es von seiner
     Upstream-URL herunter und berechnet den Hash.
     </>,
     "ToolHash":
@@ -409,14 +409,14 @@ const Deutsch = {
     "AdminOverride":
     <>
     Das Tool wurde manuell von einem Administrator hochgeladen -
-    es wird beim nächsten Velociraptor-Server-Update nicht
+    es wird beim nächsten CyFir-Server-Update nicht
     automatisch aktualisiert.
     </>,
     "ToolError":
     <>
     Der Hash des Tools ist nicht bekannt und es ist keine URL definiert.
     Es wird unmöglich sein, dieses Tools in einem Artefakt zu verwenden,
-    da Velociraptor nicht in der Lage ist, es aufzulösen.
+    da CyFir nicht in der Lage ist, es aufzulösen.
     Sie können eine Datei manuell hochladen.
     </>,
     "OverrideToolDesc":
@@ -500,10 +500,10 @@ const Deutsch = {
 
     "Theme":"Theme",
     "Select a theme":"Wählen Sie ein Theme aus",
-    "Default Velociraptor":"Standard-Velociraptor",
-    "Velociraptor Classic (light)": "Velociraptor-Klassiker (hell)",
-    "Velociraptor (light)":"Velociraptor (hell)",
-    "Velociraptor (dark)":"Velociraptor (dunkel)",
+    "Default Velociraptor":"Standard-CyFir",
+    "Velociraptor Classic (light)": "CyFir-Klassiker (hell)",
+    "Velociraptor (light)":"CyFir (hell)",
+    "Velociraptor (dark)":"CyFir (dunkel)",
     "Github dimmed (dark)":"Github gedimmt (dunkel)",
     "Github (light)": "Github (hell)",
     "Ncurses (dark)": "Ncurses (dunkel)",
@@ -659,7 +659,7 @@ const Deutsch = {
      "ToolPerm_LABEL_CLIENT": "Kann Client-Labels und Metadaten manipulieren",
      "ToolPerm_COLLECT_CLIENT": "Planen oder stornieren Sie neue Sammlungen für Kunden",
      "ToolPerm_START_HUNT": "Neue Jagd starten",
-     "ToolPerm_COLLECT_SERVER": "Neue Artefaktsammlungen auf Velociraptor-Servern planen",
+     "ToolPerm_COLLECT_SERVER": "Neue Artefaktsammlungen auf CyFir-Servern planen",
      "ToolPerm_ARTIFACT_WRITER": "Benutzerdefinierte Artefakte hinzufügen oder bearbeiten, die auf dem Server ausgeführt werden",
      "ToolPerm_SERVER_ARTIFACT_WRITER": "Benutzerdefinierte Artefakte hinzufügen oder bearbeiten, die auf dem Server ausgeführt werden",
      "ToolPerm_EXECVE": "Dürfen beliebige Befehle auf Clients ausführen",

@@ -13,7 +13,7 @@ import (
 )
 
 // The frontend service manages load balancing between multiple
-// frontends. Velociraptor clients may be redirected between active
+// frontends. CyFir clients may be redirected between active
 // frontends to spread the load between them.
 
 var (
@@ -70,7 +70,7 @@ RequireFrontend: Ensure we are running inside the server.
 This is used by VQL plugins that change server state to make sure the
 VQL query is running inside a valid frontend. Since VQL queries can
 run with the `velociraptor query` command it is possible they are just
-running on the same server as Velociraptor (and therefore the data
+running on the same server as CyFir (and therefore the data
 store is still visible) but it is important to make sure the datastore
 is not modified outside the proper frontend process.
 

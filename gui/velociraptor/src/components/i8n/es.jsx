@@ -270,7 +270,7 @@ const Spanish = {
     "Google Cloud Bucket":"Bucket de Google Cloud",
     "AWS Bucket":"Bucket de AWS",
     "SFTP Upload":"Subida mediante SFTP",
-    "Velociraptor Binary":"Ejecutable de Velociraptor",
+    "Velociraptor Binary":"Ejecutable de CyFir",
     "Temp directory":"Directorio temporal",
     "Temp location":"Ubicación temporal",
     "Compression Level":"Nivel de Compresión",
@@ -375,7 +375,7 @@ const Spanish = {
     "This is a notebook for processing a hunt.":"Este es un bloc de notas para procesar un Hunt.",
     "ToolLocalDesc":
     <>
-    La herramienta será proporcionada por el servidor de Velociraptor
+    La herramienta será proporcionada por el servidor de CyFir
     a los hosts si es necesario. El host
     almacenará en caché la herramienta en su propio disco y comparará el hash
     la próxima vez si es necesario. Las herramientas solo se descargarán si su
@@ -398,7 +398,7 @@ const Spanish = {
     "PlaceHolder":
     <>
     El hash de la herramienta es desconocido. La primera vez
-    que se necesite la herramienta, Velociraptor la descargará desde la
+    que se necesite la herramienta, CyFir la descargará desde la
     URL y calculará su hash.
     </>,
     "ToolHash":
@@ -410,13 +410,13 @@ const Spanish = {
     <>
     La herramienta fue subida manualmente por un
     administrador - no será actualiza automáticamente con la
-    próxima actualización del servidor Velociraptor.
+    próxima actualización del servidor CyFir.
     </>,
     "ToolError":
     <>
     Se desconoce el hash de la herramienta y no se ha definido una URL.
     Será imposible emplear esta herramienta en un
-    Artefacto ya que Velociraptor no puede resolverlo.
+    Artefacto ya que CyFir no puede resolverlo.
     Como alternativa, puede cargar un archivo manualmente.
     </>,
     "OverrideToolDesc":
@@ -500,12 +500,12 @@ const Spanish = {
 
     "Theme":"Tema",
     "Select a theme":"Seleccionar un tema",
-    "Default Velociraptor":"Velociraptor predeterminado",
-    "Velociraptor Classic (light)": "Velociraptor Clásico (claro)",
-    "Velociraptor (light)":"Velociraptor (claro)",
+    "Default Velociraptor":"CyFir predeterminado",
+    "Velociraptor Classic (light)": "CyFir Clásico (claro)",
+    "Velociraptor (light)":"CyFir (claro)",
     "Ncurses (light)":"Ncurses (claro)",
     "Ncurses (dark)":"Ncurses (oscuro)",
-    "Velociraptor (dark)":"Velociraptor (oscuro)",
+    "Velociraptor (dark)":"CyFir (oscuro)",
     "Github dimmed (dark)":"Github atenuado (oscuro)",
     "Github (light)":"Github (claro)",
     "Cool Gray (dark)":"Gris frío (oscuro)",
