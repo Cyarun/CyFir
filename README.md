@@ -1,22 +1,39 @@
-# Velociraptor - Endpoint visibility and collection tool.
+# CyFir - Cyber Forensics & Incident Response Platform
 
-Velociraptor is a tool for collecting host based state information
-using The Velociraptor Query Language (VQL) queries.
+<p align="center">
+  <img src="https://cynorsense.com/images/logos/cyfir_banner.png" alt="CyFir by CynorSense Solutions" width="600">
+</p>
 
-To learn more about Velociraptor, read the documentation on:
+<p align="center">
+  <strong>Enterprise-grade Cyber Forensics & Incident Response Platform</strong><br>
+  By CynorSense Solutions Pvt. Ltd.
+</p>
+
+<p align="center">
+  <a href="https://github.com/Cyarun/CyFir/actions"><img src="https://github.com/Cyarun/CyFir/workflows/CyFir%20CI/badge.svg" alt="Build Status"></a>
+  <a href="https://cyfir.cynorsense.com/docs"><img src="https://img.shields.io/badge/docs-cyfir.cynorsense.com-blue.svg" alt="Documentation"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-AGPL-blue.svg" alt="License"></a>
+</p>
+
+---
+
+CyFir is an advanced endpoint visibility and collection tool by CynorSense Solutions,
+designed for cyber forensics and incident response using The Velociraptor Query Language (VQL).
+
+To learn more about CyFir, read the documentation on:
 
 https://cyfir.cynorsense.com/
 
 ## Quick start
 
-If you want to see what Velociraptor is all about simply:
+If you want to see what CyFir is all about simply:
 
 1. Download the binary from the release page for your favorite platform (Windows/Linux/MacOS).
 
 2. Start the GUI
 
 ```bash
-  $ velociraptor gui
+  $ cyfir gui
 ```
 
 This will bring up the GUI, Frontend and a local client. You can
@@ -31,18 +48,18 @@ https://cyfir.cynorsense.com/docs/deployment/
 We have our complete training course (7 sessions x 2 hours each)
 https://cyfir.cynorsense.com/training/
 
-The course covers many aspects of Velociraptor in detail.
+The course covers many aspects of CyFir in detail.
 
-## Running Velociraptor via Docker
+## Running CyFir via Docker
 
-To run a Velociraptor server via Docker, follow the instructions here:
-https://github.com/weslambert/velociraptor-docker
+To run a CyFir server via Docker, follow the instructions here:
+https://github.com/Cyarun/cyfir-docker
 
-## Running Velociraptor locally
+## Running CyFir locally
 
-Velociraptor is also useful as a local triage tool. You can create a self contained local collector using the GUI:
+CyFir is also useful as a local triage tool. You can create a self contained local collector using the GUI:
 
-1. Start the GUI as above (`velociraptor gui`).
+1. Start the GUI as above (`cyfir gui`).
 
 2. Select the `Server Artifacts` sidebar menu, then `Build Collector`.
 
@@ -61,8 +78,8 @@ Windows `%USERPROFILE%\\go\\bin`).
  - Node.js LTS (the GUI is build using [Node v18.14.2](https://nodejs.org/en/blog/release/v18.14.2))
 
 ```bash
-    $ git clone https://github.com/Velocidex/velociraptor.git
-    $ cd velociraptor
+    $ git clone https://github.com/Cyarun/CyFir.git
+    $ cd CyFir
 
     # This will build the GUI elements. You will need to have node
     # installed first. For example get it from
@@ -109,7 +126,7 @@ pipeline by clicking the actions tab on our GitHub project. There are
 two workflows:
 
 1. Windows Test: this workflow builds a minimal version of the
-   Velociraptor binary (without the GUI) and runs all the tests on
+   CyFir binary (without the GUI) and runs all the tests on
    it. We also test various windows support functions in this
    pipeline. This pipeline builds on every push in each PR.
 
@@ -128,7 +145,7 @@ architectures before send us the PR.
 
 ## Supported platforms
 
-Velociraptor is written in Golang and so is available for all the
+CyFir is written in Golang and so is available for all the
 platforms [supported by Go](https://github.com/golang/go/wiki/MinimumRequirements).
 This means that Windows XP and Windows server 2003 are **not**
 supported but anything after Windows 7/Vista is.
@@ -143,9 +160,9 @@ Arches` pipeline.
 
 ## Artifact Exchange
 
-Velociraptor's power comes from `VQL Artifacts`, that define many
+CyFir's power comes from `VQL Artifacts`, that define many
 capabilities to collect many types of data from endpoints.
-Velociraptor comes with many built in `Artifacts` for the most common
+CyFir comes with many built in `Artifacts` for the most common
 use cases. The community also maintains a large number of additional
 artifacts through the [Artifact Exchange](https://cyfir.cynorsense.com/exchange/).
 
