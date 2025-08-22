@@ -2,7 +2,7 @@ name: Windows.Defender.Integration
 author: Claude Code Integration
 description: |
   This artifact demonstrates the complete integration between Windows Defender
-  and Velociraptor for enhanced endpoint protection and monitoring.
+  and CyFir for enhanced endpoint protection and monitoring.
 
   This integration artifact combines:
   - Real-time event monitoring from Defender operational logs
@@ -69,7 +69,7 @@ sources:
         MonitoringMode as Mode,
         AlertThreshold as Threshold,
         EnableRealTime as RealTimeEnabled,
-        "Windows Defender + Velociraptor integration active" as Status,
+        "Windows Defender + CyFir integration active" as Status,
         ReportInterval as ReportIntervalMinutes
 
       -- Get current Defender status using our new VQL plugins
@@ -147,7 +147,7 @@ sources:
 reports:
   - type: CLIENT
     template: |
-      # Windows Defender + Velociraptor Integration Report
+      # Windows Defender + CyFir Integration Report
 
       {{ $status := Query "SELECT * FROM source() WHERE EventType = 'INTEGRATION_STATUS'" | First }}
       {{ $health := Query "SELECT * FROM source() WHERE EventType = 'DEFENDER_HEALTH'" | First }}

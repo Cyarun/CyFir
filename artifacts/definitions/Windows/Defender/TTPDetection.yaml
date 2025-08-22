@@ -1,7 +1,7 @@
 name: Windows.Defender.TTPDetection
 author: Claude Code Integration
 description: |
-  This artifact combines Windows Defender telemetry with Velociraptor monitoring 
+  This artifact combines Windows Defender telemetry with CyFir monitoring 
   to detect common attack Tactics, Techniques, and Procedures (TTPs).
 
   Correlates data from multiple sources:

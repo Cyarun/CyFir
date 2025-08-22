@@ -6,7 +6,7 @@ description: |
   tools interface. Simply click on the tool in the GUI and upload a
   pre-packaged MSI.
 
-  While typically the MSI will contain the Velociraptor windows
+  While typically the MSI will contain the CyFir windows
   client, you can install any other MSI as well by customizing this
   artifact or uploading a different MSI file.
 
