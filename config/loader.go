@@ -153,7 +153,7 @@ func (self *Loader) WithRequiredUser() *Loader {
 
 			if user.Username != config_obj.Frontend.RunAsUser {
 				return fmt.Errorf(
-					"Velociraptor should be running as the '%s' user but you are '%s'. "+
+					"CyFir should be running as the '%s' user but you are '%s'. "+
 						"Please change user with sudo first.",
 					config_obj.Frontend.RunAsUser, user.Username)
 			}
