@@ -7,11 +7,11 @@ import (
 	"io"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/zip"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/zip"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils"
 	vfilter "www.velocidex.com/golang/vfilter"
 )
 

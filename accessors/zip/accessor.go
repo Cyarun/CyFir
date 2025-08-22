@@ -6,12 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/third_party/zip"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/third_party/zip"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

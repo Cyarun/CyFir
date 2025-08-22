@@ -9,9 +9,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/yaml/v2"
-	"www.velocidex.com/golang/velociraptor/file_store/csv"
-	"www.velocidex.com/golang/velociraptor/json"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/file_store/csv"
+	"github.com/Cyarun/CyFir/json"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 	"www.velocidex.com/golang/vfilter/types"

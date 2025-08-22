@@ -5,9 +5,9 @@ import (
 	"runtime"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/vql"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 )

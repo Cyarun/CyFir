@@ -10,8 +10,8 @@ import (
 
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

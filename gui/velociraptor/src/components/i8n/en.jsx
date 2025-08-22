@@ -10,7 +10,7 @@ const English = {
           <p>
             While in quarantine, the host will not be able to
             communicate with any other networks, except for the
-            Velociraptor server.
+            CyFir server.
           </p>
                               </>,
     "Cannot Quarantine host": "Cannot Quarantine host",
@@ -18,8 +18,8 @@ const English = {
         <>
           <Alert variant="warning">
             { quarantine_artifact ?
-              <p>This Velociraptor instance does not have the <b>{quarantine_artifact}</b> artifact required to quarantine hosts running {os_name}.</p> :
-              <p>This Velociraptor instance does not have an artifact name defined to quarantine hosts running {os_name}.</p>
+              <p>This CyFir instance does not have the <b>{quarantine_artifact}</b> artifact required to quarantine hosts running {os_name}.</p> :
+              <p>This CyFir instance does not have an artifact name defined to quarantine hosts running {os_name}.</p>
             }
           </Alert>
         </>,
@@ -50,6 +50,7 @@ const English = {
     "Main Menu": "Main Menu",
     "Toggle Main Menu": "Toggle Main Menu",
     "Welcome": "Welcome",
+    "Velociraptor Login": "CyFir Login",
     "Connected": "Connected",
     "time_ago": (value, unit) => {
         return value + ' ' + unit + ' ago';
@@ -94,7 +95,7 @@ const English = {
      </>,
     "ToolLocalDesc":
     <>
-      Tool will be served from the Velociraptor server
+      Tool will be served from the CyFir server
       to clients if needed. The client will
       cache the tool on its own disk and compare the hash next
       time it is needed. Tools will only be downloaded if their
@@ -117,7 +118,7 @@ const English = {
     "PlaceHolder":
     <>
       Tool hash is currently unknown. The first time the tool
-      is needed, Velociraptor will download it from it's
+      is needed, CyFir will download it from it's
       upstream URL and calculate its hash.
     </>,
     "ToolHash":
@@ -130,13 +131,13 @@ const English = {
     <>
       Tool was manually uploaded by an
       admin - it will not be automatically upgraded on the
-      next Velociraptor server update.
+      next CyFir server update.
     </>,
     "ToolError":
     <>
       Tool's hash is not known and no URL
       is defined. It will be impossible to use this tool in an
-      artifact because Velociraptor is unable to resolve it. You
+      artifact because CyFir is unable to resolve it. You
       can manually upload a file.
     </>,
     "OverrideToolDesc":
@@ -185,7 +186,7 @@ const English = {
     "Role_api" : "API Client",
     "ToolRole_administrator" :
     <>
-    Like any system, Velociraptor needs an administrator which is all powerful. This account can run arbitrary VQL on the server, reconfigure the server, etc.  The ability to add/create/edit/remove users is dependent on the organizations to which this account belongs.
+    Like any system, CyFir needs an administrator which is all powerful. This account can run arbitrary VQL on the server, reconfigure the server, etc.  The ability to add/create/edit/remove users is dependent on the organizations to which this account belongs.
     </>,
     "ToolRole_org_admin" :
     <>
@@ -243,7 +244,7 @@ const English = {
     "ToolPerm_COLLECT_CLIENT" : "Schedule or cancel new collections on clients",
     "ToolPerm_COLLECT_BASIC" : "Schedule basic collections on clients",
     "ToolPerm_START_HUNT" : "Start a new hunt",
-    "ToolPerm_COLLECT_SERVER" : "Schedule new artifact collections on Velociraptor servers",
+    "ToolPerm_COLLECT_SERVER" : "Schedule new artifact collections on CyFir servers",
     "ToolPerm_ARTIFACT_WRITER" : "Add or edit custom artifacts that run on the server",
     "ToolPerm_SERVER_ARTIFACT_WRITER" : "Add or edit custom artifacts that run on the server",
     "ToolPerm_EXECVE" : "Allowed to execute arbitrary commands on clients",
@@ -283,7 +284,7 @@ const English = {
     </>,
     "ToolOrganizations" :
     <>
-    Organizations allow multiple tenants to use this Velociraptor server.  If a user is not assigned to an organization, it is a member of the Organizational Root, which implies membership in all organizations.
+    Organizations allow multiple tenants to use this CyFir server.  If a user is not assigned to an organization, it is a member of the Organizational Root, which implies membership in all organizations.
     </>,
     "User does not exist": (username)=><>User {username} does not exist.</>,
     "Do you want to delete?": (username)=>"Do you want to delete " + username + "?",

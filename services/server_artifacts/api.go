@@ -5,9 +5,9 @@ import (
 	"io"
 	"sync"
 
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
 )
 
 type LogWriter interface {

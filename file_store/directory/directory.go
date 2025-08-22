@@ -33,13 +33,13 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/accessors/file_store_file_info"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/accessors/file_store_file_info"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store/api"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/third_party/cache"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type DirectoryFileStore struct {

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	assert "github.com/stretchr/testify/assert"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func TestObfuscation(t *testing.T) {

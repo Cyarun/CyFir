@@ -29,8 +29,8 @@ import (
 	"os"
 
 	ntfs "www.velocidex.com/golang/go-ntfs/parser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/ntfs/readers"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/ntfs/readers"
 	"www.velocidex.com/golang/vfilter"
 )
 

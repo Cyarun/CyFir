@@ -7,12 +7,12 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/emptypb"
-	"www.velocidex.com/golang/velociraptor/acls"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/acls"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // Raw Datastore access requires the DATASTORE_ACCESS permission. This

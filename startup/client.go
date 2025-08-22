@@ -3,15 +3,15 @@ package startup
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/executor"
-	"www.velocidex.com/golang/velociraptor/executor/throttler"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/encrypted_logs"
-	"www.velocidex.com/golang/velociraptor/services/orgs"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/networking"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/executor"
+	"github.com/Cyarun/CyFir/executor/throttler"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/encrypted_logs"
+	"github.com/Cyarun/CyFir/services/orgs"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/networking"
 )
 
 // StartClientServices starts the various services needed by the

@@ -8,11 +8,11 @@ import (
 	"runtime"
 	"strings"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
-	"www.velocidex.com/golang/velociraptor/utils"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

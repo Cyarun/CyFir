@@ -13,15 +13,15 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/glob"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/glob"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 type AccessorLinuxTestSuite struct {

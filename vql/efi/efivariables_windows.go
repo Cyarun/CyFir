@@ -11,7 +11,7 @@ import (
 	"unsafe"
 
 	"golang.org/x/sys/windows"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

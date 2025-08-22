@@ -15,7 +15,7 @@ description: |
    NOTE: Not all plugins are enabled in this mode for obvious reasons
    (e.g. pslist, wmi etc).
 
-   See https://docs.velociraptor.app/blog/2022/2022-08-04-post-processing/
+   See https://cyfir.cynorsense.com/blog/2022/2022-08-04-post-processing/
 
 type: CLIENT
 

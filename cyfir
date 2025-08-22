@@ -1,0 +1,29 @@
+#!/bin/bash
+# CyFir wrapper script - provides compatibility layer
+
+# Check if CYFIR_CONFIG is set, if not check VELOCIRAPTOR_CONFIG
+if [ -n "$CYFIR_CONFIG" ]; then
+    export VELOCIRAPTOR_CONFIG="$CYFIR_CONFIG"
+fi
+
+if [ -n "$CYFIR_LITERAL_CONFIG" ]; then
+    export VELOCIRAPTOR_LITERAL_CONFIG="$CYFIR_LITERAL_CONFIG"
+fi
+
+if [ -n "$CYFIR_API_CONFIG" ]; then
+    export VELOCIRAPTOR_API_CONFIG="$CYFIR_API_CONFIG"
+fi
+
+# Find the actual binary
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Look for any velociraptor binary in output directory
+BINARY=$(ls "$SCRIPT_DIR"/output/velociraptor* 2>/dev/null | head -1)
+
+# Fallback to direct binary name
+if [ -z "$BINARY" ] || [ ! -f "$BINARY" ]; then
+    BINARY="$SCRIPT_DIR/velociraptor"
+fi
+
+# Execute with all arguments
+exec "$BINARY" "$@"

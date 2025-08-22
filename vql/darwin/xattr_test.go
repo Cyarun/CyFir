@@ -8,14 +8,14 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	_ "github.com/Cyarun/CyFir/accessors/file"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 var ()

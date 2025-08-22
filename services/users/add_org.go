@@ -5,10 +5,10 @@ import (
 	"errors"
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/acls"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // Adds the user to the org.

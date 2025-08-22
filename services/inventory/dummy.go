@@ -17,16 +17,16 @@ import (
 
 	"github.com/go-errors/errors"
 	"google.golang.org/protobuf/proto"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	utils_tempfile "www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vql/networking"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	utils_tempfile "github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vql/networking"
 )
 
 type Dummy struct {

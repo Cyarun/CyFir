@@ -1,9 +1,9 @@
 package acl_managers
 
 import (
-	"www.velocidex.com/golang/velociraptor/acls"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
+	"github.com/Cyarun/CyFir/acls"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
 )
 
 // Satisfy the interface vql_subsystem.ACLManager

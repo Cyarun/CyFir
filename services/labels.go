@@ -3,7 +3,7 @@ package services
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 // The Label service is responsible for manipulating client's labels

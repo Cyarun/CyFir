@@ -40,10 +40,10 @@ import (
 
 	"github.com/Velocidex/json"
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	vjson "www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/file_store/api"
+	vjson "github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/result_sets"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

@@ -8,7 +8,7 @@ import (
 
 	"github.com/Velocidex/json"
 	"github.com/sebdah/goldie/v2"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func Retry(r *assert.R, t *testing.T, filename string, golden []byte) {

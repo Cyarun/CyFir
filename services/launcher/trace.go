@@ -4,11 +4,11 @@ import (
 	"context"
 	"fmt"
 
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 )
 
 func (self *Launcher) calculateTraceQuery(

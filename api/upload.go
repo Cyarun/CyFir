@@ -8,15 +8,15 @@ import (
 	"net/http"
 	"path"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/api/authenticators"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/api/authenticators"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services"
 )
 
 func toolUploadHandler() http.Handler {

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type ClientPathManager struct {

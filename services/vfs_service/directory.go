@@ -7,17 +7,17 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"google.golang.org/protobuf/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/api/tables"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/paths/artifacts"
-	"www.velocidex.com/golang/velociraptor/result_sets"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/api/tables"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/paths/artifacts"
+	"github.com/Cyarun/CyFir/result_sets"
 )
 
 type FileInfoRow struct {

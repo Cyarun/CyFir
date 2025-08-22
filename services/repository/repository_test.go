@@ -8,16 +8,16 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/orgs"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/orgs"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 func TestLoadingFromFilestore(t *testing.T) {

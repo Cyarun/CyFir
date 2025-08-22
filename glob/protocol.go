@@ -1,8 +1,8 @@
 package glob
 
 import (
-	"www.velocidex.com/golang/velociraptor/accessors"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/protocols"
 )

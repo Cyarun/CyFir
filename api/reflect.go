@@ -23,11 +23,11 @@ import (
 	"strings"
 
 	"google.golang.org/protobuf/types/known/emptypb"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/types"
 )

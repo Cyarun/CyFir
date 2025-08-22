@@ -9,12 +9,12 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/json"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/json"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 	"www.velocidex.com/golang/vfilter/types"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/data"
+	_ "github.com/Cyarun/CyFir/accessors/data"
 )
 
 type RegexParserTestSuite struct {

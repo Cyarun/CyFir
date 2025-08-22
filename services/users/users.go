@@ -26,13 +26,13 @@ import (
 	"regexp"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/debug"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/acls"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/debug"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 const (

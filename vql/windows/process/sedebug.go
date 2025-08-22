@@ -6,7 +6,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"www.velocidex.com/golang/velociraptor/vql/windows"
+	"github.com/Cyarun/CyFir/vql/windows"
 )
 
 type winLUID struct {

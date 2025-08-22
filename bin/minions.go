@@ -1,10 +1,10 @@
 package main
 
 import (
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/frontend"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/frontend"
 )
 
 func applyMinionRole(config_obj *config_proto.Config) error {

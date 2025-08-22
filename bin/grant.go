@@ -6,13 +6,13 @@ import (
 	"strings"
 
 	jsonpatch "github.com/evanphx/json-patch/v5"
-	"www.velocidex.com/golang/velociraptor/acls"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/acls"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	"github.com/Cyarun/CyFir/json"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

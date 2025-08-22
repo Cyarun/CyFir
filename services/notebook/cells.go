@@ -3,8 +3,8 @@ package notebook
 import (
 	"context"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func (self *NotebookManager) NewNotebookCell(

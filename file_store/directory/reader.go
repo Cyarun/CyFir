@@ -6,9 +6,9 @@ import (
 	"io"
 	"os"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/third_party/cache"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type CompressedDirectoryReader struct {

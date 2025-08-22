@@ -23,13 +23,13 @@ import (
 	"github.com/Velocidex/ordereddict"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/notifications"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/debug"
-	"www.velocidex.com/golang/velociraptor/services/journal"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/notifications"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/debug"
+	"github.com/Cyarun/CyFir/services/journal"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

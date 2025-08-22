@@ -16,11 +16,11 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/prometheus/client_golang/prometheus"
-	"www.velocidex.com/golang/velociraptor/actions"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/actions"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

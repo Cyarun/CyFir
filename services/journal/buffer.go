@@ -13,10 +13,10 @@ import (
 	"sync"
 
 	"google.golang.org/protobuf/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	logging "www.velocidex.com/golang/velociraptor/logging"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	logging "github.com/Cyarun/CyFir/logging"
 )
 
 // The below is similar to http_comms.FileBasedRingBuffer except:

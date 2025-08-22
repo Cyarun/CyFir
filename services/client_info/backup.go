@@ -6,11 +6,11 @@ import (
 	"sync"
 
 	"google.golang.org/protobuf/proto"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 	"www.velocidex.com/golang/vfilter"
 )
 

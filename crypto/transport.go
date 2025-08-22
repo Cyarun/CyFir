@@ -20,8 +20,8 @@ package crypto
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
 )
 
 type ICryptoManager interface {

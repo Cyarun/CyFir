@@ -5,8 +5,8 @@ import (
 	"net/http"
 
 	oidc "github.com/coreos/go-oidc/v3/oidc"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/vql/networking"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/vql/networking"
 )
 
 // Update the HTTP client in the context honoring proxy and TLS

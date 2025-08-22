@@ -6,9 +6,9 @@ import (
 	"os"
 
 	jsonpatch "github.com/evanphx/json-patch/v5"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	logging "www.velocidex.com/golang/velociraptor/logging"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/json"
+	logging "github.com/Cyarun/CyFir/logging"
 )
 
 var (

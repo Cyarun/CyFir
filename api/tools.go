@@ -3,9 +3,9 @@ package api
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/acls"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 func (self *ApiServer) GetToolInfo(ctx context.Context,

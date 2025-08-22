@@ -1,13 +1,13 @@
 Format: http://dep.debian.net/deps/dep5
-Upstream-Name: velociraptor
-Source: https://gitlab.com/velocidex/velociraptor
+Upstream-Name: cyfir
+Source: https://github.com/Cyarun/CyFir
 
 Files: *
-Copyright: 2018 Velocidex Innovations
+Copyright: 2018 CynorSense Solutions Pvt. Ltd.
 License: Apache-2.0
 
 Files: debian/*
-Copyright: 2018 Velocidex Innovations
+Copyright: 2018 CynorSense Solutions Pvt. Ltd.
 License: Apache-2.0
 
 License: Apache-2.0

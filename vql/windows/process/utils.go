@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/vql/tools/process"
+	"github.com/Cyarun/CyFir/vql/tools/process"
 	"www.velocidex.com/golang/vfilter"
 )
 

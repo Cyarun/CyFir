@@ -8,7 +8,7 @@ import (
 	"errors"
 	"sync"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func AvailableDiskSpace(

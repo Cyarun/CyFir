@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 type DummyGRPCAPIClient struct {

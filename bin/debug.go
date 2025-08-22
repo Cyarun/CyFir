@@ -23,9 +23,9 @@ import (
 	"net/http"
 	_ "net/http/pprof"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	debug_server "www.velocidex.com/golang/velociraptor/services/debug/server"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	logging "github.com/Cyarun/CyFir/logging"
+	debug_server "github.com/Cyarun/CyFir/services/debug/server"
 )
 
 var (

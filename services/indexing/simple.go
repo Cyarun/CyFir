@@ -5,9 +5,9 @@ import (
 	"strings"
 
 	"google.golang.org/protobuf/types/known/emptypb"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 // The simple index is a legacy index that is ok for small number of

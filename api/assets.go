@@ -31,14 +31,14 @@ import (
 	"github.com/andybalholm/brotli"
 	"github.com/gorilla/csrf"
 	"github.com/lpar/gzipped"
-	"www.velocidex.com/golang/velociraptor/api/proto"
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/gui/velociraptor"
-	gui_assets "www.velocidex.com/golang/velociraptor/gui/velociraptor"
-	"www.velocidex.com/golang/velociraptor/services"
-	vutils "www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/api/proto"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/gui/velociraptor"
+	gui_assets "github.com/Cyarun/CyFir/gui/velociraptor"
+	"github.com/Cyarun/CyFir/services"
+	vutils "github.com/Cyarun/CyFir/utils"
 )
 
 func install_static_assets(
@@ -65,7 +65,7 @@ func GetTemplateHandler(
 			`<html><body>
   <h1>This binary was not built with GUI support!</h1>
 
-  Search for building instructions on https://docs.velociraptor.app/
+  Search for building instructions on https://cyfir.cynorsense.com/
 </body></html>`)
 	}
 

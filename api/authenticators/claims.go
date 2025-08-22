@@ -8,11 +8,11 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	oidc "github.com/coreos/go-oidc/v3/oidc"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // The claims we care about - these are mapped from the IDP's claims

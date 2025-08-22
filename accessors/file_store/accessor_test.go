@@ -5,17 +5,17 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	file_store_accessor "www.velocidex.com/golang/velociraptor/accessors/file_store"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/uploads"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	file_store_accessor "github.com/Cyarun/CyFir/accessors/file_store"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/uploads"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 type testCase struct {

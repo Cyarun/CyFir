@@ -10,21 +10,21 @@ import (
 	"testing"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/inventory"
-	"www.velocidex.com/golang/velociraptor/services/launcher"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/inventory"
+	"github.com/Cyarun/CyFir/services/launcher"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
 )
 
 type MockClient struct {

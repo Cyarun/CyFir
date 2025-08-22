@@ -4,7 +4,7 @@ import (
 	"os"
 
 	concurrent_zip "github.com/Velocidex/zip"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
+	"github.com/Cyarun/CyFir/utils/tempfile"
 )
 
 type TmpfileFactory int

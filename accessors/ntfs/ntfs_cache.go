@@ -4,10 +4,10 @@ import (
 	"strings"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/third_party/cache"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

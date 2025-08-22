@@ -6,13 +6,13 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/orgs"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/orgs"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 type UserManagerTestSuite struct {

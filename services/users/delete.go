@@ -4,10 +4,10 @@ import (
 	"context"
 
 	"github.com/pkg/errors"
-	"www.velocidex.com/golang/velociraptor/acls"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/acls"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Removes a user from an org

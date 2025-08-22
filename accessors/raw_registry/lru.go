@@ -2,7 +2,7 @@ package raw_registry
 
 import (
 	"www.velocidex.com/golang/regparser"
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type readDirLRUItem struct {

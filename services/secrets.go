@@ -63,9 +63,9 @@ import (
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/yaml/v2"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

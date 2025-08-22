@@ -5,10 +5,10 @@ import (
 	"strings"
 
 	"github.com/pkg/sftp"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/constants"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/constants"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -3,11 +3,11 @@ package launcher
 import (
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/acls"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 func CheckAccess(

@@ -1,6 +1,6 @@
 /*
-Velociraptor - Dig Deeper
-Copyright (C) 2019-2025 Rapid7 Inc.
+CyFir - Cyber Forensics & IR Platform
+Copyright (C) 2024-2025 CynorSense Solutions Pvt. Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -54,7 +54,7 @@ const (
 	// Messages to the client which we dont care about their responses.
 	IgnoreResponseState = uint64(101)
 
-	USER_AGENT = "Velociraptor"
+	USER_AGENT = "CyFir"
 
 	// Globals set in VQL scopes.
 	SCOPE_CONFIG            = "config"
@@ -160,7 +160,7 @@ const (
 	// timezone actually serialized.
 	TZ = "TZ"
 
-	PinnedServerName = "VelociraptorServer"
+	PinnedServerName = "CyFirServer"
 
 	// Default gateway identity. This is only used when creating the
 	// gateway certificates.
@@ -192,9 +192,9 @@ const (
 	TIMELINE_DEFAULT_MESSAGE = "Message"
 
 	// Environment variables
-	VELOCIRAPTOR_CONFIG         = "VELOCIRAPTOR_CONFIG"
-	VELOCIRAPTOR_LITERAL_CONFIG = "VELOCIRAPTOR_LITERAL_CONFIG"
-	VELOCIRAPTOR_API_CONFIG     = "VELOCIRAPTOR_API_CONFIG"
+	VELOCIRAPTOR_CONFIG         = "CYFIR_CONFIG"
+	VELOCIRAPTOR_LITERAL_CONFIG = "CYFIR_LITERAL_CONFIG"
+	VELOCIRAPTOR_API_CONFIG     = "CYFIR_API_CONFIG"
 )
 
 type key int

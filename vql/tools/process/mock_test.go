@@ -7,9 +7,9 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/json"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/json"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/types"
 )

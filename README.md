@@ -5,7 +5,7 @@ using The Velociraptor Query Language (VQL) queries.
 
 To learn more about Velociraptor, read the documentation on:
 
-https://docs.velociraptor.app/
+https://cyfir.cynorsense.com/
 
 ## Quick start
 
@@ -24,12 +24,12 @@ collect artifacts from the client (which is just running on your own
 machine) as normal.
 
 Once you are ready for a full deployment, check out the various deployment options at
-https://docs.velociraptor.app/docs/deployment/
+https://cyfir.cynorsense.com/docs/deployment/
 
 ## Training
 
 We have our complete training course (7 sessions x 2 hours each)
-https://docs.velociraptor.app/training/
+https://cyfir.cynorsense.com/training/
 
 The course covers many aspects of Velociraptor in detail.
 
@@ -147,13 +147,13 @@ Velociraptor's power comes from `VQL Artifacts`, that define many
 capabilities to collect many types of data from endpoints.
 Velociraptor comes with many built in `Artifacts` for the most common
 use cases. The community also maintains a large number of additional
-artifacts through the [Artifact Exchange](https://docs.velociraptor.app/exchange/).
+artifacts through the [Artifact Exchange](https://cyfir.cynorsense.com/exchange/).
 
 ## Knowledge Base
 
 If you need help performing a task such as deployment, VQL queries
 etc. Your first port of call should be the Velociraptor Knowledge Base
-at https://docs.velociraptor.app/knowledge_base/ where you will find
+at https://cyfir.cynorsense.com/knowledge_base/ where you will find
 helpful tips and hints.
 
 ## Getting help
@@ -162,12 +162,12 @@ Questions and feedback are welcome at
 velociraptor-discuss@googlegroups.com (or
 https://groups.google.com/g/velociraptor-discuss)
 
-You can also chat with us directly on discord https://docs.velociraptor.app/discord
+You can also chat with us directly on discord https://cyfir.cynorsense.com/discord
 
 File issues on https://github.com/Velocidex/velociraptor
 
 Read more about Velociraptor on our blog:
-https://docs.velociraptor.app/blog/
+https://cyfir.cynorsense.com/blog/
 
 Hang out on Medium https://medium.com/velociraptor-ir
 

@@ -4,7 +4,7 @@ import (
 	"strings"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/acls"
+	"github.com/Cyarun/CyFir/acls"
 )
 
 type MetadataBuilder struct {

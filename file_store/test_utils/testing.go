@@ -6,12 +6,12 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/require"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/memory"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/memory"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func GetMemoryFileStore(

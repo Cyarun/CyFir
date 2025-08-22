@@ -1,9 +1,9 @@
 package paths_test
 
 import (
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func (self *PathManagerTestSuite) TestTimelinePathManager() {

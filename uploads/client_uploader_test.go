@@ -10,15 +10,15 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/responder"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/accessors"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/responder"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 var (

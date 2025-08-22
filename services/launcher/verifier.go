@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"strings"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

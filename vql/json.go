@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/Velocidex/json"
-	"www.velocidex.com/golang/velociraptor/constants"
-	vjson "www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/constants"
+	vjson "github.com/Cyarun/CyFir/json"
 	"www.velocidex.com/golang/vfilter"
 )
 

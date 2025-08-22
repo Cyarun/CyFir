@@ -3,7 +3,7 @@ package paths
 import (
 	"strings"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 type HuntPathManager struct {

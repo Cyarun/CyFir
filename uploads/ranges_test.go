@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 var (

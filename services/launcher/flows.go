@@ -20,13 +20,13 @@ package launcher
 import (
 	"context"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/result_sets"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Filter will be applied on flows to remove those we dont care about.

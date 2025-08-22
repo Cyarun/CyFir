@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func testHTTPConnection(

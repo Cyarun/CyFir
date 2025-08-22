@@ -23,17 +23,17 @@ import (
 	"path"
 	"sync"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/executor"
-	"www.velocidex.com/golang/velociraptor/http_comms"
-	"www.velocidex.com/golang/velociraptor/json"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/server"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/executor"
+	"github.com/Cyarun/CyFir/http_comms"
+	"github.com/Cyarun/CyFir/json"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/server"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/writeback"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

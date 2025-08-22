@@ -1,0 +1,304 @@
+name: Windows.Defender.Configuration
+author: Claude Code Integration
+description: |
+  This artifact monitors Windows Defender configuration changes through registry
+  monitoring, service status tracking, and policy modifications.
+
+  Windows Defender stores configuration in multiple registry locations:
+  - HKLM\SOFTWARE\Microsoft\Windows Defender\*
+  - HKLM\SOFTWARE\Policies\Microsoft\Windows Defender\*
+  - HKLM\SYSTEM\CurrentControlSet\Services\WinDefend\*
+  - HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+
+  Monitors for:
+  - Real-time protection disable/enable
+  - Exclusion list modifications
+  - Scan configuration changes
+  - Tamper protection modifications
+  - Cloud protection settings
+  - Service configuration changes
+  - Group policy modifications
+
+  This is critical for detecting:
+  - Malware attempting to disable protection
+  - Administrative policy changes
+  - Configuration drift
+  - Security compliance violations
+
+reference:
+  - https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/configure-microsoft-defender-antivirus-features
+  - https://attack.mitre.org/techniques/T1562/001/ (Impair Defenses: Disable or Modify Tools)
+
+type: CLIENT_EVENT
+
+parameters:
+  - name: MonitoringMode
+    description: "Configuration monitoring mode"
+    type: choices
+    default: RealTime
+    choices:
+      - RealTime
+      - Snapshot
+      - Both
+
+  - name: ConfigAreas
+    description: "Configuration areas to monitor"
+    type: multichoice
+    default: '["RealTimeProtection", "Exclusions", "CloudProtection", "TamperProtection"]'
+    choices:
+      - RealTimeProtection
+      - Exclusions
+      - ScanSettings
+      - CloudProtection
+      - TamperProtection
+      - ServiceConfig
+      - GroupPolicy
+      - QuarantineSettings
+
+  - name: AlertOnChanges
+    description: "Generate alerts on configuration changes"
+    type: bool
+    default: true
+
+  - name: IncludeBaseline
+    description: "Include current configuration baseline"
+    type: bool
+    default: true
+
+sources:
+  - query: |
+      -- Windows Defender registry paths to monitor
+      LET DefenderPaths <= [
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Real-Time Protection\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Exclusions\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Scan\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\SpyNet\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows Defender\\Features\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\*",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WinDefend\\*",
+        "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\WdNisSvc\\*",
+        "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\\DisableAntiSpyware"
+      ]
+
+      -- Configuration area mappings
+      LET ConfigAreaMap <= dict(
+        `RealTimeProtection` = "Real-Time Protection",
+        `Exclusions` = "Exclusions",
+        `ScanSettings` = "Scan",
+        `CloudProtection` = "SpyNet",
+        `TamperProtection` = "Features",
+        `ServiceConfig` = "Services",
+        `GroupPolicy` = "Policies",
+        `QuarantineSettings` = "Quarantine"
+      )
+
+      -- Critical configuration keys to monitor
+      LET CriticalKeys <= [
+        "DisableRealtimeMonitoring",
+        "DisableBehaviorMonitoring", 
+        "DisableOnAccessProtection",
+        "DisableScanOnRealtimeEnable",
+        "DisableIOAVProtection",
+        "DisablePrivacyMode",
+        "SignatureDisableUpdateOnStartupWithoutEngine",
+        "DisableAntiSpyware",
+        "DisableAntiVirus",
+        "ServiceKeepAlive",
+        "TamperProtection",
+        "SpyNetReporting",
+        "SubmitSamplesConsent"
+      ]
+
+      -- Get current baseline configuration if requested
+      LET BaselineConfig = if(condition=IncludeBaseline, then={
+        SELECT "BASELINE" as EventType,
+               now() as Timestamp,
+               Key.Name as KeyPath,
+               Key.Name as KeyName,
+               Value.Name as ValueName,
+               Value.Data as ValueData,
+               Value.Type as ValueType,
+               "Initial configuration baseline" as Description
+        FROM foreach(row=DefenderPaths, query={
+          SELECT * FROM glob(globs=_value, accessor="registry")
+        }) AS Key,
+        Key.Values AS Value
+        WHERE Key.Name
+      }, else=[])
+
+      -- Real-time registry monitoring
+      LET RealTimeEvents = if(condition=MonitoringMode in ("RealTime", "Both"), then={
+        LET Cache <= lru(size=1000)
+        LET EventLookup <= dict(
+          `1`="CreateKey", `2`="OpenKey", `3`="DeleteKey",
+          `4`="QueryKey", `5`="SetValueKey", `6`="DeleteValueKey",
+          `7`="QueryValue", `8`="EnumerateKey", `9`="EnumerateValueKey"
+        )
+
+        -- Monitor registry changes
+        LET RegistryChanges = SELECT 
+          System.TimeStamp AS Timestamp,
+          get(item=EventLookup, field=str(str=System.ID)) AS EventType,
+          get(item=Cache, field=EventData.KeyObject) || EventData.KeyName AS KeyPath,
+          EventData.ValueName AS ValueName,
+          EventData.NewValue AS ValueData,
+          process_tracker_get(id=System.ProcessID).Data AS Process,
+          EventData
+        FROM watch_etw(
+          description="Microsoft-Windows-Kernel-Registry",
+          guid="{70EB4F03-C1DE-4F73-A051-33D13D5413BD}", 
+          any=0x7720)
+        WHERE System.ProcessID != getpid()
+          AND EventType IN ("SetValueKey", "DeleteValueKey", "CreateKey", "DeleteKey")
+          AND if(condition=System.ID in (1, 2, 4),
+                then=set(item=Cache, field=EventData.KeyObject,
+                        value=EventData.RelativeName),
+                else=TRUE)
+          AND KeyPath
+          AND (KeyPath =~ "(?i)windows defender" OR
+               KeyPath =~ "(?i)windefend" OR 
+               KeyPath =~ "(?i)antispyware" OR
+               KeyPath =~ "(?i)antivirus")
+
+        SELECT Timestamp, EventType, KeyPath, ValueName, ValueData,
+               Process.Name as ProcessName,
+               Process.CommandLine as ProcessCommandLine,
+               Process.Username as ProcessUser,
+               "Real-time registry change detected" as Description,
+               if(condition=ValueName in CriticalKeys,
+                  then="CRITICAL_CONFIG_CHANGE",
+                  else="CONFIG_CHANGE") as AlertLevel,
+               if(condition=AlertOnChanges AND ValueName in CriticalKeys,
+                  then=format(format="🚨 CRITICAL: %v changed to %v by %v",
+                            args=[ValueName, ValueData, ProcessName]),
+                  else="") as Alert
+        FROM RegistryChanges
+      }, else=[])
+
+      -- Service status monitoring  
+      LET ServiceEvents = SELECT 
+        now() as Timestamp,
+        "SERVICE_STATUS" as EventType,
+        Name as ServiceName,
+        State as ServiceState,
+        Status as ServiceStatus,
+        StartMode as ServiceStartMode,
+        "Service status check" as Description,
+        if(condition=Name in ("WinDefend", "WdNisSvc", "WdFilter", "WdBoot") AND State != "Running",
+           then="SERVICE_NOT_RUNNING",
+           else="SERVICE_OK") as AlertLevel,
+        if(condition=AlertOnChanges AND Name in ("WinDefend", "WdNisSvc") AND State != "Running",
+           then=format(format="🚨 CRITICAL: Windows Defender service %v is %v", args=[Name, State]),
+           else="") as Alert
+      FROM services()
+      WHERE Name =~ "(?i)(windefend|wdnissvc|wdfilter|wdboot|sense)"
+
+      -- Group Policy monitoring
+      LET PolicyEvents = if(condition="GroupPolicy" in ConfigAreas, then={
+        SELECT now() as Timestamp,
+               "GROUP_POLICY" as EventType,
+               Key.Name as KeyPath,
+               Value.Name as ValueName,
+               Value.Data as ValueData,
+               Value.Type as ValueType,
+               "Group Policy configuration" as Description,
+               if(condition=Value.Name in CriticalKeys,
+                  then="POLICY_CRITICAL",
+                  else="POLICY_STANDARD") as AlertLevel,
+               "" as Alert
+        FROM glob(globs="HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows Defender\\**", 
+                  accessor="registry") AS Key,
+        Key.Values AS Value
+        WHERE Value.Name
+      }, else=[])
+
+      -- Combine all event sources
+      LET AllEvents = SELECT * FROM chain(
+        BaselineConfig,
+        RealTimeEvents,
+        ServiceEvents,
+        PolicyEvents
+      )
+
+      SELECT Timestamp, EventType, KeyPath, ValueName, ValueData,
+             ProcessName, ProcessCommandLine, ProcessUser,
+             Description, AlertLevel, Alert,
+             
+             -- Categorize configuration areas
+             if(condition=KeyPath =~ "(?i)real-time protection", then="RealTimeProtection",
+                else=if(condition=KeyPath =~ "(?i)exclusions", then="Exclusions",
+                       else=if(condition=KeyPath =~ "(?i)scan", then="ScanSettings",
+                              else=if(condition=KeyPath =~ "(?i)spynet", then="CloudProtection",
+                                     else=if(condition=KeyPath =~ "(?i)features", then="TamperProtection",
+                                            else=if(condition=KeyPath =~ "(?i)services", then="ServiceConfig",
+                                                   else=if(condition=KeyPath =~ "(?i)policies", then="GroupPolicy",
+                                                          else="Other"))))))) as ConfigArea,
+             
+             -- Risk assessment
+             if(condition=AlertLevel in ("CRITICAL_CONFIG_CHANGE", "SERVICE_NOT_RUNNING"),
+                then="HIGH",
+                else=if(condition=AlertLevel in ("POLICY_CRITICAL", "CONFIG_CHANGE"),
+                       then="MEDIUM",
+                       else="LOW")) as RiskLevel
+
+      FROM AllEvents
+      WHERE ConfigArea in ConfigAreas OR ConfigArea = "Other"
+      ORDER BY Timestamp DESC
+
+reports:
+  - type: CLIENT
+    template: |
+      # Windows Defender Configuration Monitoring Report
+
+      {{ $events := Query "SELECT * FROM source()" }}
+      {{ $critical := Query "SELECT * FROM source() WHERE RiskLevel = 'HIGH'" }}
+      {{ $config_areas := Query "SELECT count() as Count, ConfigArea FROM source() GROUP BY ConfigArea ORDER BY Count DESC" }}
+      {{ $processes := Query "SELECT count() as Count, ProcessName FROM source() WHERE ProcessName GROUP BY ProcessName ORDER BY Count DESC LIMIT 10" }}
+      
+      ## Summary
+      
+      **Total Events:** {{ len $events }}
+      **Critical Events:** {{ len $critical }}
+      **Monitoring Period:** Current session
+      
+      ## Critical Alerts
+      {{ if $critical }}
+      {{ range $critical }}
+      🚨 **{{ .AlertLevel }}** - {{ .Timestamp }}
+      **Event:** {{ .EventType }}
+      {{ if .ProcessName }}**Process:** {{ .ProcessName }}{{ end }}
+      {{ if .KeyPath }}**Registry:** {{ .KeyPath }}{{ end }}
+      {{ if .ValueName }}**Value:** {{ .ValueName }} = {{ .ValueData }}{{ end }}
+      {{ if .Alert }}{{ .Alert }}{{ end }}
+      
+      ---
+      {{ end }}
+      {{ else }}
+      ✅ No critical configuration issues detected.
+      {{ end }}
+      
+      ## Configuration Areas
+      {{ if $config_areas }}
+      | Area | Event Count |
+      |------|-------------|
+      {{ range $config_areas }}| {{ .ConfigArea }} | {{ .Count }} |
+      {{ end }}
+      {{ end }}
+      
+      ## Top Processes Making Changes
+      {{ if $processes }}
+      | Process | Changes |
+      |---------|---------|
+      {{ range $processes }}| {{ .ProcessName }} | {{ .Count }} |
+      {{ end }}
+      {{ end }}
+      
+      ## Recent Configuration Changes
+      {{ range $events | Where "EventType != 'BASELINE'" | Slice 0 10 }}
+      **{{ .Timestamp }}** - {{ .ConfigArea }}
+      {{ if .ProcessName }}📁 **Process:** {{ .ProcessName }}{{ end }}
+      {{ if .ValueName }}🔧 **Setting:** {{ .ValueName }} → {{ .ValueData }}{{ end }}
+      **Risk:** {{ .RiskLevel }}
+      
+      ---
+      {{ end }}

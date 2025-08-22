@@ -14,11 +14,11 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/hillu/go-ntdll"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/windows"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/windows"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 )

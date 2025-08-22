@@ -6,9 +6,9 @@ package flows
 
 import (
 	"google.golang.org/protobuf/proto"
-	artifacts "www.velocidex.com/golang/velociraptor/artifacts"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
+	artifacts "github.com/Cyarun/CyFir/artifacts"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
 )
 
 func deobfuscateNames(config_obj *config_proto.Config,

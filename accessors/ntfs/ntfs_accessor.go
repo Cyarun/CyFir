@@ -33,13 +33,13 @@ import (
 	"github.com/Velocidex/ordereddict"
 
 	ntfs "www.velocidex.com/golang/go-ntfs/parser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/file"
-	"www.velocidex.com/golang/velociraptor/accessors/ntfs/readers"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/uploads"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/files"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/file"
+	"github.com/Cyarun/CyFir/accessors/ntfs/readers"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/uploads"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/files"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -12,8 +12,8 @@ import (
 
 	fat "github.com/Velocidex/go-fat/parser"
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/json"
 	"www.velocidex.com/golang/vfilter"
 )
 

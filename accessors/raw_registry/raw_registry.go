@@ -41,12 +41,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 
 	"www.velocidex.com/golang/regparser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/readers"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/readers"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -5,9 +5,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/sirupsen/logrus"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
 )
 
 type AuditManager struct{}

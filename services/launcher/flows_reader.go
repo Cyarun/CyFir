@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 const (

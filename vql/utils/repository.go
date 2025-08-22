@@ -3,8 +3,8 @@ package utils
 import (
 	"errors"
 
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/services"
 	"www.velocidex.com/golang/vfilter"
 )
 

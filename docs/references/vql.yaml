@@ -1475,7 +1475,7 @@
     the lazy evaluation property of VQL columns.
 
     For a full discussion of aggregate functions see
-    https://docs.velociraptor.app/docs/vql/#aggregate-functions
+    https://cyfir.cynorsense.com/docs/vql/#aggregate-functions
   type: Function
   args:
   - name: items
@@ -2269,7 +2269,7 @@
     installed (e.g. Sysinternal's autoruns.exe) you will need to use
     Velociraptor's external tools feature to deliver and manage the
     tools on the client. See
-    https://docs.velociraptor.app/docs/vql/extending_vql/
+    https://cyfir.cynorsense.com/docs/vql/extending_vql/
     for more information.
 
     ### Notes
@@ -4320,7 +4320,7 @@
     Velociraptor is managing. This plugin will display this.
 
     See
-    https://docs.velociraptor.app/docs/vql/extending_vql/
+    https://cyfir.cynorsense.com/docs/vql/extending_vql/
     for more information.
   type: Plugin
   category: server
@@ -6165,7 +6165,7 @@
     then the object is emitted with its required fields.
 
     Please refer to [Binary
-    Parsing](https://docs.velociraptor.app/docs/forensic/binary/) for
+    Parsing](https://cyfir.cynorsense.com/docs/forensic/binary/) for
     a background in parsing binary data for forensic purposes and for
     instructions on how to construct profiles like the example above.
 
@@ -9165,9 +9165,9 @@
     Evaluate sigma rules.
 
     For a full description of this plugin see
-    * https://docs.velociraptor.app/blog/2023/2023-11-15-sigma_in_velociraptor/
-    * https://docs.velociraptor.app/blog/2024/2024-05-09-detection-engineering/
-    * https://docs.velociraptor.app/blog/2025/2025-02-02-sigma/
+    * https://cyfir.cynorsense.com/blog/2023/2023-11-15-sigma_in_velociraptor/
+    * https://cyfir.cynorsense.com/blog/2024/2024-05-09-detection-engineering/
+    * https://cyfir.cynorsense.com/blog/2025/2025-02-02-sigma/
 
     A Curated set of Sigma Models and rules is maintained at https://sigma.velocidex.com/
 
@@ -11407,9 +11407,9 @@
     this capability.
 
     To learn more about ETW see
-    https://docs.velociraptor.app/blog/2021/2021-08-18-velociraptor-and-etw/
+    https://cyfir.cynorsense.com/blog/2021/2021-08-18-velociraptor-and-etw/
     or
-    https://docs.velociraptor.app/blog/2021/2021-09-03-process-spoofing/
+    https://cyfir.cynorsense.com/blog/2021/2021-09-03-process-spoofing/
 
     ## The NT Kernel Logger
 

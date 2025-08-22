@@ -17,7 +17,7 @@ package services
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func GetNotifier(config_obj *config_proto.Config) (Notifier, error) {

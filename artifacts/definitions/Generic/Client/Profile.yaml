@@ -73,7 +73,7 @@ parameters:
 
 export: |
     LET CleanUp(Name) = regex_replace(
-        re="www.velocidex.com/golang/velociraptor/",
+        re="cynorsense.com/golang/velociraptor/",
         replace="", source=Name)
 
 sources:

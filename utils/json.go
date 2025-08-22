@@ -10,7 +10,7 @@ import (
 	"github.com/Velocidex/ordereddict"
 	errors "github.com/go-errors/errors"
 
-	vjson "www.velocidex.com/golang/velociraptor/json"
+	vjson "github.com/Cyarun/CyFir/json"
 )
 
 func ParseJsonToObject(serialized []byte) (*ordereddict.Dict, error) {

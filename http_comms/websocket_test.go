@@ -9,9 +9,9 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/http_comms"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/vtesting"
+	"github.com/Cyarun/CyFir/http_comms"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/vtesting"
 )
 
 func (self *TestSuite) TestWebSocketRetry() {

@@ -25,12 +25,12 @@ import (
 	"sync"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	constants "www.velocidex.com/golang/velociraptor/constants"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/services/debug"
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	constants "github.com/Cyarun/CyFir/constants"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/services/debug"
+	"github.com/Cyarun/CyFir/third_party/cache"
+	"github.com/Cyarun/CyFir/utils"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -5,8 +5,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/datastore"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/datastore"
 )
 
 type MemcacheTestSuite struct {

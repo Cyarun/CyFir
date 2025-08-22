@@ -5,7 +5,7 @@ import (
 	"errors"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/result_sets"
+	"github.com/Cyarun/CyFir/result_sets"
 )
 
 // A wrapper that allows us to read a range from a larger result set.

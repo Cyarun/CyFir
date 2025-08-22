@@ -6,9 +6,9 @@ import (
 	"fmt"
 	"unsafe"
 
-	"www.velocidex.com/golang/velociraptor/constants"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	windows "www.velocidex.com/golang/velociraptor/vql/windows"
+	"github.com/Cyarun/CyFir/constants"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	windows "github.com/Cyarun/CyFir/vql/windows"
 	"www.velocidex.com/golang/vfilter"
 )
 

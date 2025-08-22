@@ -11,7 +11,7 @@ import (
 	"unsafe"
 
 	"golang.org/x/sys/windows/registry"
-	"www.velocidex.com/golang/velociraptor/vql/windows"
+	"github.com/Cyarun/CyFir/vql/windows"
 )
 
 const (

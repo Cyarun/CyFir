@@ -7,12 +7,12 @@ import (
 	"context"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/file"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/constants"
-	"www.velocidex.com/golang/velociraptor/vql/windows/wmi"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/file"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/constants"
+	"github.com/Cyarun/CyFir/vql/windows/wmi"
 	"www.velocidex.com/golang/vfilter"
 )
 

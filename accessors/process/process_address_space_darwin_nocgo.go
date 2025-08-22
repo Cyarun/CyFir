@@ -6,7 +6,7 @@ package process
 import (
 	"errors"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 var (

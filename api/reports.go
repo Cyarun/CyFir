@@ -6,14 +6,14 @@ import (
 	"strings"
 
 	errors "github.com/go-errors/errors"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/reporting"
-	"www.velocidex.com/golang/velociraptor/services"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/reporting"
+	"github.com/Cyarun/CyFir/services"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 // Reports are used for various dashboards. They are almost like a

@@ -3,8 +3,8 @@ package path_specs
 import (
 	"strconv"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type FSPathSpec struct {

@@ -5,10 +5,10 @@ import (
 	"io/ioutil"
 	"os"
 
-	"www.velocidex.com/golang/velociraptor/config"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
+	"github.com/Cyarun/CyFir/config"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
 )
 
 var (

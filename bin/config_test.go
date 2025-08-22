@@ -8,7 +8,7 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
+	"github.com/Cyarun/CyFir/utils/tempfile"
 )
 
 func TestGenerateAPIConfig(t *testing.T) {

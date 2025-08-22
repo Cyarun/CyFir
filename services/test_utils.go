@@ -5,7 +5,7 @@ import (
 	"sync"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 // Helpers for testing the filestore.

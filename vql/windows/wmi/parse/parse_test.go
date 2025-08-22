@@ -23,9 +23,9 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/json"
-	wmi_parse "www.velocidex.com/golang/velociraptor/vql/windows/wmi/parse"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/json"
+	wmi_parse "github.com/Cyarun/CyFir/vql/windows/wmi/parse"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 func TestParseMOF(t *testing.T) {

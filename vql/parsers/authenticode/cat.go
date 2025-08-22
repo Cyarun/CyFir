@@ -14,11 +14,11 @@ import (
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/pkcs7"
 	"www.velocidex.com/golang/go-pe"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	windows "www.velocidex.com/golang/velociraptor/vql/windows"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	windows "github.com/Cyarun/CyFir/vql/windows"
 	"www.velocidex.com/golang/vfilter"
 )
 

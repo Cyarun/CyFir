@@ -6,7 +6,7 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Implement the glob.FileInfo

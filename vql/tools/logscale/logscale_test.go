@@ -17,20 +17,20 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
 
 	"github.com/Velocidex/ordereddict"
 
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vql/functions"
-	"www.velocidex.com/golang/velociraptor/vtesting"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vql/functions"
+	"github.com/Cyarun/CyFir/vtesting"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
 	vfilter "www.velocidex.com/golang/vfilter"
 )

@@ -8,9 +8,9 @@ import (
 	"strings"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	"github.com/Cyarun/CyFir/acls"
+	utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 var (

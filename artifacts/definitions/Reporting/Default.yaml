@@ -207,7 +207,7 @@ reports:
          <body>
            <nav class="header navbar navbar-expand-lg navbar-dark fixed-top">
              <a class="navbar-brand" href="#" aria-label="CyberCX">
-               <img src="https://www.velocidex.com/images/logos/velo_word_on_side.svg" class="logo"/>
+               <img src="https://cynorsense.com/images/logos/velo_word_on_side.svg" class="logo"/>
              </a>
              <button class="navbar-toggler" type="button"
                      data-toggle="collapse"

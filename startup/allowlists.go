@@ -1,10 +1,10 @@
 package startup
 
 import (
-	"www.velocidex.com/golang/velociraptor/accessors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 // Potentially restrict server functionality.

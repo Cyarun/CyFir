@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/services/debug"
+	"github.com/Cyarun/CyFir/services/debug"
 	"www.velocidex.com/golang/vfilter"
 )
 

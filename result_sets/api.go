@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 type WriteMode bool

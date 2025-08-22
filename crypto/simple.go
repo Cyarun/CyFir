@@ -8,7 +8,7 @@ import (
 	"sync"
 
 	errors "github.com/go-errors/errors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 // Simple aes obfuscation. This is used in VQL obfuscation and so must

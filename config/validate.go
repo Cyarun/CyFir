@@ -6,10 +6,10 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	constants "www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	constants "github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/services/writeback"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Ensures client config is valid, fills in defaults for missing values etc.

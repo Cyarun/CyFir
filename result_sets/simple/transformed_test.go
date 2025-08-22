@@ -5,13 +5,13 @@ import (
 	"regexp"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/paths/artifacts"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	"www.velocidex.com/golang/velociraptor/result_sets/simple"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/paths/artifacts"
+	"github.com/Cyarun/CyFir/result_sets"
+	"github.com/Cyarun/CyFir/result_sets/simple"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 func (self *ResultSetTestSuite) TestTransformed() {

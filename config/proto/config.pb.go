@@ -10,9 +10,9 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	proto1 "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	_ "www.velocidex.com/golang/velociraptor/proto"
+	proto "github.com/Cyarun/CyFir/actions/proto"
+	proto1 "github.com/Cyarun/CyFir/artifacts/proto"
+	_ "github.com/Cyarun/CyFir/proto"
 )
 
 const (

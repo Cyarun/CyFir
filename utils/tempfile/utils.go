@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"regexp"
 
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func FindFile(tempdir string, re *regexp.Regexp) (string, error) {

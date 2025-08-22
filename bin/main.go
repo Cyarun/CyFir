@@ -28,23 +28,23 @@ import (
 
 	kingpin "github.com/alecthomas/kingpin/v2"
 	errors "github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/logging"
-	vsurvey "www.velocidex.com/golang/velociraptor/tools/survey"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/proxy"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/logging"
+	vsurvey "github.com/Cyarun/CyFir/tools/survey"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/proxy"
 
 	// Import all vql plugins.
-	_ "www.velocidex.com/golang/velociraptor/vql_plugins"
+	_ "github.com/Cyarun/CyFir/vql_plugins"
 )
 
 type CommandHandler func(command string) bool
 
 var (
-	app = kingpin.New("velociraptor",
-		"An advanced incident response and monitoring agent.")
+	app = kingpin.New("cyfir",
+		"CyFir - Cyber Forensics & IR Platform by CynorSense Solutions.")
 
 	config_path = app.Flag("config", "The configuration file.").
 			Short('c').String()

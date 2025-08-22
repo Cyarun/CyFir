@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 type MockFileInfo struct {

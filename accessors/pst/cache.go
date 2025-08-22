@@ -14,11 +14,11 @@ import (
 
 	"github.com/Velocidex/ttlcache/v2"
 	pst "github.com/mooijtech/go-pst/v6/pkg"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/files"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/files"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

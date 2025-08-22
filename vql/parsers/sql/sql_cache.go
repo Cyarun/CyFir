@@ -13,13 +13,13 @@ import (
 
 	"database/sql"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/services/debug"
-	utils "www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	utils_tempfile "www.velocidex.com/golang/velociraptor/utils/tempfile"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/services/debug"
+	utils "github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	utils_tempfile "github.com/Cyarun/CyFir/utils/tempfile"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	vfilter "www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/types"
 )

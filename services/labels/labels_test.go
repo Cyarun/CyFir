@@ -7,15 +7,15 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/labels"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/labels"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting"
 
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
 )
 
 type LabelsTestSuite struct {

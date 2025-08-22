@@ -1,6 +1,6 @@
 package config
 
-import config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+import config_proto "github.com/Cyarun/CyFir/config/proto"
 
 // The client config is a reducted version of the server config with
 // sensitive values removed.

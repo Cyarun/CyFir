@@ -10,15 +10,15 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/ttlcache/v2"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto/client"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services/journal"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto/client"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services/journal"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type ServerCryptoManager struct {

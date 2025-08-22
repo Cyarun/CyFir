@@ -4,23 +4,24 @@ import (
 	"os"
 	"strings"
 
-	"www.velocidex.com/golang/velociraptor/config"
-	logging "www.velocidex.com/golang/velociraptor/logging"
+	"github.com/Cyarun/CyFir/config"
+	logging "github.com/Cyarun/CyFir/logging"
 )
 
 var (
 	nobanner_flag = app.Flag(
-		"nobanner", "Suppress the Velociraptor banner").Bool()
+		"nobanner", "Suppress the CyFir banner").Bool()
 )
 
 var banner = `
-<green> _    __     __           _                  __
-<green>| |  / /__  / /___  _____(_)________ _____  / /_____  _____
-<green>| | / / _ \/ / __ \/ ___/ / ___/ __ ` + "`" + `/ __ \/ __/ __ \/ ___/
-<green>| |/ /  __/ / /_/ / /__/ / /  / /_/ / /_/ / /_/ /_/ / /
-<green>|___/\___/_/\____/\___/_/_/   \__,_/ .___/\__/\____/_/
-<green>                                  /_/
-<red>Digging deeper!                  <cyan>https://www.velocidex.com
+<green>  ______      _______ _      
+<green> / ___\ \    / /  ___(_)     
+<green>| |    \ \  / /| |_   _ _ __  
+<green>| |     \ \/ / |  _| | | '__| 
+<green>| |___   \  /  | |   | | |    
+<green> \____|   \/   |_|   |_|_|    
+<green>                              
+<red>Cyber Forensics & IR Platform  <cyan>by CynorSense Solutions
 `
 
 func doBanner() {
@@ -35,7 +36,7 @@ func doBanner() {
 
 	version := config.GetVersion()
 
-	logging.Prelog("<yellow>This is Velociraptor %v built on %v (%v)", version.Version,
+	logging.Prelog("<yellow>This is CyFir %v built on %v (%v)", version.Version,
 		version.BuildTime, version.Commit)
 
 	// Record some important environment variables to the log.

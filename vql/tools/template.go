@@ -7,10 +7,10 @@ import (
 
 	"github.com/Masterminds/sprig/v3"
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/reporting"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/reporting"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 )

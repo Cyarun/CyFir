@@ -10,14 +10,14 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	constants "www.velocidex.com/golang/velociraptor/constants"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
-	"www.velocidex.com/golang/velociraptor/utils"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	constants "github.com/Cyarun/CyFir/constants"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services/writeback"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Represents a single flow on the client. Previously flows were

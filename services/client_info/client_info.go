@@ -43,12 +43,12 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/journal"
-	"www.velocidex.com/golang/velociraptor/utils"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/journal"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

@@ -1,8 +1,8 @@
 package sigma
 
 import (
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/sigma/evaluator"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/sigma/evaluator"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -7,7 +7,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 var (

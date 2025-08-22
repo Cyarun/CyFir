@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strings"
 
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 type Validator struct{}

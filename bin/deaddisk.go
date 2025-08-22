@@ -7,9 +7,9 @@ import (
 	"path/filepath"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -7,14 +7,14 @@ import (
 	"path/filepath"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/reporting"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/uploads"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/reporting"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/uploads"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 	"www.velocidex.com/golang/vfilter"
 )
 

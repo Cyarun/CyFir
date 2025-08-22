@@ -7,8 +7,8 @@ import (
 	errors "github.com/go-errors/errors"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Convert from various errors into gRPC status errors. This will be

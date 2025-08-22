@@ -3,7 +3,7 @@ package authenticators
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // Try to store the picture URL in the datastore to avoid making the

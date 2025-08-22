@@ -1,6 +1,6 @@
 package paths
 
-import "www.velocidex.com/golang/velociraptor/file_store/api"
+import "github.com/Cyarun/CyFir/file_store/api"
 
 type OrgPathManager struct {
 	org_id string

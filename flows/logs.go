@@ -11,17 +11,17 @@ import (
 	"sync"
 	"time"
 
-	artifacts "www.velocidex.com/golang/velociraptor/artifacts"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	constants "www.velocidex.com/golang/velociraptor/constants"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	utils "www.velocidex.com/golang/velociraptor/utils"
+	artifacts "github.com/Cyarun/CyFir/artifacts"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	constants "github.com/Cyarun/CyFir/constants"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/file_store"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/result_sets"
+	utils "github.com/Cyarun/CyFir/utils"
 )
 
 var (

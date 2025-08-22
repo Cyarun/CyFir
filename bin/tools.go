@@ -10,11 +10,11 @@ import (
 	"regexp"
 
 	"github.com/Velocidex/yaml/v2"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
 )
 
 var (

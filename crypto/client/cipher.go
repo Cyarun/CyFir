@@ -11,8 +11,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"google.golang.org/protobuf/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
+	"github.com/Cyarun/CyFir/constants"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
 )
 
 var (

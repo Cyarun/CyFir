@@ -4,9 +4,9 @@ import (
 	"io"
 
 	"github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/third_party/zip"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/third_party/zip"
 	"www.velocidex.com/golang/vfilter"
 )
 

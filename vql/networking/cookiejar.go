@@ -7,8 +7,8 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"golang.org/x/net/publicsuffix"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type DictBasedCookieJar struct {

@@ -3,13 +3,13 @@ package executor
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/actions"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/responder"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/actions"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/responder"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func (self *ClientExecutor) ResumeTransactions(

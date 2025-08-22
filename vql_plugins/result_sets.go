@@ -1,6 +1,6 @@
 package plugins
 
 import (
-	_ "www.velocidex.com/golang/velociraptor/result_sets/simple"
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
+	_ "github.com/Cyarun/CyFir/result_sets/simple"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
 )

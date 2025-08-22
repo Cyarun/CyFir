@@ -6,7 +6,7 @@ package main
 import (
 	"fmt"
 
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 func checkAdmin() error {

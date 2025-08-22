@@ -5,9 +5,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"gopkg.in/yaml.v2"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/artifacts/assets"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/artifacts/assets"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

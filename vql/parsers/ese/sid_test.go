@@ -3,7 +3,7 @@ package ese
 import (
 	"testing"
 
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 // https://devblogs.microsoft.com/oldnewthing/20040315-00/?p=40253

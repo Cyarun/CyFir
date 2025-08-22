@@ -1,9 +1,9 @@
 package services
 
 import (
-	"www.velocidex.com/golang/velociraptor/acls"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	"github.com/Cyarun/CyFir/acls"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 type ACLManager interface {

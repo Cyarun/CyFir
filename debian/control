@@ -1,13 +1,13 @@
-Source: velociraptor
+Source: cyfir
 Section: misc
 Priority: extra
-Maintainer: Velocidex Innovations <support@velocidex.com>
+Maintainer: CynorSense Solutions Pvt. Ltd. <support@cynorsense.com>
 Build-Depends: debhelper (>= 7.0.0)
 Standards-Version: 3.9.2
-Homepage: https://gitlab.com/velocidex/velociraptor
+Homepage: https://github.com/Cyarun/CyFir
 
-Package: velociraptor
+Package: cyfir
 Architecture: any
 Depends: lsb-base (>= 3.2-14)
-Description: Velociraptor Response Client
- The Velociraptor Response Client
+Description: CyFir - Cyber Forensics & IR Platform
+ CyFir - Advanced Cyber Forensics and Incident Response Platform

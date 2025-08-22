@@ -8,9 +8,9 @@ import (
 	"sync"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/vql/psutils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/vql/psutils"
 )
 
 func AvailableDiskSpace(

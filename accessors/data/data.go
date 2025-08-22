@@ -23,7 +23,7 @@ import (
 	"strings"
 
 	"github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -15,19 +15,19 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	vsql "www.velocidex.com/golang/velociraptor/vql/parsers/sql"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	vsql "github.com/Cyarun/CyFir/vql/parsers/sql"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 	vfilter "www.velocidex.com/golang/vfilter"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
-	_ "www.velocidex.com/golang/velociraptor/accessors/ntfs"
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
+	_ "github.com/Cyarun/CyFir/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/ntfs"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
 )
 
 type TestSuite struct {

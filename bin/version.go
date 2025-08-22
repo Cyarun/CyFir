@@ -23,7 +23,7 @@ import (
 
 	"github.com/Velocidex/yaml/v2"
 	"github.com/alecthomas/kingpin/v2"
-	"www.velocidex.com/golang/velociraptor/config"
+	"github.com/Cyarun/CyFir/config"
 )
 
 var (

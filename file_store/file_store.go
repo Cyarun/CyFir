@@ -22,13 +22,13 @@ import (
 	"fmt"
 	"sync"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/directory"
-	"www.velocidex.com/golang/velociraptor/file_store/memcache"
-	"www.velocidex.com/golang/velociraptor/file_store/memory"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/directory"
+	"github.com/Cyarun/CyFir/file_store/memcache"
+	"github.com/Cyarun/CyFir/file_store/memory"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

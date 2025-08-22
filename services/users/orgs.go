@@ -4,9 +4,9 @@ import (
 	"context"
 	"sort"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/acls"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // List all the orgs the user can see.

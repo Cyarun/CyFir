@@ -23,8 +23,8 @@ const French = {
         <>
           <Alert variant="warning">
             { quarantine_artifact ?
-              <p>Cette instance Velociraptor n'a pas l'artefact <b>{quarantine_artifact}</b> requis pour mettre en quarantaine les hôtes en cours d'exécution {os_name}.</p> :
-              <p>Cette instance Velociraptor n'a pas de nom d'artefact défini pour mettre en quarantaine les hôtes en cours d'exécution {os_name}.</p>
+              <p>Cette instance CyFir n'a pas l'artefact <b>{quarantine_artifact}</b> requis pour mettre en quarantaine les hôtes en cours d'exécution {os_name}.</p> :
+              <p>Cette instance CyFir n'a pas de nom d'artefact défini pour mettre en quarantaine les hôtes en cours d'exécution {os_name}.</p>
             }
           </Alert>
         </>,
@@ -275,7 +275,7 @@ const French = {
     "Google Cloud Bucket":"Google Cloud Bucket",
     "AWS Bucket":"AWS Bucket",
     "SFTP Upload":"Téléversement SFTP",
-    "Velociraptor Binary":"Binaire Vélociraptor",
+    "Velociraptor Binary":"Binaire CyFir",
     "Temp directory":"Répertoire temporaire",
     "Temp location":"Emplacement temporaire",
     "Compression Level":"Niveau de compression",
@@ -380,7 +380,7 @@ const French = {
     "This is a notebook for processing a hunt.":"C'est un carnet de notes pour gérer une chasse.",
     "ToolLocalDesc":
     <>
-    L'outil sera servi du serveur Velociraptor aux clients si nécessaire.
+    L'outil sera servi du serveur CyFir aux clients si nécessaire.
     Le client mettra l'outil en cache sur son propre disque et comparera
     le hachage la prochaine fois qu'il en aura besoin.
     Les outils ne seront téléchargés que si leur hachage a changé.
@@ -403,7 +403,7 @@ const French = {
     <>
     Le hachage de l'outil est actuellement inconnu.
     La première fois que l'outil est nécessaire,
-    Velociraptor le télécharge à partir de son URL
+    CyFir le télécharge à partir de son URL
     en amont et calcule son hachage.
     </>,
     "ToolHash":

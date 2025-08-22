@@ -5,12 +5,12 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/paths/artifacts"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/paths/artifacts"
+	"github.com/Cyarun/CyFir/result_sets"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 // Test migration from an old index arrangement.

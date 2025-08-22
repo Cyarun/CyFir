@@ -3,9 +3,9 @@ package paths_test
 import (
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func (self *PathManagerTestSuite) TestNotebookPathManager() {

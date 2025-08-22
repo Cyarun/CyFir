@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func TestEnvExpansion(t *testing.T) {

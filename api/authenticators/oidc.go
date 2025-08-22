@@ -8,10 +8,10 @@ import (
 	oidc "github.com/coreos/go-oidc/v3/oidc"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/oauth2"
-	"www.velocidex.com/golang/velociraptor/acls"
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
+	"github.com/Cyarun/CyFir/acls"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
 )
 
 type OIDCConnector interface {

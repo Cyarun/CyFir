@@ -25,7 +25,7 @@ import (
 	errors "github.com/go-errors/errors"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	"www.velocidex.com/golang/velociraptor/services"
+	"github.com/Cyarun/CyFir/services"
 )
 
 var (

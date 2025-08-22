@@ -9,7 +9,7 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"golang.org/x/sys/windows"
-	"www.velocidex.com/golang/velociraptor/services/debug"
+	"github.com/Cyarun/CyFir/services/debug"
 	"www.velocidex.com/golang/vfilter"
 )
 

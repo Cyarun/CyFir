@@ -12,7 +12,7 @@ import (
 	"github.com/Velocidex/yaml/v2"
 	"github.com/davecgh/go-spew/spew"
 	kingpin "gopkg.in/alecthomas/kingpin.v2"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 var (

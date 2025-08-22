@@ -25,13 +25,13 @@ import (
 	"strings"
 
 	"github.com/Velocidex/yaml/v2"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/config"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vutils "www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/config"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/utils"
+	vutils "github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter/types"
 )
 

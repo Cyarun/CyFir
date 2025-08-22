@@ -28,17 +28,17 @@ import (
 
 	"github.com/juju/ratelimit"
 	"github.com/prometheus/client_golang/prometheus"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/crypto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	crypto_server "www.velocidex.com/golang/velociraptor/crypto/server"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/flows"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/crypto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	crypto_server "github.com/Cyarun/CyFir/crypto/server"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/flows"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 const (

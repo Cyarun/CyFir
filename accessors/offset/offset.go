@@ -8,8 +8,8 @@ import (
 	"os"
 	"strconv"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/zip"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/zip"
 	"www.velocidex.com/golang/vfilter"
 )
 

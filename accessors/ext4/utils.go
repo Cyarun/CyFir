@@ -2,10 +2,10 @@ package ext4
 
 import (
 	ext4 "github.com/Velocidex/go-ext4/parser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/readers"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/readers"
 	"www.velocidex.com/golang/vfilter"
 )
 

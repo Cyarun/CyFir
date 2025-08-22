@@ -18,5 +18,5 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package plugins
 
 import (
-	_ "www.velocidex.com/golang/velociraptor/vql/darwin"
+	_ "github.com/Cyarun/CyFir/vql/darwin"
 )

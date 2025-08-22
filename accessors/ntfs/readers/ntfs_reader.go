@@ -10,12 +10,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"www.velocidex.com/golang/go-ntfs/parser"
 	ntfs "www.velocidex.com/golang/go-ntfs/parser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/utils"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	vql_constants "www.velocidex.com/golang/velociraptor/vql/constants"
-	"www.velocidex.com/golang/velociraptor/vql/readers"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/utils"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	vql_constants "github.com/Cyarun/CyFir/vql/constants"
+	"github.com/Cyarun/CyFir/vql/readers"
 	"www.velocidex.com/golang/vfilter"
 )
 

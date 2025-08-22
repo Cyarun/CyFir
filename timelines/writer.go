@@ -14,15 +14,15 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/json"
-	vjson "www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	timelines_proto "www.velocidex.com/golang/velociraptor/timelines/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/json"
+	vjson "github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/result_sets"
+	timelines_proto "github.com/Cyarun/CyFir/timelines/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 const (

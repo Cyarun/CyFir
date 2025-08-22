@@ -8,10 +8,10 @@ import (
 	"net"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/files"
-	"www.velocidex.com/golang/velociraptor/vql/networking"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/files"
+	"github.com/Cyarun/CyFir/vql/networking"
 )
 
 type Logger struct {

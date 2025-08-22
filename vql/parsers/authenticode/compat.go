@@ -7,7 +7,7 @@ import (
 	"os"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"io"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type ValueBuffer struct {

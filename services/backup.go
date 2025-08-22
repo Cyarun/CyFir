@@ -8,8 +8,8 @@ import (
 	"sync"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store/api"
 	"www.velocidex.com/golang/vfilter"
 )
 

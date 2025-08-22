@@ -5,7 +5,7 @@ import (
 	"encoding/base32"
 	"encoding/base64"
 
-	"www.velocidex.com/golang/velociraptor/constants"
+	"github.com/Cyarun/CyFir/constants"
 )
 
 func (self *OrgManager) SetOrgIdForTesting(a string) {

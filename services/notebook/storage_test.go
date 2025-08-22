@@ -3,15 +3,15 @@ package notebook_test
 import (
 	"time"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/scheduler"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vtesting"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/scheduler"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vtesting"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func (self *NotebookManagerTestSuite) TestNotebookStorage() {

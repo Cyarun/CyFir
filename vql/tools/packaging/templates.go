@@ -9,16 +9,16 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/yaml/v2"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (
 	RPMClientTemplate = map[string]string{
 		"ServiceDefinition": `
 [Unit]
-Description=Velociraptor client
+Description=CyFir client
 After=syslog.target network.target
 
 [Service]
@@ -465,7 +465,7 @@ func (self *PackageSpec) OutputFilename() string {
 
 func NewClientRPMSpec() *PackageSpec {
 	return &PackageSpec{
-		OutputFilenameTemplate: "velociraptor_client_{{ .Version }}_{{ .Arch }}.rpm",
+		OutputFilenameTemplate: "cyfir_client_{{ .Version }}_{{ .Arch }}.rpm",
 		Files: ordereddict.NewDict().
 			Set("{{.ConfigPath}}", FileSpec{
 				Template: `{{ .ConfigYaml }}`,
@@ -488,25 +488,25 @@ func NewClientRPMSpec() *PackageSpec {
 			}),
 		Templates: RPMClientTemplate,
 		Expansion: TemplateExpansion{
-			Name:            "velociraptor-client",
-			Maintainer:      "Velocidex Enterprises",
-			MaintainerEmail: "support@velocidex.com",
-			Homepage:        "https://www.velocidex.com",
+			Name:            "cyfir-client",
+			Maintainer:      "CynorSense Solutions",
+			MaintainerEmail: "support@cynorsense.com",
+			Homepage:        "https://cynorsense.com",
 			Depends:         "libcap2-bin, systemd",
 
-			ConfigPath:             "/etc/velociraptor/client.config.yaml",
-			VelociraptorBinaryPath: "/usr/local/bin/velociraptor_client",
-			ServerUser:             "velociraptor",
-			SystemdServiceFile:     "velociraptor_client.service",
-			SysvService:            "velociraptor_client",
-			ServiceDescription:     "Velociraptor is an endpoint monitoring tool",
+			ConfigPath:             "/etc/cyfir/client.config.yaml",
+			VelociraptorBinaryPath: "/usr/local/bin/cyfir_client",
+			ServerUser:             "cyfir",
+			SystemdServiceFile:     "cyfir_client.service",
+			SysvService:            "cyfir_client",
+			ServiceDescription:     "CyFir is an endpoint monitoring tool",
 		},
 	}
 }
 
 func NewClientDebSpec() *PackageSpec {
 	return &PackageSpec{
-		OutputFilenameTemplate: "velociraptor_client_{{ .Version }}_{{ .Arch }}.deb",
+		OutputFilenameTemplate: "cyfir_client_{{ .Version }}_{{ .Arch }}.deb",
 		Files: ordereddict.NewDict().
 			Set("{{.ConfigPath}}", FileSpec{
 				Template: `{{ .ConfigYaml }}`,
@@ -529,17 +529,17 @@ func NewClientDebSpec() *PackageSpec {
 			}),
 		Templates: DebClientTemplates,
 		Expansion: TemplateExpansion{
-			Name:            "velociraptor-client",
-			Maintainer:      "Velocidex Enterprises",
-			MaintainerEmail: "support@velocidex.com",
-			Homepage:        "https://www.velocidex.com",
+			Name:            "cyfir-client",
+			Maintainer:      "CynorSense Solutions",
+			MaintainerEmail: "support@cynorsense.com",
+			Homepage:        "https://cynorsense.com",
 
-			ConfigPath:             "/etc/velociraptor/client.config.yaml",
-			VelociraptorBinaryPath: "/usr/local/bin/velociraptor_client",
-			ServerUser:             "velociraptor",
-			SystemdServiceFile:     "velociraptor_client.service",
-			SysvService:            "velociraptor_client",
-			ServiceDescription:     "Velociraptor client package.",
+			ConfigPath:             "/etc/cyfir/client.config.yaml",
+			VelociraptorBinaryPath: "/usr/local/bin/cyfir_client",
+			ServerUser:             "cyfir",
+			SystemdServiceFile:     "cyfir_client.service",
+			SysvService:            "cyfir_client",
+			ServiceDescription:     "CyFir client package.",
 		},
 	}
 }
@@ -548,13 +548,12 @@ func NewServerRPMSpec() *PackageSpec {
 	return &PackageSpec{
 		Server: true,
 		OutputFilenameTemplate: `{{- if eq .Variant "master" -}}
-velociraptor-server-master-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.rpm
+cyfir-server-master-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.rpm
 {{- else if eq .Variant "minion" -}}
-velociraptor-server-minion-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.rpm
+cyfir-server-minion-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.rpm
 {{- else -}}
-velociraptor-server-{{ .Version }}.{{ .Arch }}.rpm
-{{- end -}}
-`,
+cyfir-server-{{ .Version }}.{{ .Arch }}.rpm
+{{- end -}}`,
 		Files: ordereddict.NewDict().
 			Set("{{.ConfigPath}}", FileSpec{
 				Template: `{{ .ConfigYaml }}`,
@@ -579,18 +578,18 @@ velociraptor-server-{{ .Version }}.{{ .Arch }}.rpm
 			}),
 		Templates: RPMServerTemplates,
 		Expansion: TemplateExpansion{
-			Name:            "velociraptor-server",
-			Maintainer:      "Velocidex Enterprises",
-			MaintainerEmail: "support@velocidex.com",
-			Homepage:        "https://www.velocidex.com",
+			Name:            "cyfir-server",
+			Maintainer:      "CynorSense Solutions",
+			MaintainerEmail: "support@cynorsense.com",
+			Homepage:        "https://cynorsense.com",
 			Depends:         "libcap2-bin, systemd",
 
-			ConfigPath:             "/etc/velociraptor/server.config.yaml",
-			VelociraptorBinaryPath: "/usr/local/bin/velociraptor",
-			ServerUser:             "velociraptor",
-			SystemdServiceFile:     "velociraptor_server.service",
-			SysvService:            "velociraptor",
-			ServiceDescription:     "Velociraptor server",
+			ConfigPath:             "/etc/cyfir/server.config.yaml",
+			VelociraptorBinaryPath: "/usr/local/bin/cyfir",
+			ServerUser:             "cyfir",
+			SystemdServiceFile:     "cyfir_server.service",
+			SysvService:            "cyfir",
+			ServiceDescription:     "CyFir server",
 		},
 	}
 }
@@ -599,13 +598,12 @@ func NewServerDebSpec() *PackageSpec {
 	return &PackageSpec{
 		Server: true,
 		OutputFilenameTemplate: `{{- if eq .Variant "master" -}}
-velociraptor-server-master-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.deb
+cyfir-server-master-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.deb
 {{- else if eq .Variant "minion" -}}
-velociraptor-server-minion-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.deb
+cyfir-server-minion-{{ .Version }}.{{ .Arch }}-{{ .NodeName}}.deb
 {{- else -}}
-velociraptor-server-{{ .Version }}.{{ .Arch }}.deb
-{{- end -}}
-`,
+cyfir-server-{{ .Version }}.{{ .Arch }}.deb
+{{- end -}}`,
 		Files: ordereddict.NewDict().
 			Set("{{.ConfigPath}}", FileSpec{
 				Template: `{{ .ConfigYaml }}`,
@@ -630,18 +628,18 @@ velociraptor-server-{{ .Version }}.{{ .Arch }}.deb
 			}),
 		Templates: DebServerTemplates,
 		Expansion: TemplateExpansion{
-			Name:            "velociraptor-server",
-			Maintainer:      "Velocidex Enterprises",
-			MaintainerEmail: "support@velocidex.com",
-			Homepage:        "https://www.velocidex.com",
+			Name:            "cyfir-server",
+			Maintainer:      "CynorSense Solutions",
+			MaintainerEmail: "support@cynorsense.com",
+			Homepage:        "https://cynorsense.com",
 			Depends:         "libcap2-bin, systemd",
 
-			ConfigPath:             "/etc/velociraptor/server.config.yaml",
-			VelociraptorBinaryPath: "/usr/local/bin/velociraptor",
-			ServerUser:             "velociraptor",
-			SystemdServiceFile:     "velociraptor_server.service",
-			SysvService:            "velociraptor",
-			ServiceDescription:     "Velociraptor server",
+			ConfigPath:             "/etc/cyfir/server.config.yaml",
+			VelociraptorBinaryPath: "/usr/local/bin/cyfir",
+			ServerUser:             "cyfir",
+			SystemdServiceFile:     "cyfir_server.service",
+			SysvService:            "cyfir",
+			ServiceDescription:     "CyFir server",
 		},
 	}
 }

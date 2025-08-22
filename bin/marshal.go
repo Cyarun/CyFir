@@ -5,8 +5,8 @@ import (
 	"os"
 
 	errors "github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/vql/tools"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/vql/tools"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/marshal"
 	"www.velocidex.com/golang/vfilter/types"

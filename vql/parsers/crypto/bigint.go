@@ -4,7 +4,7 @@ import (
 	"errors"
 	"math/big"
 
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 )
 
 // The default bigint marshaller uses a long integer but this may not

@@ -6,7 +6,7 @@ import (
 	"errors"
 	"io"
 
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // This is an at-rest crypto storage file.

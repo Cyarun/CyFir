@@ -3,8 +3,8 @@ package utils
 import (
 	"strings"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // Normalize the base path. If base path is not specified or / return

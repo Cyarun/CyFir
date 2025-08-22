@@ -8,12 +8,12 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	errors "github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/uploads"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/uploads"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 )
 
 var (

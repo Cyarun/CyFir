@@ -7,7 +7,7 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/pkg/sftp"
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type SFTPFileInfo struct {

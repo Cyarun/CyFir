@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"path"
 
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services/users"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services/users"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Build a config file from the intermediate survey

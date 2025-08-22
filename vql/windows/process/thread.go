@@ -12,9 +12,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"golang.org/x/sys/windows"
-	"www.velocidex.com/golang/velociraptor/acls"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	vwindows "www.velocidex.com/golang/velociraptor/vql/windows"
+	"github.com/Cyarun/CyFir/acls"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	vwindows "github.com/Cyarun/CyFir/vql/windows"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 )

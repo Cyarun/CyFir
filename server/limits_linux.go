@@ -24,8 +24,8 @@ package server
 import (
 	"syscall"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
 )
 
 // On linux we can use a system call to increase our file handle

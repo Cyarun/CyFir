@@ -13,7 +13,7 @@ import (
 	"github.com/rifflock/lfshook"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/sys/windows"
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 )
 
 var (

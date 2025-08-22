@@ -7,12 +7,12 @@ import (
 	"time"
 
 	"github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/uploader"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/uploads"
+	"github.com/Cyarun/CyFir/accessors"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/uploader"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/uploads"
 	"www.velocidex.com/golang/vfilter"
 )
 

@@ -15,7 +15,7 @@ import (
 	"os"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

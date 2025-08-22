@@ -3,12 +3,12 @@ package startup
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/executor/throttler"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/orgs"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/executor/throttler"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/orgs"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 // Start minimal services for tools.

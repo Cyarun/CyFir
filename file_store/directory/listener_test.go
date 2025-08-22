@@ -7,9 +7,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/directory"
-	"www.velocidex.com/golang/velociraptor/vtesting"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/directory"
+	"github.com/Cyarun/CyFir/vtesting"
 )
 
 func (self *TestSuite) TestListener() {

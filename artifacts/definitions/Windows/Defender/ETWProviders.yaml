@@ -1,0 +1,261 @@
+name: Windows.Defender.ETWProviders
+author: Claude Code Integration
+description: |
+  This artifact monitors Windows Defender ETW providers for real-time threat
+  detection, scanning activities, and protection events.
+
+  Windows Defender uses multiple ETW providers for comprehensive logging:
+  - Microsoft-Windows-Windows Defender: Core Defender operations
+  - Microsoft-Antimalware-Service: Antimalware service events
+  - Microsoft-Windows-Security-Mitigations: Exploit protection events
+  - Microsoft-Antimalware-Protection: Real-time protection events
+
+  This provides deeper visibility than event logs, capturing:
+  - Real-time scan operations and results
+  - File reputation checks and cloud lookups
+  - Behavior monitoring events
+  - Exploit protection triggers
+  - Network inspection events
+  - Memory scanning operations
+
+  **NOTE:** This requires administrator privileges and may generate high volumes
+  of events on active systems. Consider filtering by process or threat types
+  for production monitoring.
+
+reference:
+  - https://docs.microsoft.com/en-us/windows/security/threat-protection/microsoft-defender-antivirus/
+  - https://github.com/repnz/etw-providers-docs
+
+parameters:
+  - name: Provider
+    description: "Windows Defender ETW provider to monitor"
+    type: choices
+    default: WindowsDefender
+    choices:
+      - WindowsDefender
+      - AntimalwareService
+      - SecurityMitigations
+      - AntimalwareProtection
+      - All
+
+  - name: ProviderMap
+    type: hidden
+    default: |
+      Provider,GUID,Description
+      WindowsDefender,{11CD958A-C507-4EF3-B3F2-5FD9DFBD2C78},Microsoft-Windows-Windows Defender
+      AntimalwareService,{751EF305-6C6E-4FED-B847-02EF79D26AEF},Microsoft-Antimalware-Service
+      SecurityMitigations,{85A62A0D-7E17-485F-9D4F-749A287193A6},Microsoft-Windows-Security-Mitigations
+      AntimalwareProtection,{E4B70372-261F-4C54-8FA6-A5A7914A73DA},Microsoft-Antimalware-Protection
+
+  - name: ProcessRegex
+    description: "Filter by process name regex"
+    type: regex
+    default: "."
+
+  - name: ThreatNameRegex
+    description: "Filter by threat name regex"
+    type: regex
+    default: "."
+
+  - name: FilePathRegex
+    description: "Filter by file path regex"
+    type: regex
+    default: "."
+
+  - name: EventTypes
+    description: "Types of events to monitor"
+    type: multichoice
+    default: '["ThreatDetection", "ScanOperations", "RealTimeProtection"]'
+    choices:
+      - ThreatDetection
+      - ScanOperations
+      - RealTimeProtection
+      - CloudLookup
+      - BehaviorMonitoring
+      - ExploitProtection
+      - NetworkInspection
+      - ConfigChanges
+
+  - name: HighSeverityOnly
+    description: "Only capture high severity threats"
+    type: bool
+    default: false
+
+type: CLIENT_EVENT
+
+sources:
+  - query: |
+      -- Build provider list based on selection
+      LET ProviderData = SELECT *
+        FROM parse_csv(filename=ProviderMap, accessor="data")
+
+      LET Providers = if(condition=Provider = "All",
+        then=ProviderData,
+        else=filter(list=ProviderData, condition={Provider=Provider}))
+
+      -- Event ID mappings for different providers
+      LET DefenderEventTypes <= dict(
+        `1116`="ThreatDetection",  `1117`="ThreatDetection",
+        `1118`="ThreatDetection",  `1119`="ThreatDetection", 
+        `1001`="ScanOperations",   `1002`="ScanOperations",
+        `1003`="ScanOperations",   `1004`="ScanOperations",
+        `5001`="RealTimeProtection", `5004`="RealTimeProtection",
+        `5007`="RealTimeProtection", `5008`="RealTimeProtection",
+        `2000`="ConfigChanges",    `2001`="ConfigChanges",
+        `3002`="CloudLookup",      `3007`="CloudLookup",
+        `1008`="BehaviorMonitoring", `1015`="BehaviorMonitoring",
+        `5012`="ExploitProtection", `5013`="ExploitProtection",
+        `1020`="NetworkInspection", `1021`="NetworkInspection"
+      )
+
+      LET SeverityLevels <= dict(
+        `1`="Low", `2`="Medium", `3`="High", `4`="Critical", `5`="Severe"
+      )
+
+      -- Monitor selected providers
+      LET ETWEvents = SELECT * FROM foreach(
+        row=Providers,
+        query={
+          SELECT 
+            System.TimeStamp AS EventTime,
+            System.ID AS EventID,
+            System.ProcessID AS ProcessID,
+            System.ThreadID AS ThreadID,
+            System.ActivityID AS ActivityID,
+            Description AS ProviderName,
+            GUID AS ProviderGUID,
+            get(item=DefenderEventTypes, field=str(str=System.ID)) AS EventType,
+            
+            -- Common fields across providers
+            EventData.ThreatName AS ThreatName,
+            EventData.Path AS FilePath,
+            EventData.ProcessName AS ProcessName,
+            EventData.User AS User,
+            EventData.SeverityID AS SeverityID,
+            get(item=SeverityLevels, field=str(str=EventData.SeverityID)) AS Severity,
+            EventData.CategoryID AS CategoryID,
+            EventData.DetectionSource AS DetectionSource,
+            EventData.`Detection ID` AS DetectionID,
+            
+            -- Scan related fields
+            EventData.`Scan ID` AS ScanID,
+            EventData.`Scan Type` AS ScanType,
+            EventData.`Scan Parameters` AS ScanParameters,
+            EventData.`Start Time` AS ScanStartTime,
+            EventData.`End Time` AS ScanEndTime,
+            
+            -- Real-time protection fields
+            EventData.`Feature Name` AS FeatureName,
+            EventData.`New Value` AS NewValue,
+            EventData.`Old Value` AS OldValue,
+            
+            -- Cloud lookup fields
+            EventData.`File Hash` AS FileHash,
+            EventData.`Reputation` AS Reputation,
+            EventData.`Cloud Timeout` AS CloudTimeout,
+            
+            -- Behavior monitoring fields
+            EventData.`Behavior ID` AS BehaviorID,
+            EventData.`Behavior Type` AS BehaviorType,
+            EventData.`Target Process` AS TargetProcess,
+            
+            -- Network inspection fields
+            EventData.`URL` AS URL,
+            EventData.`IP Address` AS IPAddress,
+            EventData.`Port` AS Port,
+            EventData.`Protocol` AS Protocol,
+            
+            -- Additional metadata
+            EventData.`Signature Version` AS SignatureVersion,
+            EventData.`Engine Version` AS EngineVersion,
+            EventData.`Product Version` AS ProductVersion,
+            EventData.`Error Code` AS ErrorCode,
+            EventData.`Error Description` AS ErrorDescription,
+            
+            -- Full event data for analysis
+            EventData,
+            
+            -- Process tracking information
+            process_tracker_get(id=System.ProcessID).Data AS ProcessInfo,
+            
+            -- Generate alert classifications
+            if(condition=EventData.ThreatName,
+               then=format(format="THREAT: %v (Severity: %v)",
+                          args=[EventData.ThreatName, Severity]),
+               else="") AS ThreatAlert,
+            
+            if(condition=System.ID in (5001, 5004, 5007, 5008),
+               then="REALTIME_PROTECTION_EVENT",
+               else=if(condition=System.ID in (1116, 1117, 1118, 1119),
+                      then="MALWARE_DETECTION",
+                      else=if(condition=System.ID in (5012, 5013),
+                             then="EXPLOIT_PROTECTION",
+                             else="OTHER"))) AS AlertCategory
+
+          FROM watch_etw(guid=GUID, description=Description, any=0xFFFFFFFF)
+          WHERE get(item=DefenderEventTypes, field=str(str=System.ID)) IN EventTypes
+            AND ProcessName =~ ProcessRegex
+            AND if(condition=ThreatNameRegex != ".",
+                   then=ThreatName =~ ThreatNameRegex,
+                   else=TRUE)
+            AND if(condition=FilePathRegex != ".",
+                   then=FilePath =~ FilePathRegex,
+                   else=TRUE)
+            AND if(condition=HighSeverityOnly,
+                   then=SeverityID >= 3,
+                   else=TRUE)
+        })
+
+      SELECT * FROM ETWEvents
+      ORDER BY EventTime DESC
+
+reports:
+  - type: CLIENT
+    template: |
+      # Windows Defender ETW Monitoring Report
+
+      {{ $events := Query "SELECT * FROM source()" }}
+      {{ $threats := Query "SELECT count() as Count, ThreatName, Severity FROM source() WHERE ThreatName GROUP BY ThreatName, Severity ORDER BY Count DESC" }}
+      {{ $categories := Query "SELECT count() as Count, AlertCategory FROM source() WHERE AlertCategory != 'OTHER' GROUP BY AlertCategory ORDER BY Count DESC" }}
+      {{ $processes := Query "SELECT count() as Count, ProcessName FROM source() WHERE ProcessName GROUP BY ProcessName ORDER BY Count DESC LIMIT 10" }}
+      
+      ## Summary
+      
+      **Total Events:** {{ len $events }}
+      **Monitoring Period:** Last monitoring session
+      
+      ## Threat Detections
+      {{ if $threats }}
+      | Threat Name | Severity | Count |
+      |-------------|----------|-------|
+      {{ range $threats }}| {{ .ThreatName }} | {{ .Severity }} | {{ .Count }} |
+      {{ end }}
+      {{ else }}
+      No threats detected during monitoring.
+      {{ end }}
+      
+      ## Event Categories
+      {{ if $categories }}
+      | Category | Count |
+      |----------|-------|
+      {{ range $categories }}| {{ .AlertCategory }} | {{ .Count }} |
+      {{ end }}
+      {{ end }}
+      
+      ## Top Processes
+      {{ if $processes }}
+      | Process | Event Count |
+      |---------|-------------|
+      {{ range $processes }}| {{ .ProcessName }} | {{ .Count }} |
+      {{ end }}
+      {{ end }}
+      
+      ## Recent Critical Events
+      {{ range $events | Where "AlertCategory != 'OTHER'" | Slice 0 5 }}
+      **{{ .EventTime }}** - {{ .AlertCategory }}
+      {{ if .ThreatName }}🚨 **Threat:** {{ .ThreatName }} ({{ .Severity }}){{ end }}
+      {{ if .ProcessName }}📁 **Process:** {{ .ProcessName }}{{ end }}
+      {{ if .FilePath }}📄 **File:** {{ .FilePath }}{{ end }}
+      
+      ---
+      {{ end }}

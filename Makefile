@@ -14,13 +14,13 @@ test_light:
 	go test -v --tags server_vql ./...
 
 golden:
-	./output/velociraptor -v --config artifacts/testdata/windows/test.config.yaml golden artifacts/testdata/server/testcases/ --env srcDir=`pwd` --filter=${GOLDEN}
+	./output/cyfir -v --config artifacts/testdata/windows/test.config.yaml golden artifacts/testdata/server/testcases/ --env srcDir=`pwd` --filter=${GOLDEN}
 
 debug_golden:
 	dlv debug --build-flags="-tags 'server_vql extras'" ./bin/ -- --config artifacts/testdata/windows/test.config.yaml golden artifacts/testdata/server/testcases/ --env srcDir=`pwd` --disable_alarm -v --debug --filter=${GOLDEN}
 
 references:
-	./output/velociraptor vql export docs/references/vql.yaml > docs/references/vql.yaml.tmp
+	./output/cyfir vql export docs/references/vql.yaml > docs/references/vql.yaml.tmp
 	mv docs/references/vql.yaml.tmp docs/references/vql.yaml
 
 release:
@@ -110,7 +110,7 @@ archive_artifacts:
 	zip -r release_artifacts_$(basename "$(git status | head -1)").zip artifacts/definitions/ -i \*.yaml
 
 translations:
-	python3 ./scripts/find_i8n_translations.py ./gui/velociraptor/src/components/i8n/
+	python3 ./scripts/find_i8n_translations.py ./gui/cyfir/src/components/i8n/
 
 config_check:
 	go run ./docs/references/sample_config/main.go ./docs/references/server.config.yaml

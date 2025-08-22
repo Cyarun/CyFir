@@ -36,12 +36,12 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	ntfs "www.velocidex.com/golang/go-ntfs/parser"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/files"
-	"www.velocidex.com/golang/velociraptor/vql/windows/wmi"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/files"
+	"github.com/Cyarun/CyFir/vql/windows/wmi"
 	"www.velocidex.com/golang/vfilter"
 )
 

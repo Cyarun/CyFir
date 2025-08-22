@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func TestCompression(t *testing.T) {

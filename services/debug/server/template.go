@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"path"
 
-	"www.velocidex.com/golang/velociraptor/services/debug"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/services/debug"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 const (

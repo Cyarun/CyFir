@@ -7,12 +7,12 @@ import (
 	"sync"
 
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_client "www.velocidex.com/golang/velociraptor/crypto/client"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/crypto/utils"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_client "github.com/Cyarun/CyFir/crypto/client"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/crypto/utils"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/services/writeback"
 )
 
 type KeepPolicy bool

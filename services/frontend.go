@@ -7,9 +7,9 @@ import (
 	"os"
 	"sync/atomic"
 
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // The frontend service manages load balancing between multiple
@@ -19,7 +19,7 @@ import (
 var (
 	FrontendIsMaster          = fmt.Errorf("FrontendIsMaster: %w", os.ErrNotExist)
 	NotRunningInFrontendError = utils.Wrap(utils.InvalidConfigError,
-		"Command not available when running without a frontend service. To perform administrative tasks on the command line, connect to the server using the API https://docs.velociraptor.app/docs/server_automation/server_api/")
+		"Command not available when running without a frontend service. To perform administrative tasks on the command line, connect to the server using the API https://cyfir.cynorsense.com/docs/server_automation/server_api/")
 
 	// A bypass for RequireFrontend() set during tests.
 	AllowFrontendPlugins = atomic.Bool{}

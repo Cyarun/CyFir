@@ -8,8 +8,8 @@ import (
 	"syscall"
 
 	"golang.org/x/sys/windows/svc/eventlog"
-	"www.velocidex.com/golang/velociraptor/json"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/json"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 func checkAdmin() error {

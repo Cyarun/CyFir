@@ -16,7 +16,7 @@ description: |
        this is a utility artifact meant to be called by other artifacts, the
        tool should be specified in the artifact calling this artifact.
        Alternatively, configure the tool by using
-       [VQL](https://docs.velociraptor.app/vql_reference/server/inventory_add/).
+       [VQL](https://cyfir.cynorsense.com/vql_reference/server/inventory_add/).
 
      - DebName: The name of the package to install, or an absolute path to a deb
        file to install. Each word is considered as a package name or file name.

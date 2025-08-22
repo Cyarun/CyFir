@@ -4,8 +4,8 @@ import (
 	"io"
 	"os"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/vtesting"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/vtesting"
 )
 
 type MemoryReader struct {

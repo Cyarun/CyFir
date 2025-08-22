@@ -9,8 +9,8 @@ import (
 	"io"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	vjson "www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/file_store/api"
+	vjson "github.com/Cyarun/CyFir/json"
 )
 
 type replacement_record struct {

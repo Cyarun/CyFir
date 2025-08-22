@@ -6,7 +6,7 @@ import (
 	"runtime/debug"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type readAdapter struct {

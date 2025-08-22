@@ -28,8 +28,8 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	_ "github.com/mattn/go-sqlite3"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	vfilter "www.velocidex.com/golang/vfilter"
 )
 

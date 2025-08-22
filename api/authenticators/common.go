@@ -8,10 +8,10 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	jwt "github.com/golang-jwt/jwt/v4"
-	utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
+	utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
 )
 
 var (

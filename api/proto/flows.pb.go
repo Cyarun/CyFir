@@ -8,8 +8,8 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	proto1 "www.velocidex.com/golang/velociraptor/crypto/proto"
-	proto "www.velocidex.com/golang/velociraptor/flows/proto"
+	proto1 "github.com/Cyarun/CyFir/crypto/proto"
+	proto "github.com/Cyarun/CyFir/flows/proto"
 )
 
 const (

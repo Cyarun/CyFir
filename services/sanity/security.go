@@ -1,12 +1,12 @@
 package sanity
 
 import (
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/file"
-	"www.velocidex.com/golang/velociraptor/accessors/file_store"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql/common"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/file"
+	"github.com/Cyarun/CyFir/accessors/file_store"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql/common"
 )
 
 func (self *SanityChecks) CheckSecuritySettings(

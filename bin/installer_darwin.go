@@ -31,8 +31,8 @@ import (
 	"strings"
 
 	errors "github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

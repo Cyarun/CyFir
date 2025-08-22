@@ -4,7 +4,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func TestMountFilesystemAccessor(t *testing.T) {

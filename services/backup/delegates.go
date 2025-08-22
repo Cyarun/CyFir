@@ -7,9 +7,9 @@ import (
 	"io/fs"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/reporting"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/reporting"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

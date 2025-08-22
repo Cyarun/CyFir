@@ -13,7 +13,7 @@ const Japanese = {
     "Quarantine description": (<>
           <p>このホストを隔離しようとしています。</p>
           <p>
-            隔離中は、Velociraptorサーバを除く他のネットワークと通信することはできません。
+            隔離中は、CyFirサーバを除く他のネットワークと通信することはできません。
           </p>
         </>),
     "Cannot Quarantine host": "ホストを隔離できない",
@@ -21,8 +21,8 @@ const Japanese = {
         <>
           <Alert variant="warning">
             { quarantine_artifact ?
-              <p>このVelociraptorインスタンスは{os_name}を実行しているホストを検疫するために必要な<b>{quarantine_artifact}</b>アーティファクトを持っていません。</p> :
-              <p>このVelociraptorインスタンスには、{os_name}を実行しているホストを検疫するためのアーティファクト名が定義されていません。</p>
+              <p>このCyFirインスタンスは{os_name}を実行しているホストを検疫するために必要な<b>{quarantine_artifact}</b>アーティファクトを持っていません。</p> :
+              <p>このCyFirインスタンスには、{os_name}を実行しているホストを検疫するためのアーティファクト名が定義されていません。</p>
             }
           </Alert>
         </>,
@@ -265,7 +265,7 @@ const Japanese = {
     "Google Cloud Bucket":"Google Cloudバケット",
     "AWS Bucket":"AWSバケット",
     "SFTP Upload":"SFTPアップロード",
-    "Velociraptor Binary":"Velociraptorバイナリ",
+    "Velociraptor Binary":"CyFirバイナリ",
     "Temp directory":"一時的なディレクトリ",
     "Temp location":"一時的なロケーション",
     "Compression Level":"圧縮レベル",
@@ -370,7 +370,7 @@ const Japanese = {
     "This is a notebook for processing a hunt.":"ハントを処理するためのノートブックです。",
     "ToolLocalDesc":
     <>
-    ツールは必要に応じてVelociraptorサーバからクライアントに提供されます。
+    ツールは必要に応じてCyFirサーバからクライアントに提供されます。
     クライアントはそのツールを自分のディスクにキャッシュし、次に必要になったときにハッシュを比較します。
     ツールは、ハッシュが変更された場合のみダウンロードされます。
     </>,
@@ -386,7 +386,7 @@ const Japanese = {
     "PlaceHolder":
     <>
       ツールのハッシュは現在不明です。
-      初めてツールが必要になったとき、Velociraptorはその上流のURLからツールをダウンロードし、そのハッシュを計算します。
+      初めてツールが必要になったとき、CyFirはその上流のURLからツールをダウンロードし、そのハッシュを計算します。
     </>,
     "ToolHash":
     <>
@@ -395,12 +395,12 @@ const Japanese = {
     </>,
     "AdminOverride":
     <>
-      ツールは管理者が手動でアップロードしたもので、次回のVelociraptorサーバの更新時には自動的にアップグレードされません。
+      ツールは管理者が手動でアップロードしたもので、次回のCyFirサーバの更新時には自動的にアップグレードされません。
     </>,
     "ToolError":
     <>
       ツールのハッシュは不明で、URLも定義されていません。
-      Velociraptorが解決できないため、このツールをアーティファクトで使用することは不可能になります。
+      CyFirが解決できないため、このツールをアーティファクトで使用することは不可能になります。
       手動でファイルをアップロードすることはできます。
     </>,
     "OverrideToolDesc":
@@ -482,10 +482,10 @@ const Japanese = {
 
     "Theme":"テーマ",
     "Select a theme":"テーマの選択",
-    "Default Velociraptor":"デフォルトのVelociraptor",
-    "Velociraptor (light)":"Velociraptor (ライト)",
+    "Default Velociraptor":"デフォルトのCyFir",
+    "Velociraptor (light)":"CyFir (ライト)",
     "Ncurses (light)":"Ncurses (ライト)",
-    "Velociraptor (dark)":"Velociraptor (ダーク)",
+    "Velociraptor (dark)":"CyFir (ダーク)",
     "Github dimmed (dark)":"仄暗いGithub (ダーク)",
     "Cool Gray (dark)":"クールグレー (ダーク)",
     "Strawberry Milkshake (light)":"イチゴミルクシェイク (ライト)",
@@ -632,7 +632,7 @@ const Japanese = {
      "ToolPerm_LABEL_CLIENT": "クライアントのラベルとメタデータを操作できます",
      "ToolPerm_COLLECT_CLIENT": "クライアントでの新しいコレクションのスケジュールまたはキャンセル",
      "ToolPerm_START_HUNT": "新しいハントを開始",
-     "ToolPerm_COLLECT_SERVER": "Velociraptor サーバーで新しいアーティファクト コレクションをスケジュールする",
+     "ToolPerm_COLLECT_SERVER": "CyFir サーバーで新しいアーティファクト コレクションをスケジュールする",
      "ToolPerm_ARTIFACT_WRITER": "サーバー上で実行されるカスタム アーティファクトを追加または編集する",
      "ToolPerm_SERVER_ARTIFACT_WRITER": "サーバー上で実行されるカスタム アーティファクトを追加または編集する",
      "ToolPerm_EXECVE": "クライアントでの任意のコマンドの実行を許可",

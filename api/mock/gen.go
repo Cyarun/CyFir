@@ -1,3 +1,3 @@
-//go:generate mockgen  -destination api_mock.go www.velocidex.com/golang/velociraptor/api/proto APIClient,API_WatchEventClient
+//go:generate mockgen  -destination api_mock.go github.com/Cyarun/CyFir/api/proto APIClient,API_WatchEventClient
 
 package mock_proto

@@ -3,8 +3,8 @@ package api
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/api/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
+	"github.com/Cyarun/CyFir/api/proto"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
 )
 
 func (self *ApiServer) Check(

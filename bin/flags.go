@@ -7,8 +7,8 @@ import (
 	"github.com/Velocidex/sflags/gen/gkingpin"
 	kingpin "github.com/alecthomas/kingpin/v2"
 	proto "google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/json"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/json"
 )
 
 func mergeFlagConfig(config_obj *config_proto.Config,

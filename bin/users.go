@@ -24,13 +24,13 @@ import (
 	"strings"
 
 	"golang.org/x/crypto/ssh/terminal"
-	"www.velocidex.com/golang/velociraptor/api/authenticators"
-	"www.velocidex.com/golang/velociraptor/json"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/users"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/api/authenticators"
+	"github.com/Cyarun/CyFir/json"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/users"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 const (
@@ -42,7 +42,7 @@ so you should restart the server to pick up these changes.
 The recommended way to make these changes is via the API.
 See the following for more information
 
-https://docs.velociraptor.app/docs/server_automation/server_api/`
+https://cyfir.cynorsense.com/docs/server_automation/server_api/`
 )
 
 var (

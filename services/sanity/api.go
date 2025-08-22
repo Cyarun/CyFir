@@ -3,8 +3,8 @@ package sanity
 import (
 	"fmt"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
 )
 
 func (self *SanityChecks) CheckAPISettings(

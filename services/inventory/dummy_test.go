@@ -4,9 +4,9 @@ import (
 	"sync"
 
 	"github.com/stretchr/testify/assert"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/inventory"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/inventory"
 )
 
 func (self *ServicesTestSuite) TestDummyInventory() {

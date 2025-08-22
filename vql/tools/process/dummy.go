@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
-	"www.velocidex.com/golang/velociraptor/vql/functions"
+	"github.com/Cyarun/CyFir/third_party/cache"
+	"github.com/Cyarun/CyFir/vql/functions"
 	"www.velocidex.com/golang/vfilter"
 )
 

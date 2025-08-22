@@ -5,9 +5,9 @@ import (
 	"runtime"
 
 	"github.com/Showmax/go-fqdn"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/vql/psutils"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/vql/psutils"
 )
 
 // Return essential information about the client used for indexing

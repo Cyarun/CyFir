@@ -29,9 +29,9 @@ import (
 	"time"
 
 	errors "github.com/go-errors/errors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto/utils"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto/utils"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
 )
 
 type CertBundle struct {

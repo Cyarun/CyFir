@@ -9,9 +9,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/xor-gate/debpkg"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/filesystem"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/filesystem"
 	"www.velocidex.com/golang/vfilter"
 )
 

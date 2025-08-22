@@ -1,0 +1,326 @@
+name: Windows.Defender.TTPDetection
+author: Claude Code Integration
+description: |
+  This artifact combines Windows Defender telemetry with Velociraptor monitoring 
+  to detect common attack Tactics, Techniques, and Procedures (TTPs).
+
+  Correlates data from multiple sources:
+  - Windows Defender event logs and ETW
+  - Process creation and termination events
+  - File system activity monitoring
+  - Registry modifications
+  - Network connections
+  - PowerShell and script execution
+  - AMSI detections
+
+  Detects MITRE ATT&CK techniques including:
+  - T1562.001: Impair Defenses (Disable or Modify Tools)
+  - T1059.001: PowerShell execution
+  - T1055: Process Injection
+  - T1027: Obfuscated Files or Information
+  - T1112: Modify Registry
+  - T1053: Scheduled Task/Job
+  - T1071: Application Layer Protocol
+  - T1564.003: Hidden Files and Directories
+
+  **NOTE:** This is a comprehensive monitoring artifact that may generate
+  significant output. Consider filtering by specific TTPs for production use.
+
+reference:
+  - https://attack.mitre.org/
+  - https://docs.microsoft.com/en-us/windows/security/threat-protection/
+
+type: CLIENT_EVENT
+
+parameters:
+  - name: TTPs
+    description: "Attack techniques to monitor"
+    type: multichoice
+    default: '["DefenderTampering", "PowerShellAbuse", "ProcessInjection", "Obfuscation"]'
+    choices:
+      - DefenderTampering
+      - PowerShellAbuse
+      - ProcessInjection
+      - Obfuscation
+      - RegistryPersistence
+      - ScheduledTasks
+      - SuspiciousNetwork
+      - FileHiding
+      - ScriptExecution
+      - MemoryInjection
+
+  - name: SeverityThreshold
+    description: "Minimum severity level for alerts"
+    type: choices
+    default: Medium
+    choices:
+      - Low
+      - Medium
+      - High
+      - Critical
+
+  - name: CorrelationWindow
+    description: "Time window in seconds for event correlation"
+    type: int
+    default: 300
+
+  - name: EnableAMSI
+    description: "Enable AMSI scanning for suspicious content"
+    type: bool
+    default: true
+
+sources:
+  - query: |
+      -- Correlation cache for related events
+      LET CorrelationCache <= lru(size=10000)
+
+      -- Severity scoring
+      LET SeverityScores <= dict(
+        `Low`=1, `Medium`=2, `High`=3, `Critical`=4
+      )
+      LET MinSeverity <= get(item=SeverityScores, field=SeverityThreshold)
+
+      -- MITRE ATT&CK technique mappings
+      LET AttackTechniques <= dict(
+        `DefenderTampering`="T1562.001",
+        `PowerShellAbuse`="T1059.001", 
+        `ProcessInjection`="T1055",
+        `Obfuscation`="T1027",
+        `RegistryPersistence`="T1112",
+        `ScheduledTasks`="T1053",
+        `SuspiciousNetwork`="T1071",
+        `FileHiding`="T1564.003",
+        `ScriptExecution`="T1059",
+        `MemoryInjection`="T1055"
+      )
+
+      -- 1. Windows Defender Tampering Detection (T1562.001)
+      LET DefenderTamperingEvents = if(condition="DefenderTampering" in TTPs, then={
+        -- Monitor Defender configuration changes
+        SELECT "DEFENDER_TAMPERING" as AlertType,
+               EventTime as Timestamp,
+               "HIGH" as Severity,
+               get(item=AttackTechniques, field="DefenderTampering") as MitreTechnique,
+               format(format="Defender tampering detected: %v changed to %v by %v", 
+                     args=[ValueName, ValueData, ProcessName]) as Description,
+               ProcessName, ProcessCommandLine, KeyPath, ValueName, ValueData
+        FROM watch_etw(
+          description="Microsoft-Windows-Kernel-Registry",
+          guid="{70EB4F03-C1DE-4F73-A051-33D13D5413BD}", any=0x7720)
+        WHERE System.ID = 5 -- SetValueKey
+          AND (KeyPath =~ "(?i)windows defender" OR KeyPath =~ "(?i)windefend")
+          AND ValueName in ("DisableRealtimeMonitoring", "DisableBehaviorMonitoring", 
+                           "DisableOnAccessProtection", "DisableAntiSpyware", "TamperProtection")
+          AND ValueData != 0
+          AND process_tracker_get(id=System.ProcessID).Data.Name != "MsMpEng.exe"
+      }, else=[])
+
+      -- 2. PowerShell Abuse Detection (T1059.001)
+      LET PowerShellAbuseEvents = if(condition="PowerShellAbuse" in TTPs, then={
+        SELECT "POWERSHELL_ABUSE" as AlertType,
+               EventTime as Timestamp,
+               if(condition=ScriptBlockText =~ "(?i)(bypass|hidden|encoded|invoke-expression|iex|downloadstring)",
+                  then="HIGH", else="MEDIUM") as Severity,
+               get(item=AttackTechniques, field="PowerShellAbuse") as MitreTechnique,
+               format(format="Suspicious PowerShell detected: %v", args=ScriptBlockText) as Description,
+               Process.Name as ProcessName, Process.CommandLine as ProcessCommandLine,
+               ScriptBlockText, Path
+        FROM parse_evtx(filename=expand(path='%SystemRoot%\\System32\\winevt\\logs\\Microsoft-Windows-PowerShell%4Operational.evtx'))
+        WHERE System.EventID.Value = 4104
+          AND EventTime > timestamp(epoch=now() - CorrelationWindow)
+          AND ScriptBlockText =~ "(?i)(bypass|hidden|encoded|invoke-expression|iex|downloadstring|invoke-webrequest|webclient|base64|gzip|reflection|assembly)"
+      }, else=[])
+
+      -- 3. Process Injection Detection (T1055)
+      LET ProcessInjectionEvents = if(condition="ProcessInjection" in TTPs, then={
+        SELECT "PROCESS_INJECTION" as AlertType,
+               System.TimeStamp as Timestamp,
+               "HIGH" as Severity,
+               get(item=AttackTechniques, field="ProcessInjection") as MitreTechnique,
+               format(format="Potential process injection: %v -> %v", 
+                     args=[Process.Name, EventData.ImageName]) as Description,
+               Process.Name as ProcessName, Process.CommandLine as ProcessCommandLine,
+               EventData.ImageName as TargetImage, EventData.ProcessId as TargetPID
+        FROM watch_etw(guid='{22fb2cd6-0e7b-422b-a0c7-2fad1fd0e716}',
+                      description="Microsoft-Windows-Kernel-Process", any=0x50)
+        WHERE System.ID = 5 -- ImageLoad
+          AND EventData.ImageName =~ "(?i)\\.(dll|exe)$"
+          AND Process.Name in ("powershell.exe", "cmd.exe", "wscript.exe", "cscript.exe", "rundll32.exe")
+          AND EventData.ImageName NOT =~ "(?i)c:\\\\windows\\\\system32"
+      }, else=[])
+
+      -- 4. File Obfuscation Detection (T1027)
+      LET ObfuscationEvents = if(condition="Obfuscation" in TTPs, then={
+        SELECT "OBFUSCATION" as AlertType,
+               now() as Timestamp,
+               if(condition=amsi(string=Content) = "ResultDetected", then="CRITICAL", else="MEDIUM") as Severity,
+               get(item=AttackTechniques, field="Obfuscation") as MitreTechnique,
+               format(format="Obfuscated content detected in %v", args=OSPath) as Description,
+               OSPath, Size, Modified, Hash
+        FROM glob(globs="C:\\Users\\**\\*.{ps1,bat,cmd,vbs,js}")
+        WHERE Size > 1000 AND Size < 1024*1024 -- 1KB to 1MB
+          AND Content =~ "(?i)(base64|gzip|deflate|compress|encode|obfuscat)"
+          AND Modified > timestamp(epoch=now() - CorrelationWindow)
+      }, else=[])
+
+      -- 5. Registry Persistence Detection (T1112)
+      LET RegistryPersistenceEvents = if(condition="RegistryPersistence" in TTPs, then={
+        SELECT "REGISTRY_PERSISTENCE" as AlertType,
+               System.TimeStamp as Timestamp,
+               "MEDIUM" as Severity,
+               get(item=AttackTechniques, field="RegistryPersistence") as MitreTechnique,
+               format(format="Registry persistence: %v = %v", args=[KeyName, EventData.ValueName]) as Description,
+               Process.Name as ProcessName, Process.CommandLine as ProcessCommandLine,
+               KeyName, EventData.ValueName as ValueName, EventData.NewValue as ValueData
+        FROM watch_etw(
+          description="Microsoft-Windows-Kernel-Registry",
+          guid="{70EB4F03-C1DE-4F73-A051-33D13D5413BD}", any=0x7720)
+        WHERE System.ID = 5 -- SetValueKey
+          AND (KeyName =~ "(?i)\\\\run" OR KeyName =~ "(?i)\\\\runonce" OR 
+               KeyName =~ "(?i)\\\\winlogon" OR KeyName =~ "(?i)\\\\userinit")
+          AND EventData.ValueName NOT in ("SecurityHealth", "OneDriveSetup", "Teams")
+      }, else=[])
+
+      -- 6. Suspicious Network Activity (T1071)
+      LET SuspiciousNetworkEvents = if(condition="SuspiciousNetwork" in TTPs, then={
+        SELECT "SUSPICIOUS_NETWORK" as AlertType,
+               EventTime as Timestamp,
+               "MEDIUM" as Severity,
+               get(item=AttackTechniques, field="SuspiciousNetwork") as MitreTechnique,
+               format(format="Suspicious network: %v connected to %v", args=[Process.Name, Answer]) as Description,
+               Process.Name as ProcessName, Process.CommandLine as ProcessCommandLine,
+               Query as Domain, Answer as IPAddress, Type as QueryType
+        FROM watch_etw(
+          description="Microsoft-Windows-DNS-Client",
+          guid="{1C95126E-7EEA-49A9-A3FE-A378B03DDB4D}")
+        WHERE System.ID = 3008
+          AND Query =~ "(?i)\\.(tk|ml|ga|cf|onion|bit|duckdns|servegame|serveminecraft)$"
+          AND Process.Name NOT in ("svchost.exe", "explorer.exe", "chrome.exe", "firefox.exe")
+      }, else=[])
+
+      -- Combine all event sources
+      LET AllEvents = SELECT * FROM chain(
+        DefenderTamperingEvents,
+        PowerShellAbuseEvents, 
+        ProcessInjectionEvents,
+        ObfuscationEvents,
+        RegistryPersistenceEvents,
+        SuspiciousNetworkEvents
+      )
+
+      -- Apply severity filtering and correlation
+      LET FilteredEvents = SELECT *,
+        -- Add correlation ID based on process and time window
+        format(format="%v_%v_%v", args=[ProcessName, int(int=Timestamp)/CorrelationWindow, MitreTechnique]) as CorrelationID,
+        
+        -- Calculate risk score
+        if(condition=Severity = "LOW", then=1,
+           else=if(condition=Severity = "MEDIUM", then=2,
+                  else=if(condition=Severity = "HIGH", then=3,
+                         else=4))) as RiskScore,
+        
+        -- Enhanced AMSI scanning for suspicious content
+        if(condition=EnableAMSI AND Description =~ "(?i)(script|powershell|command)",
+           then=amsi(string=Description),
+           else="") as AMSIResult
+
+      FROM AllEvents
+      WHERE RiskScore >= MinSeverity
+
+      -- Perform event correlation and output final results
+      SELECT Timestamp, AlertType, Severity, MitreTechnique, Description,
+             ProcessName, ProcessCommandLine, CorrelationID, RiskScore, AMSIResult,
+             
+             -- Add contextual information
+             if(condition=ProcessName, 
+                then=process_tracker_get(id=getpid()).Data.ParentInfo,
+                else=null) as ParentProcess,
+             
+             -- Count correlated events
+             if(condition=set(item=CorrelationCache, field=CorrelationID, 
+                             value=get(item=CorrelationCache, field=CorrelationID) + 1),
+                then=get(item=CorrelationCache, field=CorrelationID),
+                else=1) as CorrelatedEventCount,
+             
+             -- Generate recommendations
+             if(condition=AlertType = "DEFENDER_TAMPERING",
+                then="Immediately investigate for malware and restore Defender settings",
+                else=if(condition=AlertType = "POWERSHELL_ABUSE",
+                       then="Review PowerShell execution policy and audit script content",
+                       else=if(condition=AlertType = "PROCESS_INJECTION",
+                              then="Analyze process memory and check for malicious DLLs",
+                              else="Investigate source and intent of detected activity"))) as Recommendation
+
+      FROM FilteredEvents
+      WHERE CorrelatedEventCount >= 1
+      ORDER BY RiskScore DESC, Timestamp DESC
+
+reports:
+  - type: CLIENT
+    template: |
+      # Windows Defender TTP Detection Report
+
+      {{ $events := Query "SELECT * FROM source()" }}
+      {{ $critical := Query "SELECT * FROM source() WHERE Severity = 'CRITICAL'" }}
+      {{ $high := Query "SELECT * FROM source() WHERE Severity = 'HIGH'" }}
+      {{ $techniques := Query "SELECT count() as Count, MitreTechnique, AlertType FROM source() GROUP BY MitreTechnique, AlertType ORDER BY Count DESC" }}
+      
+      ## Executive Summary
+      
+      **Total Detections:** {{ len $events }}
+      **Critical Alerts:** {{ len $critical }}
+      **High Severity:** {{ len $high }}
+      **Monitoring Window:** {{ .Get "CorrelationWindow" }} seconds
+      
+      ## Critical Alerts Requiring Immediate Action
+      {{ if $critical }}
+      {{ range $critical }}
+      🚨 **CRITICAL** - {{ .Timestamp }}
+      **Technique:** {{ .MitreTechnique }} ({{ .AlertType }})
+      **Process:** {{ .ProcessName }}
+      **Description:** {{ .Description }}
+      **Recommendation:** {{ .Recommendation }}
+      {{ if .AMSIResult }}**AMSI Result:** {{ .AMSIResult }}{{ end }}
+      
+      ---
+      {{ end }}
+      {{ else }}
+      ✅ No critical alerts detected.
+      {{ end }}
+      
+      ## MITRE ATT&CK Techniques Detected
+      {{ if $techniques }}
+      | Technique | Alert Type | Count |
+      |-----------|------------|-------|
+      {{ range $techniques }}| {{ .MitreTechnique }} | {{ .AlertType }} | {{ .Count }} |
+      {{ end }}
+      {{ end }}
+      
+      ## Top Risk Events
+      {{ range $events | Where "Severity in ('HIGH', 'CRITICAL')" | Slice 0 10 }}
+      **{{ .Timestamp }}** - {{ .Severity }}
+      **{{ .MitreTechnique }}:** {{ .AlertType }}
+      {{ if .ProcessName }}📁 **Process:** {{ .ProcessName }}{{ end }}
+      🔍 **Description:** {{ .Description }}
+      💡 **Action:** {{ .Recommendation }}
+      {{ if .CorrelatedEventCount > 1 }}🔗 **Correlated Events:** {{ .CorrelatedEventCount }}{{ end }}
+      
+      ---
+      {{ end }}
+      
+      ## Recommendations
+      
+      1. **Immediate Actions:**
+         - Review all CRITICAL and HIGH severity alerts
+         - Validate Windows Defender configuration and protection status
+         - Check for signs of persistence mechanisms
+      
+      2. **Investigation Steps:**
+         - Correlate events with network logs and file system changes
+         - Review process execution chains for suspicious patterns
+         - Validate PowerShell execution policies and logging
+      
+      3. **Preventive Measures:**
+         - Enable comprehensive PowerShell logging
+         - Implement application whitelisting
+         - Regular security awareness training for users

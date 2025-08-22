@@ -5,8 +5,8 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 // Sanitized strings should be prefectly reversible.

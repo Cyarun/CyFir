@@ -25,7 +25,7 @@ package responder
 import (
 	"context"
 
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
 )
 
 type Responder interface {

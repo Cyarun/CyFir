@@ -6,8 +6,8 @@ import (
 	"strings"
 
 	"github.com/Velocidex/ordereddict"
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	"github.com/Cyarun/CyFir/utils"
 	"www.velocidex.com/golang/vfilter"
 )
 

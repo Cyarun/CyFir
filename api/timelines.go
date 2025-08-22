@@ -6,11 +6,11 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"google.golang.org/protobuf/types/known/emptypb"
-	"www.velocidex.com/golang/velociraptor/acls"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/services"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/acls"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/services"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 )
 
 func (self *ApiServer) AnnotateTimeline(

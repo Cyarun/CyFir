@@ -2,7 +2,7 @@ package logging
 
 import (
 	"github.com/sirupsen/logrus"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type JSONFormatter struct {

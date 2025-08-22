@@ -1,8 +1,8 @@
 package smb
 
 import (
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type SMBPathManipulator struct {

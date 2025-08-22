@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"time"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Check if the frontend certificates have expired. In the past this
@@ -20,7 +20,7 @@ import (
 // In more secure deployments we recommend removing the CA private key
 // from the server config, which prevents us from automatically
 // rekeying the certificates. See
-// https://docs.velociraptor.app/docs/deployment/security/ for
+// https://cyfir.cynorsense.com/docs/deployment/security/ for
 // relevant discussion.
 func (self *SanityChecks) CheckCertificates(
 	config_obj *config_proto.Config) error {
@@ -35,7 +35,7 @@ func (self *SanityChecks) CheckCertificates(
 
 	if cert.NotBefore.After(now) || cert.NotAfter.Before(now) {
 		logger := logging.GetLogger(config_obj, &logging.FrontendComponent)
-		logger.Error("<red>Frontend Certificate is not valid</>: Certificate Valid NotBefore %v and Not After %v but Now is %v. See https://docs.velociraptor.app/knowledge_base/tips/rolling_certificates/",
+		logger.Error("<red>Frontend Certificate is not valid</>: Certificate Valid NotBefore %v and Not After %v but Now is %v. See https://cyfir.cynorsense.com/knowledge_base/tips/rolling_certificates/",
 			cert.NotBefore.Format(time.RFC3339),
 			cert.NotAfter.Format(time.RFC3339),
 			now.Format(time.RFC3339),

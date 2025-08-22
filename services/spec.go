@@ -1,7 +1,7 @@
 package services
 
 import (
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 // The Golden test harness starts all services except for the sanity service.

@@ -41,7 +41,7 @@ sources:
 
           Sigma is an open notation for writing detection rules - It
           is supported natively in Velociraptor as described in [our
-          blog post](https://docs.velociraptor.app/blog/2024/2024-05-09-detection-engineering/)
+          blog post](https://cyfir.cynorsense.com/blog/2024/2024-05-09-detection-engineering/)
 
           Sigma relies on a set of `Log Sources` (defining possible
           sources for log events) and `Field Mappings` (an agreed upon

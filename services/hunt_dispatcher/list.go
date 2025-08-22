@@ -6,9 +6,9 @@ import (
 	"sort"
 
 	"google.golang.org/protobuf/proto"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
 )
 
 // Backwards compatibility: Figure out the list of collected hunts

@@ -6,12 +6,12 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/directory"
-	"www.velocidex.com/golang/velociraptor/file_store/tests"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/directory"
+	"github.com/Cyarun/CyFir/file_store/tests"
+	"github.com/Cyarun/CyFir/utils/tempfile"
 )
 
 type DirectoryTestSuite struct {

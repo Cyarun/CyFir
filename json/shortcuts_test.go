@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 )
 
 func TestJsonlShortcuts(t *testing.T) {

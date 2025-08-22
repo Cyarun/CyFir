@@ -6,7 +6,7 @@ import (
 	"sync"
 
 	errors "github.com/go-errors/errors"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
 )
 
 // Wrapper to provider io.ReaderAt

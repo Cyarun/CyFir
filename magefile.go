@@ -40,8 +40,8 @@ import (
 	"github.com/magefile/mage/mg"
 	"github.com/magefile/mage/sh"
 	"gopkg.in/yaml.v2"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/json"
 )
 
 var (
@@ -516,14 +516,14 @@ func build_gui_files() error {
 
 func flags() string {
 	timestamp := time.Now().Format(time.RFC3339)
-	flags := fmt.Sprintf(` -X "www.velocidex.com/golang/velociraptor/config.build_time=%s"`, timestamp)
+	flags := fmt.Sprintf(` -X "github.com/Cyarun/CyFir/config.build_time=%s"`, timestamp)
 
-	flags += fmt.Sprintf(` -X "www.velocidex.com/golang/velociraptor/config.commit_hash=%s"`, hash())
+	flags += fmt.Sprintf(` -X "github.com/Cyarun/CyFir/config.commit_hash=%s"`, hash())
 
 	// If we are running on the CI pipeline we need to know the run
 	// number and URL so we can report them.
 	if os.Getenv("GITHUB_SERVER_URL") != "" {
-		flags += fmt.Sprintf(` -X "www.velocidex.com/golang/velociraptor/config.ci_run_url=%s"`,
+		flags += fmt.Sprintf(` -X "github.com/Cyarun/CyFir/config.ci_run_url=%s"`,
 			os.ExpandEnv("$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"))
 	}
 

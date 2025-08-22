@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func TestThrottler(t *testing.T) {

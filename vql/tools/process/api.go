@@ -3,7 +3,7 @@ package process
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/third_party/cache"
+	"github.com/Cyarun/CyFir/third_party/cache"
 	"www.velocidex.com/golang/vfilter"
 )
 

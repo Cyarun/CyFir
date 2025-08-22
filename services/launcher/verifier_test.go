@@ -4,8 +4,8 @@ import (
 	"fmt"
 
 	"github.com/stretchr/testify/assert"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/launcher"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/launcher"
 )
 
 var (

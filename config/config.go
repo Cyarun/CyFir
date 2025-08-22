@@ -1,6 +1,6 @@
 /*
-Velociraptor - Dig Deeper
-Copyright (C) 2019-2025 Rapid7 Inc.
+CyFir - Cyber Forensics & IR Platform
+Copyright (C) 2024-2025 CynorSense Solutions Pvt. Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published
@@ -22,8 +22,8 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	constants "www.velocidex.com/golang/velociraptor/constants"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	constants "github.com/Cyarun/CyFir/constants"
 )
 
 // Embed build time constants into here for reporting client version.
@@ -34,14 +34,14 @@ var (
 	ci_run_url  string
 
 	versionCounter = promauto.NewCounterVec(prometheus.CounterOpts{
-		Name: "velociraptor_build",
+		Name: "cyfir_build",
 		Help: "Current version of running binary.",
 	}, []string{"commit_hash", "build_time"})
 )
 
 func GetVersion() *config_proto.Version {
 	return &config_proto.Version{
-		Name:         "velociraptor",
+		Name:         "cyfir",
 		Version:      constants.VERSION,
 		BuildTime:    build_time,
 		Commit:       commit_hash,
@@ -86,15 +86,15 @@ func GetDefaultConfig() *config_proto.Config {
 			// Specific instructions for the
 			// windows service installer.
 			WindowsInstaller: &config_proto.WindowsInstallerConfig{
-				ServiceName: "Velociraptor",
-				InstallPath: "$ProgramFiles\\Velociraptor\\" +
-					"Velociraptor.exe",
-				ServiceDescription: "Velociraptor service",
+				ServiceName: "CyFir",
+				InstallPath: "$ProgramFiles\\CyFir\\" +
+					"CyFir.exe",
+				ServiceDescription: "CyFir service",
 			},
 
 			DarwinInstaller: &config_proto.DarwinInstallerConfig{
-				ServiceName: "com.velocidex.velociraptor",
-				InstallPath: "/usr/local/sbin/velociraptor",
+				ServiceName: "com.cynorsense.cyfir",
+				InstallPath: "/usr/local/sbin/cyfir",
 			},
 
 			// If set to true this will stop
@@ -123,7 +123,7 @@ func GetDefaultConfig() *config_proto.Config {
 			Links: []*config_proto.GUILink{
 				{
 					Text:    "Documentation",
-					Url:     "https://docs.velociraptor.app/",
+					Url:     "https://cyfir.cynorsense.com/",
 					NewTab:  true,
 					Type:    "sidebar",
 					IconUrl: VeloIconDataURL,

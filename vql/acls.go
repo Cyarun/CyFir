@@ -3,8 +3,8 @@ package vql
 import (
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/acls"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	"github.com/Cyarun/CyFir/acls"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 	"www.velocidex.com/golang/vfilter"
 )
 

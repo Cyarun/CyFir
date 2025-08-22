@@ -7,13 +7,13 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/timelines"
-	timelines_proto "www.velocidex.com/golang/velociraptor/timelines/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql/functions"
-	"www.velocidex.com/golang/velociraptor/vql/sorter"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/timelines"
+	timelines_proto "github.com/Cyarun/CyFir/timelines/proto"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql/functions"
+	"github.com/Cyarun/CyFir/vql/sorter"
 	"www.velocidex.com/golang/vfilter"
 )
 

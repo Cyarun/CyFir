@@ -2,8 +2,8 @@ package launcher
 
 import (
 	"google.golang.org/protobuf/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
 )
 
 func redactTask(task *crypto_proto.VeloMessage) *crypto_proto.VeloMessage {

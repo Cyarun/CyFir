@@ -5,11 +5,11 @@ import (
 
 	"github.com/go-errors/errors"
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type NullCryptoManager struct{}

@@ -5,9 +5,9 @@ import (
 	"encoding/base64"
 	"fmt"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func GenerateNewKeys(config_obj *config_proto.Config) error {

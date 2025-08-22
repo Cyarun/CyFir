@@ -6,8 +6,8 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/tracee_velociraptor/userspace/types/trace"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql/tools/dns"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql/tools/dns"
 )
 
 func parseDNSResponse(event *ordereddict.Dict) *ordereddict.Dict {

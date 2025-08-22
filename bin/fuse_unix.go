@@ -11,12 +11,12 @@ import (
 	"github.com/Velocidex/ordereddict"
 	kingpin "github.com/alecthomas/kingpin/v2"
 	"github.com/hanwen/go-fuse/v2/fs"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	"www.velocidex.com/golang/velociraptor/tools/fuse"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	"github.com/Cyarun/CyFir/accessors"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	"github.com/Cyarun/CyFir/tools/fuse"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 )
 
 var (

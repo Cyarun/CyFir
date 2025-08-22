@@ -1,6 +1,6 @@
 package users
 
-import config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+import config_proto "github.com/Cyarun/CyFir/config/proto"
 
 var (
 	DefaultLinks = []*config_proto.GUILink{

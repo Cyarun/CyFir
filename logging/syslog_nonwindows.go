@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	lSyslog "github.com/sirupsen/logrus/hooks/syslog"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func maybeAddRemoteSyslog(

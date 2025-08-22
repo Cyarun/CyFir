@@ -5,12 +5,12 @@ import (
 	"os"
 
 	"github.com/Velocidex/ordereddict"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/reporting"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/startup"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/reporting"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/startup"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
 	"www.velocidex.com/golang/vfilter"
 )
 

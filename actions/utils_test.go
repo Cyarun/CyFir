@@ -3,8 +3,8 @@ package actions_test
 import (
 	"fmt"
 
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/json"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/json"
 )
 
 // Format various response packets so they can be better matched for

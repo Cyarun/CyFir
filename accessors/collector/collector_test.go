@@ -6,16 +6,16 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vql/filesystem"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vql/filesystem"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 	"www.velocidex.com/golang/vfilter"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
-	_ "www.velocidex.com/golang/velociraptor/accessors/ntfs"
+	_ "github.com/Cyarun/CyFir/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/ntfs"
 )
 
 const (

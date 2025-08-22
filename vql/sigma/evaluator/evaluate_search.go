@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strings"
 
-	"www.velocidex.com/golang/velociraptor/vql/sigma/evaluator/modifiers"
+	"github.com/Cyarun/CyFir/vql/sigma/evaluator/modifiers"
 	"www.velocidex.com/golang/vfilter/types"
 
 	"github.com/Velocidex/sigma-go"

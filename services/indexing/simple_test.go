@@ -1,9 +1,9 @@
 package indexing_test
 
 import (
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func (self *TestSuite) TestSimpleIndex() {

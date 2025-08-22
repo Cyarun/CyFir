@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/Velocidex/json"
-	vjson "www.velocidex.com/golang/velociraptor/json"
+	vjson "github.com/Cyarun/CyFir/json"
 	"www.velocidex.com/golang/vfilter"
 )
 

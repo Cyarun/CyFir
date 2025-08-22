@@ -17,9 +17,9 @@ package ext4
 import (
 	"context"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/psutils"
+	"github.com/Cyarun/CyFir/accessors"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/psutils"
 	"www.velocidex.com/golang/vfilter"
 )
 

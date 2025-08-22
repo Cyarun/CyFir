@@ -4,5 +4,5 @@
 package sql
 
 import (
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/filesystems"
+	_ "github.com/Cyarun/CyFir/vql/windows/filesystems"
 )

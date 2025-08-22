@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strings"
 
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 // Implement a src IP filter if required. This adds an additional

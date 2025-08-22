@@ -3,8 +3,8 @@ package notebook
 import (
 	"regexp"
 
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/timelines"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/timelines"
 )
 
 type TimelineFilter struct {

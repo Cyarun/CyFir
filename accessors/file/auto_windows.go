@@ -13,8 +13,8 @@ import (
 	"os"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/acls"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/acls"
 	"www.velocidex.com/golang/vfilter"
 )
 

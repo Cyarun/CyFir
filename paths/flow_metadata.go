@@ -3,7 +3,7 @@ package paths
 import (
 	"fmt"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 // Represents paths for storing an uploaded file in the filestore. The

@@ -9,7 +9,7 @@ import (
 
 	"github.com/alecthomas/participle"
 	"gopkg.in/yaml.v3"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/reformat"
 )

@@ -4,11 +4,11 @@ import (
 	"os"
 	"testing"
 
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/utils/tempfile"
 )
 
 func BenchmarkSetSubject(b *testing.B) {

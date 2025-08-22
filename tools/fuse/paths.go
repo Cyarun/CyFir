@@ -3,7 +3,7 @@ package fuse
 import (
 	"regexp"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 var (

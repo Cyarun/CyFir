@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 	"www.velocidex.com/golang/vfilter"
 )
 

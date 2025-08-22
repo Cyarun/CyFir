@@ -11,7 +11,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 )
 
 // A Writer writes records to a CSV encoded file.

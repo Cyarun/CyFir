@@ -8,8 +8,8 @@ package services
 import (
 	"context"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	flows_proto "www.velocidex.com/golang/velociraptor/flows/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	flows_proto "github.com/Cyarun/CyFir/flows/proto"
 )
 
 func GetServerEventManager(config_obj *config_proto.Config) (ServerEventManager, error) {

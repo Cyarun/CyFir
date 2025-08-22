@@ -6,12 +6,12 @@ import (
 	"testing"
 
 	"github.com/Velocidex/yaml/v2"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services/writeback"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func readWritebackFile(t *testing.T, filename string) (*config_proto.Writeback, error) {

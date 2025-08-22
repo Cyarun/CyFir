@@ -4,7 +4,7 @@ import (
 	"net/url"
 
 	errors "github.com/go-errors/errors"
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 )
 
 var (

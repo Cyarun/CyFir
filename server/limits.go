@@ -22,7 +22,7 @@
 package server
 
 import (
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func IncreaseLimits(config_obj *config_proto.Config) {}

@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/memory"
-	"www.velocidex.com/golang/velociraptor/file_store/tests"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/memory"
+	"github.com/Cyarun/CyFir/file_store/tests"
 )
 
 type MemoryTestSuite struct {

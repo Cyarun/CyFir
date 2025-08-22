@@ -6,9 +6,9 @@ import (
 
 	"github.com/charmbracelet/huh"
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func reportCurrentSetup(config_obj *config_proto.Config) string {
@@ -47,7 +47,7 @@ func GenerateFrontendPackages(config_obj *config_proto.Config) error {
 		huh.NewNote().
 			Title("Welcome to the Velociraptor multi-frontend configuration generator").
 			Description(`Warning: This configuration is currently experimental. Read more about
-it here https://docs.velociraptor.app/docs/deployment/cloud/multifrontend/
+it here https://cyfir.cynorsense.com/docs/deployment/cloud/multifrontend/
 
 I will be adding an extra minion frontend to the configuration.
 

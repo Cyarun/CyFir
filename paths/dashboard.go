@@ -1,6 +1,6 @@
 package paths
 
-import "www.velocidex.com/golang/velociraptor/file_store/api"
+import "github.com/Cyarun/CyFir/file_store/api"
 
 // Dashboards may live in a global place or a client specific place
 func NewDashboardPathManager(dashboard_type, artifact,

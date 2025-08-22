@@ -12,20 +12,20 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/third_party/zip"
-	"www.velocidex.com/golang/velociraptor/uploads"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vql/server"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/third_party/zip"
+	"github.com/Cyarun/CyFir/uploads"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vql/server"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/data"
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/data"
+	_ "github.com/Cyarun/CyFir/accessors/file"
 )
 
 var (

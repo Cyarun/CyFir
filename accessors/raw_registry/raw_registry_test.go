@@ -8,19 +8,19 @@ import (
 	"testing"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/glob"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/glob"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 	"www.velocidex.com/golang/vfilter"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
-	_ "www.velocidex.com/golang/velociraptor/accessors/ntfs"
+	_ "github.com/Cyarun/CyFir/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/ntfs"
 )
 
 func TestAccessorRawReg(t *testing.T) {

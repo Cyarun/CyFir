@@ -5,7 +5,7 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	timelines_proto "www.velocidex.com/golang/velociraptor/timelines/proto"
+	timelines_proto "github.com/Cyarun/CyFir/timelines/proto"
 )
 
 const (

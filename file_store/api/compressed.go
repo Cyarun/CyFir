@@ -7,7 +7,7 @@ import (
 	"sort"
 	"unsafe"
 
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Compressed files contain a sequence of chunks, each compressed

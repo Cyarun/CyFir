@@ -2,7 +2,7 @@
 
 package writeback
 
-import config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+import config_proto "github.com/Cyarun/CyFir/config/proto"
 
 func GetFileWritebackStore(config_obj *config_proto.Config) WritebackStorer {
 	location, _ := WritebackLocation(config_obj)

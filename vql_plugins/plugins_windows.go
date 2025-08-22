@@ -18,10 +18,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package plugins
 
 import (
-	_ "www.velocidex.com/golang/velociraptor/vql/windows"
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/etw"
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/filesystems"
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/process"
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/registry"
-	_ "www.velocidex.com/golang/velociraptor/vql/windows/wmi"
+	_ "github.com/Cyarun/CyFir/vql/windows"
+	_ "github.com/Cyarun/CyFir/vql/windows/etw"
+	_ "github.com/Cyarun/CyFir/vql/windows/filesystems"
+	_ "github.com/Cyarun/CyFir/vql/windows/process"
+	_ "github.com/Cyarun/CyFir/vql/windows/registry"
+	_ "github.com/Cyarun/CyFir/vql/windows/wmi"
 )

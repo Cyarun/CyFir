@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"sync"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_client "www.velocidex.com/golang/velociraptor/crypto/client"
-	"www.velocidex.com/golang/velociraptor/executor"
-	"www.velocidex.com/golang/velociraptor/services/writeback"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_client "github.com/Cyarun/CyFir/crypto/client"
+	"github.com/Cyarun/CyFir/executor"
+	"github.com/Cyarun/CyFir/services/writeback"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func StartHttpCommunicatorService(

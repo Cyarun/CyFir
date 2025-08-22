@@ -27,8 +27,8 @@ import (
 	errors "github.com/go-errors/errors"
 	"google.golang.org/protobuf/encoding/protojson"
 	"google.golang.org/protobuf/proto"
-	"www.velocidex.com/golang/velociraptor/json"
-	vjson "www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
+	vjson "github.com/Cyarun/CyFir/json"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/types"
 )

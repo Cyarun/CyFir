@@ -6,7 +6,7 @@ package registry
 import (
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type readDirLRUItem struct {

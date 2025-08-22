@@ -1,8 +1,8 @@
 package protocols
 
 import (
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 )
 

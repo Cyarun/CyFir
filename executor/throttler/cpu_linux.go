@@ -7,7 +7,7 @@ import (
 	"os"
 	"syscall"
 
-	"www.velocidex.com/golang/velociraptor/vql/psutils"
+	"github.com/Cyarun/CyFir/vql/psutils"
 )
 
 const (

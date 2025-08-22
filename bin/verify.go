@@ -5,11 +5,11 @@ import (
 	"io/ioutil"
 	"os"
 
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	logging "www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/services/launcher"
-	"www.velocidex.com/golang/velociraptor/startup"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	logging "github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/services/launcher"
+	"github.com/Cyarun/CyFir/startup"
 )
 
 var (

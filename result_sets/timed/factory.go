@@ -4,11 +4,11 @@ import (
 	"context"
 
 	"github.com/Velocidex/json"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/result_sets"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/result_sets"
 
-	_ "www.velocidex.com/golang/velociraptor/result_sets/simple"
+	_ "github.com/Cyarun/CyFir/result_sets/simple"
 )
 
 type TimedFactory struct{}

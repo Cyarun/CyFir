@@ -5,9 +5,9 @@ import (
 	"time"
 
 	"github.com/Velocidex/ordereddict"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/paths"
-	timelines_proto "www.velocidex.com/golang/velociraptor/timelines/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/paths"
+	timelines_proto "github.com/Cyarun/CyFir/timelines/proto"
 	"www.velocidex.com/golang/vfilter"
 )
 

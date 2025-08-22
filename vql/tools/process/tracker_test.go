@@ -8,19 +8,19 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
-	"www.velocidex.com/golang/velociraptor/vtesting/goldie"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/goldie"
 	"www.velocidex.com/golang/vfilter"
 
-	_ "www.velocidex.com/golang/velociraptor/result_sets/simple"
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	_ "www.velocidex.com/golang/velociraptor/vql/protocols"
+	_ "github.com/Cyarun/CyFir/result_sets/simple"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	_ "github.com/Cyarun/CyFir/vql/protocols"
 )
 
 type testCases_t struct {

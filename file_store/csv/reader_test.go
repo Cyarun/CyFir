@@ -10,7 +10,7 @@ import (
 	"testing"
 	"unicode/utf8"
 
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 )
 
 func TestRead(t *testing.T) {

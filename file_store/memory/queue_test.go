@@ -4,13 +4,13 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/file_store"
-	"www.velocidex.com/golang/velociraptor/file_store/memory"
-	"www.velocidex.com/golang/velociraptor/file_store/tests"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/file_store"
+	"github.com/Cyarun/CyFir/file_store/memory"
+	"github.com/Cyarun/CyFir/file_store/tests"
 
-	_ "www.velocidex.com/golang/velociraptor/result_sets/simple"
-	_ "www.velocidex.com/golang/velociraptor/result_sets/timed"
+	_ "github.com/Cyarun/CyFir/result_sets/simple"
+	_ "github.com/Cyarun/CyFir/result_sets/timed"
 )
 
 func TestMemoryQueueManager(t *testing.T) {

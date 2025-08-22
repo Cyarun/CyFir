@@ -18,7 +18,7 @@ linters:
       settings:
         printf:
           funcs:
-            - (www.velocidex.com/golang/velociraptor/logging.LogContext).Error
+            - (cynorsense.com/golang/velociraptor/logging.LogContext).Error
   exclusions:
     generated: lax
     presets:

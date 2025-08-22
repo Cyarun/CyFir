@@ -14,7 +14,7 @@ const Spanish = {
           <p>
             Durante la cuarentena, el host no podrá
             comunicarse con ninguna otra red, salvo con el
-            servidor de Velociraptor.
+            servidor de CyFir.
           </p>
         </>),
     "Cannot Quarantine host": "No se puede poner en cuarentena el host",
@@ -22,8 +22,8 @@ const Spanish = {
         <>
           <Alert variant="warning">
             { quarantine_artifact ?
-              <p>Esta instancia de Velociraptor no tiene el artefacto <b>{quarantine_artifact}</b> necesario para poner en cuarentena los hosts que ejecutan {os_name}.</p> :
-              <p>Esta instancia de Velociraptor no tiene un nombre de artefacto definido para poner en cuarentena los hosts que ejecutan {os_name}.</p>
+              <p>Esta instancia de CyFir no tiene el artefacto <b>{quarantine_artifact}</b> necesario para poner en cuarentena los hosts que ejecutan {os_name}.</p> :
+              <p>Esta instancia de CyFir no tiene un nombre de artefacto definido para poner en cuarentena los hosts que ejecutan {os_name}.</p>
             }
           </Alert>
         </>,

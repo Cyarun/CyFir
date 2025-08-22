@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/accessors"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/data"
+	_ "github.com/Cyarun/CyFir/accessors/data"
 )
 
 func TestAccessorOffset(t *testing.T) {

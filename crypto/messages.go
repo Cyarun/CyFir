@@ -5,9 +5,9 @@ import (
 
 	errors "github.com/go-errors/errors"
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // Once a message is decoded the MessageInfo contains metadata about it.

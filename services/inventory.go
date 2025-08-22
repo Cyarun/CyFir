@@ -10,8 +10,8 @@ package services
 import (
 	"context"
 
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
 )
 
 func GetInventory(config_obj *config_proto.Config) (Inventory, error) {

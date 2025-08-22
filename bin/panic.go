@@ -9,9 +9,9 @@ import (
 
 	kingpin "github.com/alecthomas/kingpin/v2"
 	"github.com/mitchellh/panicwrap"
-	"www.velocidex.com/golang/velociraptor/config"
-	"www.velocidex.com/golang/velociraptor/constants"
-	logging "www.velocidex.com/golang/velociraptor/logging"
+	"github.com/Cyarun/CyFir/config"
+	"github.com/Cyarun/CyFir/constants"
+	logging "github.com/Cyarun/CyFir/logging"
 )
 
 func writeLogOnPanic() error {

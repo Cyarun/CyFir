@@ -32,7 +32,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	"www.velocidex.com/golang/velociraptor/constants"
+	"github.com/Cyarun/CyFir/constants"
 	"www.velocidex.com/golang/vfilter"
 )
 

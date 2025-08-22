@@ -5,13 +5,13 @@ import (
 	"net/http"
 
 	"github.com/sirupsen/logrus"
-	api_proto "www.velocidex.com/golang/velociraptor/api/proto"
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/constants"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/logging"
-	http_utils "www.velocidex.com/golang/velociraptor/utils/http"
+	api_proto "github.com/Cyarun/CyFir/api/proto"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/constants"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/logging"
+	http_utils "github.com/Cyarun/CyFir/utils/http"
 )
 
 func GetUserInfo(ctx context.Context,

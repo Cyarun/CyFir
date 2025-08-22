@@ -13,7 +13,7 @@ const Vietnamese = {
         <>
           <p>Bạn đang chuẩn bị cách ly host này.</p>
           <p>
-            Trong thời gian cách ly, host không thể kết nối với bất kỳ mạng khác, ngoại trừ Velociraptor server.
+            Trong thời gian cách ly, host không thể kết nối với bất kỳ mạng khác, ngoại trừ CyFir server.
           </p>
         </>),
     "Cannot Quarantine host": "Không thể cách ly host.",
@@ -21,8 +21,8 @@ const Vietnamese = {
         <>
           <Alert variant="warning">
             { quarantine_artifact ?
-              <p>Phiên bản Velociraptor này không có artifact <b>{quarantine_artifact}</b> cần thiết để cách ly hosts đang chạy {os_name}</p> :
-              <p>Phiên bản Velociraptor này không có artifact xác định để cách ly hosts đang chạy {os_name}.</p>
+              <p>Phiên bản CyFir này không có artifact <b>{quarantine_artifact}</b> cần thiết để cách ly hosts đang chạy {os_name}</p> :
+              <p>Phiên bản CyFir này không có artifact xác định để cách ly hosts đang chạy {os_name}.</p>
             }
           </Alert>
         </>,
@@ -66,7 +66,7 @@ const Vietnamese = {
 
     "ToolLocalDesc":
     <>
-   Công cụ sẽ được cung cấp từ máy chủ Velociraptor cho máy trạm nếu cần. Máy trạm sẽ lưu công cụ vào bộ nhớ cache trên ổ cứng và so sánh hàm băm vào lần chạy tiếp theo. Các công cụ sẽ chỉ được tải xuống nếu hàm băm của chúng đã thay đổi.
+   Công cụ sẽ được cung cấp từ máy chủ CyFir cho máy trạm nếu cần. Máy trạm sẽ lưu công cụ vào bộ nhớ cache trên ổ cứng và so sánh hàm băm vào lần chạy tiếp theo. Các công cụ sẽ chỉ được tải xuống nếu hàm băm của chúng đã thay đổi.
     </>,
     "ServedFromURL": (url)=>
     <>
@@ -80,7 +80,7 @@ const Vietnamese = {
     </>,
     "PlaceHolder":
     <>
-    Hash của công cụ chưa được tính. Lần đầu khởi chạy công cụ, Velociraptor sẽ tải xuống từ URL và tính hash của nó.
+    Hash của công cụ chưa được tính. Lần đầu khởi chạy công cụ, CyFir sẽ tải xuống từ URL và tính hash của nó.
     </>,
     "ToolHash":
     <>
@@ -88,11 +88,11 @@ const Vietnamese = {
     </>,
     "AdminOverride":
     <>
-    Công cụ được quản trị viên tải lên thủ công - nó sẽ không được nâng cấp tự động trong lần cập nhật máy chủ Velociraptor tiếp theo.
+    Công cụ được quản trị viên tải lên thủ công - nó sẽ không được nâng cấp tự động trong lần cập nhật máy chủ CyFir tiếp theo.
     </>,
     "ToolError":
     <>
-    Hàm băm của công cụ không được xác định và không có URL nào được xác định. Sẽ không thể sử dụng công cụ này vì Velociraptor không thể xử lý yêu cầu. Bạn có thể tải tệp lên theo cách thủ công.
+    Hàm băm của công cụ không được xác định và không có URL nào được xác định. Sẽ không thể sử dụng công cụ này vì CyFir không thể xử lý yêu cầu. Bạn có thể tải tệp lên theo cách thủ công.
     </>,
     "OverrideToolDesc":
     <>
@@ -155,7 +155,7 @@ const Vietnamese = {
      "ToolPerm_LABEL_CLIENT": "Có thể thao tác với nhãn và metadata",
      "ToolPerm_COLLECT_CLIENT": "Lên lịch hoặc hủy các collection mới trên máy trạm",
      "ToolPerm_START_HUNT": "Bắt đầu một lần hunt mới",
-     "ToolPerm_COLLECT_SERVER": "Lên lịch một artifact collections trên Velociraptor servers",
+     "ToolPerm_COLLECT_SERVER": "Lên lịch một artifact collections trên CyFir servers",
      "ToolPerm_ARTIFACT_WRITER": "Thêm hoặc chỉnh sửa các artifacts tùy chỉnh chạy trên máy chủ",
      "ToolPerm_SERVER_ARTIFACT_WRITER": "Thêm hoặc chỉnh sửa các artifacts tùy chỉnh chạy trên máy chủ",
      "ToolPerm_EXECVE": "Được phép thực thi các lệnh tùy ý trên máy trạm",

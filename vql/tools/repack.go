@@ -25,19 +25,19 @@ import (
 	"strings"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/accessors/file"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/config"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/csv"
-	"www.velocidex.com/golang/velociraptor/json"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/services"
-	"www.velocidex.com/golang/velociraptor/third_party/zip"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/accessors/file"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/config"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/file_store/csv"
+	"github.com/Cyarun/CyFir/json"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/services"
+	"github.com/Cyarun/CyFir/third_party/zip"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/arg_parser"
 )
@@ -429,7 +429,7 @@ func RepackMSI(
 	cab_header_offset, page_0_present := page_map[0]
 
 	if len(page_map) == 0 || cab_header_length == 0 || !page_0_present {
-		scope.Log("client_repack: I can not seem to locate the embedded config???? To repack an MSI, be sure to build from the placeholder config as described in https://docs.velociraptor.app/docs/deployment/clients/#building-a-custom-msi-package-from-scratch .")
+		scope.Log("client_repack: I can not seem to locate the embedded config???? To repack an MSI, be sure to build from the placeholder config as described in https://cyfir.cynorsense.com/docs/deployment/clients/#building-a-custom-msi-package-from-scratch .")
 		return vfilter.Null{}
 	}
 

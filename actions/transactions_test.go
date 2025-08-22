@@ -3,14 +3,14 @@ package actions_test
 import (
 	"os"
 
-	"www.velocidex.com/golang/velociraptor/actions"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/responder"
-	"www.velocidex.com/golang/velociraptor/utils/tempfile"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/actions"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/responder"
+	"github.com/Cyarun/CyFir/utils/tempfile"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/file"
 )
 
 func (self *ClientVQLTestSuite) TestTransactions() {

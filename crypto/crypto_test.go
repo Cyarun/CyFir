@@ -32,14 +32,14 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/crypto/client"
-	crypto_client "www.velocidex.com/golang/velociraptor/crypto/client"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	crypto_server "www.velocidex.com/golang/velociraptor/crypto/server"
-	crypto_utils "www.velocidex.com/golang/velociraptor/crypto/utils"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/crypto/client"
+	crypto_client "github.com/Cyarun/CyFir/crypto/client"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	crypto_server "github.com/Cyarun/CyFir/crypto/server"
+	crypto_utils "github.com/Cyarun/CyFir/crypto/utils"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type TestSuite struct {

@@ -14,9 +14,9 @@ import (
 	"os"
 	"sync"
 
-	"www.velocidex.com/golang/velociraptor/accessors"
-	"www.velocidex.com/golang/velociraptor/acls"
-	"www.velocidex.com/golang/velociraptor/uploads"
+	"github.com/Cyarun/CyFir/accessors"
+	"github.com/Cyarun/CyFir/acls"
+	"github.com/Cyarun/CyFir/uploads"
 	"www.velocidex.com/golang/vfilter"
 )
 

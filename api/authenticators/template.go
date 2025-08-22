@@ -5,12 +5,12 @@ import (
 	"strings"
 	"text/template"
 
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	utils "www.velocidex.com/golang/velociraptor/api/utils"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/gui/velociraptor"
-	gui_assets "www.velocidex.com/golang/velociraptor/gui/velociraptor"
-	"www.velocidex.com/golang/velociraptor/json"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	utils "github.com/Cyarun/CyFir/api/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/gui/velociraptor"
+	gui_assets "github.com/Cyarun/CyFir/gui/velociraptor"
+	"github.com/Cyarun/CyFir/json"
 )
 
 func renderRejectionMessage(

@@ -4,11 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/directory"
-	"www.velocidex.com/golang/velociraptor/file_store/memory"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/directory"
+	"github.com/Cyarun/CyFir/file_store/memory"
 )
 
 // GetQueueManager selects an appropriate QueueManager object based on

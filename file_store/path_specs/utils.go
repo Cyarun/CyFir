@@ -3,8 +3,8 @@ package path_specs
 import (
 	"strings"
 
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 // If child_components are a subpath of parent_components (i.e. are

@@ -8,13 +8,13 @@ import (
 	"testing"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/accessors"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vql/acl_managers"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/accessors"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vql/acl_managers"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
-	_ "www.velocidex.com/golang/velociraptor/accessors/file"
-	_ "www.velocidex.com/golang/velociraptor/accessors/ntfs"
+	_ "github.com/Cyarun/CyFir/accessors/file"
+	_ "github.com/Cyarun/CyFir/accessors/ntfs"
 )
 
 func TestAccessorGzip(t *testing.T) {

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"strings"
 
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 var (

@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	"www.velocidex.com/golang/velociraptor/utils"
+	"github.com/Cyarun/CyFir/result_sets"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 func ResultSetFlusher(ctx context.Context, rs_writer result_sets.ResultSetWriter) func() {

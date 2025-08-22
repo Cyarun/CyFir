@@ -3,7 +3,7 @@ package actions
 import (
 	"sync"
 
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
 )
 
 // Track the row index from the beginning of the query to report to

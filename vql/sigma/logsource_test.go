@@ -6,14 +6,14 @@ import (
 	"os"
 
 	"github.com/Velocidex/ordereddict"
-	"www.velocidex.com/golang/velociraptor/json"
-	vql_subsystem "www.velocidex.com/golang/velociraptor/vql"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/json"
+	vql_subsystem "github.com/Cyarun/CyFir/vql"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 	"www.velocidex.com/golang/vfilter"
 
 	// For items plugin
-	_ "www.velocidex.com/golang/velociraptor/vql/common"
-	_ "www.velocidex.com/golang/velociraptor/vql/golang"
+	_ "github.com/Cyarun/CyFir/vql/common"
+	_ "github.com/Cyarun/CyFir/vql/golang"
 )
 
 func (self *SigmaTestSuite) TestLogSourceIterator() {

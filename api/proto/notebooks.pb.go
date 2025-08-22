@@ -8,9 +8,9 @@ import (
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
 	sync "sync"
-	proto2 "www.velocidex.com/golang/velociraptor/actions/proto"
-	proto1 "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	proto "www.velocidex.com/golang/velociraptor/flows/proto"
+	proto2 "github.com/Cyarun/CyFir/actions/proto"
+	proto1 "github.com/Cyarun/CyFir/artifacts/proto"
+	proto "github.com/Cyarun/CyFir/flows/proto"
 )
 
 const (

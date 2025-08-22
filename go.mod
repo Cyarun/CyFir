@@ -1,4 +1,4 @@
-module www.velocidex.com/golang/velociraptor
+module github.com/Cyarun/CyFir
 
 require (
 	cloud.google.com/go/pubsub v1.36.1

@@ -18,6 +18,6 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 package plugins
 
 import (
-	_ "www.velocidex.com/golang/velociraptor/vql/linux"
-	_ "www.velocidex.com/golang/velociraptor/vql/linux/ebpf"
+	_ "github.com/Cyarun/CyFir/vql/linux"
+	_ "github.com/Cyarun/CyFir/vql/linux/ebpf"
 )

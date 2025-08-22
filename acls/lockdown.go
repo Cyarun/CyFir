@@ -3,7 +3,7 @@ package acls
 import (
 	"sync"
 
-	acl_proto "www.velocidex.com/golang/velociraptor/acls/proto"
+	acl_proto "github.com/Cyarun/CyFir/acls/proto"
 )
 
 var (

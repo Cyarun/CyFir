@@ -1,8 +1,8 @@
 package paths
 
 import (
-	"www.velocidex.com/golang/velociraptor/file_store/api"
-	"www.velocidex.com/golang/velociraptor/file_store/path_specs"
+	"github.com/Cyarun/CyFir/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/path_specs"
 )
 
 func DSPathSpecFromClientPath(client_path string) api.DSPathSpec {

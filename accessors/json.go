@@ -4,7 +4,7 @@ import (
 	"os"
 	"time"
 
-	"www.velocidex.com/golang/velociraptor/json"
+	"github.com/Cyarun/CyFir/json"
 )
 
 func MarshalGlobFileInfo(v interface{}, opts *json.EncOpts) ([]byte, error) {

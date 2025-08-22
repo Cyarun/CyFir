@@ -1,7 +1,7 @@
 package reporting
 
 import (
-	"www.velocidex.com/golang/velociraptor/accessors"
+	"github.com/Cyarun/CyFir/accessors"
 )
 
 type NotebookExportPathManager struct {

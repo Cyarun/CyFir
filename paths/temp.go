@@ -2,7 +2,7 @@ package paths
 
 import (
 	"github.com/google/uuid"
-	"www.velocidex.com/golang/velociraptor/file_store/api"
+	"github.com/Cyarun/CyFir/file_store/api"
 )
 
 type TempPathManager struct {

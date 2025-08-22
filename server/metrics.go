@@ -6,8 +6,8 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
-	api_utils "www.velocidex.com/golang/velociraptor/api/utils"
-	http_utils "www.velocidex.com/golang/velociraptor/utils/http"
+	api_utils "github.com/Cyarun/CyFir/api/utils"
+	http_utils "github.com/Cyarun/CyFir/utils/http"
 )
 
 var (

@@ -9,9 +9,9 @@ import (
 
 	"github.com/Velocidex/ordereddict"
 	"github.com/Velocidex/sigma-go"
-	"www.velocidex.com/golang/velociraptor/actions"
-	"www.velocidex.com/golang/velociraptor/utils"
-	"www.velocidex.com/golang/velociraptor/vql/sigma/evaluator"
+	"github.com/Cyarun/CyFir/actions"
+	"github.com/Cyarun/CyFir/utils"
+	"github.com/Cyarun/CyFir/vql/sigma/evaluator"
 	"www.velocidex.com/golang/vfilter"
 	"www.velocidex.com/golang/vfilter/types"
 )

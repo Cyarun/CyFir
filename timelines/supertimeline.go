@@ -8,12 +8,12 @@ import (
 	"time"
 
 	"google.golang.org/protobuf/proto"
-	config_proto "www.velocidex.com/golang/velociraptor/config/proto"
-	"www.velocidex.com/golang/velociraptor/datastore"
-	"www.velocidex.com/golang/velociraptor/paths"
-	"www.velocidex.com/golang/velociraptor/result_sets"
-	timelines_proto "www.velocidex.com/golang/velociraptor/timelines/proto"
-	"www.velocidex.com/golang/velociraptor/utils"
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+	"github.com/Cyarun/CyFir/datastore"
+	"github.com/Cyarun/CyFir/paths"
+	"github.com/Cyarun/CyFir/result_sets"
+	timelines_proto "github.com/Cyarun/CyFir/timelines/proto"
+	"github.com/Cyarun/CyFir/utils"
 )
 
 type SuperTimelineReader struct {

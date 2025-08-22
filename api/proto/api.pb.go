@@ -10,10 +10,10 @@ import (
 	emptypb "google.golang.org/protobuf/types/known/emptypb"
 	reflect "reflect"
 	sync "sync"
-	proto2 "www.velocidex.com/golang/velociraptor/actions/proto"
-	proto1 "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	proto "www.velocidex.com/golang/velociraptor/flows/proto"
-	_ "www.velocidex.com/golang/velociraptor/proto"
+	proto2 "github.com/Cyarun/CyFir/actions/proto"
+	proto1 "github.com/Cyarun/CyFir/artifacts/proto"
+	proto "github.com/Cyarun/CyFir/flows/proto"
+	_ "github.com/Cyarun/CyFir/proto"
 )
 
 const (

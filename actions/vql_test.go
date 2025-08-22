@@ -6,19 +6,19 @@ import (
 	"time"
 
 	"github.com/stretchr/testify/suite"
-	"www.velocidex.com/golang/velociraptor/actions"
-	actions_proto "www.velocidex.com/golang/velociraptor/actions/proto"
-	artifacts_proto "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	crypto_proto "www.velocidex.com/golang/velociraptor/crypto/proto"
-	"www.velocidex.com/golang/velociraptor/file_store/test_utils"
-	"www.velocidex.com/golang/velociraptor/logging"
-	"www.velocidex.com/golang/velociraptor/responder"
-	"www.velocidex.com/golang/velociraptor/vtesting"
-	"www.velocidex.com/golang/velociraptor/vtesting/assert"
+	"github.com/Cyarun/CyFir/actions"
+	actions_proto "github.com/Cyarun/CyFir/actions/proto"
+	artifacts_proto "github.com/Cyarun/CyFir/artifacts/proto"
+	crypto_proto "github.com/Cyarun/CyFir/crypto/proto"
+	"github.com/Cyarun/CyFir/file_store/test_utils"
+	"github.com/Cyarun/CyFir/logging"
+	"github.com/Cyarun/CyFir/responder"
+	"github.com/Cyarun/CyFir/vtesting"
+	"github.com/Cyarun/CyFir/vtesting/assert"
 
 	// For execve and query
-	_ "www.velocidex.com/golang/velociraptor/vql/common"
-	_ "www.velocidex.com/golang/velociraptor/vql/tools"
+	_ "github.com/Cyarun/CyFir/vql/common"
+	_ "github.com/Cyarun/CyFir/vql/tools"
 )
 
 type ClientVQLTestSuite struct {

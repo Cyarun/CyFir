@@ -22,8 +22,8 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/emptypb"
-	proto_5 "www.velocidex.com/golang/velociraptor/artifacts/proto"
-	proto_0 "www.velocidex.com/golang/velociraptor/flows/proto"
+	proto_5 "github.com/Cyarun/CyFir/artifacts/proto"
+	proto_0 "github.com/Cyarun/CyFir/flows/proto"
 )
 
 // Suppress "imported and not used" errors
