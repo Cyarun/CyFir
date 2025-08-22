@@ -11,7 +11,7 @@ import (
 
 func checkAdmin() error {
 	if !vql_subsystem.IsAdmin() {
-		return fmt.Errorf("Velociraptor requires administrator level access. Use 'sudo' command shell to launch the binary.")
+		return fmt.Errorf("CyFir requires administrator level access. Use 'sudo' command shell to launch the binary.")
 	}
 	return nil
 }

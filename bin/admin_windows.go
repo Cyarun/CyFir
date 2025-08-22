@@ -14,7 +14,7 @@ import (
 
 func checkAdmin() error {
 	if !vql_subsystem.IsAdmin() {
-		return fmt.Errorf("Velociraptor requires administrator level access. Use a 'Run as administrator' command shell to launch the binary.")
+		return fmt.Errorf("CyFir requires administrator level access. Use a 'Run as administrator' command shell to launch the binary.")
 	}
 	return nil
 }
@@ -27,7 +27,7 @@ var (
 )
 
 func logArgv(argv []string) error {
-	source_name := "Velociraptor"
+	source_name := "CyFir"
 	err := eventlog.InstallAsEventCreate(
 		source_name, eventlog.Error|eventlog.Warning|eventlog.Info)
 	if err != nil {

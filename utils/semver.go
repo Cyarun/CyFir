@@ -10,7 +10,7 @@ import (
 
 // CyFir versioning historically was not strictly
 // semantic. Here we try to massage the version into a valid semver so
-// we can compare it properly. In future we should move Velociraptor
+// we can compare it properly. In future we should move CyFir
 // to a more strict semver.
 
 // In order to do this accurately we need to convert the old scheme

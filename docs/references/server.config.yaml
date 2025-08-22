@@ -4,14 +4,14 @@
 # The values you see are the default values that will be used when the
 # option is omitted.
 
-## This is the version of the Velociraptor binary used to generate
+## This is the version of the CyFir binary used to generate
 ## this configuration file. It simply annotates the produced file and
-## can not be changed. When Velociraptor loads the configuration file,
-## this field will be updated so for example `velociraptor config
+## can not be changed. When CyFir loads the configuration file,
+## this field will be updated so for example `cyfir config
 ## show` will update this to the present version.
 version:
-  # Name of the agent - always "velociraptor"
-  name: velociraptor
+  # Name of the agent - always "cyfir"
+  name: cyfir
 
   # The release version on GitHub.
   version: 0.74
@@ -26,7 +26,7 @@ version:
   # The URL to the Github Action CI job that built this binary. Not
   # all release binaries are built on the Github CI due to signing
   # requirements.
-  ci_build_url: https://github.com/Velocidex/velociraptor/actions/runs/3391188003
+  ci_build_url: https://github.com/Cyarun/CyFir/actions/runs/3391188003
 
   # The version of the Go compiler that built this binary
   compiler: go1.19.2
