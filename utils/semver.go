@@ -8,7 +8,7 @@ import (
 	"golang.org/x/mod/semver"
 )
 
-// Velociraptor versioning historically was not strictly
+// CyFir versioning historically was not strictly
 // semantic. Here we try to massage the version into a valid semver so
 // we can compare it properly. In future we should move Velociraptor
 // to a more strict semver.

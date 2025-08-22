@@ -53,17 +53,17 @@ import (
 
 var (
 	service_command = app.Command(
-		"service", "Manipulate the Velociraptor service.")
+		"service", "Manipulate the CyFir service.")
 
 	installl_command = service_command.Command(
-		"install", "Install Velociraptor as a Windows service.")
+		"install", "Install CyFir as a Windows service.")
 
 	installl_command_argv = service_command.Flag(
 		"argv", "Service args (default 'service', 'run').").
 		Strings()
 
 	remove_command = service_command.Command(
-		"remove", "Remove the Velociraptor Windows service.")
+		"remove", "Remove the CyFir Windows service.")
 
 	start_command = service_command.Command(
 		"start", "Start the service")

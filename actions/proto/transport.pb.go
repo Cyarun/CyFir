@@ -206,7 +206,7 @@ func (x *PathSpec) GetAccessor() string {
 	return ""
 }
 
-// The Velociraptor client sends back the buffer and the filename and
+// The CyFir client sends back the buffer and the filename and
 // the server saves the entire file directly in the file storage
 // filesystem. This allows easy recovery as well as data expiration
 // policies (since the filestore is just a directory on disk with

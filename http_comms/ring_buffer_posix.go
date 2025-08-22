@@ -11,7 +11,7 @@ import (
 // Reset the buffer file by removing old data. We prevent symlink
 // attacks by replacing any existing file with a new file. In this
 // case we do not want to use a random file name because the
-// Velociraptor client is often killed without warning and
+// CyFir client is often killed without warning and
 // restarted (e.g. system reboot). This means we dont always get a
 // chance to cleanup and after a lot of restarts random file names
 // will accumulate.

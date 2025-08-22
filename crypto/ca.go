@@ -48,7 +48,7 @@ func GenerateCACert(rsaBits int) (*CertBundle, error) {
 		return nil, err
 	}
 
-	// Velociraptor depends on the CA certificate for
+	// CyFir depends on the CA certificate for
 	// everything. It is embedded in clients and underpins
 	// comms. We must ensure it does not expire in a reasonable
 	// time.
@@ -168,7 +168,7 @@ func GenerateServerCert(config_obj *config_proto.Config, name string) (*CertBund
 
 	// Encode the common name in the DNSNames field. Note that by
 	// default Velociraptor pins the server name to
-	// VelociraptorServer - it is not a DNS name at all. But since
+	// CyFirServer - it is not a DNS name at all. But since
 	// golang 1.15 has deprecated the CommonName we need to use
 	// this field or it will refuse to connect.
 	// See https://github.com/golang/go/issues/39568#issuecomment-671424481
@@ -259,7 +259,7 @@ func ReissueServerCert(config_obj *config_proto.Config,
 
 	// Encode the common name in the DNSNames field. Note that by
 	// default Velociraptor pins the server name to
-	// VelociraptorServer - it is not a DNS name at all. But since
+	// CyFirServer - it is not a DNS name at all. But since
 	// golang 1.15 has deprecated the CommonName we need to use
 	// this field or it will refuse to connect.
 	// See https://github.com/golang/go/issues/39568#issuecomment-671424481

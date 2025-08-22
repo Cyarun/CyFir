@@ -21,7 +21,7 @@ package reporting
 
 // # The templating system
 
-// Velociraptor uses Go's templating facility to provide the user with
+// CyFir uses Go's templating facility to provide the user with
 // a fully functioning templating system. The template is able to
 // execute VQL statements and therefore can do anything.
 
@@ -30,6 +30,6 @@ package reporting
 // because VQL in reports runs server side and can access the entire
 // VQL functionality.
 
-// Velociraptor currently does not have finer grain access control -
+// CyFir currently does not have finer grain access control -
 // read only users are unable to modify any artifacts and full users
 // can run anything on the server.

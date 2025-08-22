@@ -16,8 +16,8 @@ import (
 )
 
 /*
-   Velociraptor - Dig Deeper
-   Copyright (C) 2019-2021 Velocidex Innovations.
+   CyFir - Cyber Forensics & IR Platform
+   Copyright (C) 2019-2021 CynorSense Solutions.
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU Affero General Public License as published
    by the Free Software Foundation, either version 3 of the License, or

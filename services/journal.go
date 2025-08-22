@@ -1,6 +1,6 @@
 package services
 
-// Velociraptor is powered by VQL which is a query language. At its
+// CyFir is powered by VQL which is a query language. At its
 // heart, queries simply return rows. Velociraptor organizes the
 // results of queries by the artifact name - that is to say, that
 // artifacts return rows when collected, which are stored in the

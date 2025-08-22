@@ -280,7 +280,7 @@ func (r *Reader) ReadAny() ([]interface{}, error) {
 			// Its not really a json object - just include
 			// it as a string (this might happen when
 			// parsing CSV files not produced by
-			// Velociraptor).
+			// CyFir).
 			if err != nil {
 				record[i] = item
 				continue

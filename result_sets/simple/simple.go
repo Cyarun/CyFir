@@ -1,6 +1,6 @@
 // Manage reading and writing result sets.
 
-// Velociraptor is essentially a VQL engine - all operations are
+// CyFir is essentially a VQL engine - all operations are
 // simply queries and all queries return a result set. Result sets are
 // essentially tables - containing columns specified by the query
 // itself and rows.

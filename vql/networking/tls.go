@@ -128,19 +128,19 @@ func customVerifyConnection(
 
 				case "", "PKI":
 					// If the server certificate is signed by the
-					// Velociraptor CA (self signed mode) then we
+					// CyFir CA (self signed mode) then we
 					// allow it regardless of any other checks
 					// (e.g. DNS check).
 
-					// Velociraptor does not allow intermediates so
+					// CyFir does not allow intermediates so
 					// this should be sufficient to verify that the
-					// Velociraptor CA signed it.
+					// CyFir CA signed it.
 					_, err := server_cert.Verify(private_opts)
 					if err == nil {
-						// The Velociraptor CA signed it - we
+						// The CyFir CA signed it - we
 						// disregard the DNS name and allow it anyway
 						// - This allows us to connect to the
-						// Velociraptor server by IP address.
+						// CyFir server by IP address.
 						return nil
 					}
 				}

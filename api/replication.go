@@ -138,7 +138,7 @@ func (self *ApiServer) WatchEvent(
 	}
 
 	// This name is taken from the certificate usually
-	// VelociraptorServer.
+	// CyFirServer.
 	peer_name := user_record.Name
 
 	// Check that the principal is allowed to issue queries.

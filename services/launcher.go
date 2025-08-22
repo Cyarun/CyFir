@@ -5,7 +5,7 @@ package services
 // collections is extracted into a service so it can be accessible
 // from many components.
 
-// Velociraptor treats all input as artifacts - users can launch new
+// CyFir treats all input as artifacts - users can launch new
 // artifact collection on endpoints by naming the artifact and
 // providing parameters. However the endpoint itself is not directly
 // running the artifacts - it simply runs VQL statements. We do this

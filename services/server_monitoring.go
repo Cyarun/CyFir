@@ -1,6 +1,6 @@
 package services
 
-// The Velociraptor server maintains a table of event queries it runs
+// The CyFir server maintains a table of event queries it runs
 // on startup. This service manages this table. It provides methods
 // for the Velociraptor administrator to update the table for the
 // server.

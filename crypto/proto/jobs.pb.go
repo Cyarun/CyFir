@@ -214,7 +214,7 @@ func (Certificate_Type) EnumDescriptor() ([]byte, []int) {
 	return file_jobs_proto_rawDescGZIP(), []int{3, 0}
 }
 
-// Velociraptor only uses OK and GENERIC_ERROR right now.
+// CyFir only uses OK and GENERIC_ERROR right now.
 type VeloStatus_ReturnedStatus int32
 
 const (

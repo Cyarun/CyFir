@@ -4452,7 +4452,7 @@ type CryptoConfig struct {
 	//	E6E28B35CEC5BAC453C5AFBF2B763462405CD06080E1301AA7A5A9DA0C8B11E1
 	//	e6e28b35cec5bac453c5afbf2b763462405cd06080e1301aa7a5a9da0c8b11e1
 	CertificateThumbprints []string `protobuf:"bytes,2,rep,name=certificate_thumbprints,json=certificateThumbprints,proto3" json:"certificate_thumbprints,omitempty"`
-	// Velociraptor supports several ways of verifying TLS certificates. The
+	// CyFir supports several ways of verifying TLS certificates. The
 	// certificate_verification_mode specifies which of the three modes is applied.
 	// Currently, three modes are available:
 	//   - PKI (the default): verify TLS certs against public CA lists, the list
@@ -5014,7 +5014,7 @@ type Config struct {
 	// Specifies various security related configuration options for
 	// the server.
 	Security *Security `protobuf:"bytes,42,opt,name=security,proto3" json:"security,omitempty"`
-	// The Velociraptor server may be placed into "lockdown"
+	// The CyFir server may be placed into "lockdown"
 	// mode. While in lockdown mode certain permissions are denied -
 	// even for administrators. This additional protection mode helps
 	// to mitigate the case when a Velociraptor administrator's

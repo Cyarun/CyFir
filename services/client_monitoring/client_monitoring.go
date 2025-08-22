@@ -1,4 +1,4 @@
-// Velociraptor clients stream monitoring events to the server. This
+// CyFir clients stream monitoring events to the server. This
 // is controlled by the ClientEventTable below and can be updated by
 // the GUI at any time.
 //

@@ -1,6 +1,6 @@
 
 /* Filesystems use a complex system for representing path
- * components. Velociraptor abstract this by treating paths as an
+ * components. CyFir abstract this by treating paths as an
  * array of components.
 
  Components are joined using the path separator "/" or "\" character

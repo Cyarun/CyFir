@@ -194,7 +194,7 @@ func NewHTTPConnector(
 		// NOTE: This stops an api cert from being presented for the
 		// server. This setting also allows the server to be accessed
 		// by e.g. localhost despite the certificate being issued to
-		// VelociraptorServer.
+		// CyFirServer.
 		transport.TLSClientConfig.ServerName = utils.GetSuperuserName(config_obj)
 	} else {
 		// Not self signed - add the public roots for verifications.
@@ -968,7 +968,7 @@ func (self *NotificationReader) Start(
 	}()
 }
 
-// Velociraptor's foreman is very quick (since it is just an int
+// CyFir's foreman is very quick (since it is just an int
 // comparison between the client's last hunt timestamp and the
 // server's last hunt timestamp). It is therefore ok to send a foreman
 // message in every reader message to improve hunt latency.

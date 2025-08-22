@@ -15,7 +15,7 @@
    You should have received a copy of the GNU Affero General Public License
    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
-// Velociraptor flows are similar to GRR's flows but are optimized for
+// CyFir flows are similar to GRR's flows but are optimized for
 // speed:
 
 // 1. Velociraptor flows are run directly on the frontend - there is
@@ -46,7 +46,7 @@
 //  - respone id 1, respone id 2
 //  - respone id 1, respone id 3, status OK.
 
-// Velociraptor will a actually run the handler three times - for each
+// CyFir will a actually run the handler three times - for each
 // response and for the status.
 
 // GRR flows maintain state while processing each response. The server

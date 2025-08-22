@@ -58,7 +58,7 @@ type LauncherTestSuite struct {
 // make the binaries available to clients.
 
 // It is possible to either serve the binaries directly from
-// Velociraptor's public directory, or simply have the endpoint
+// CyFir's public directory, or simply have the endpoint
 // download the tool from an external location (like an s3 bucket).
 
 var testArtifactWithTools = `
