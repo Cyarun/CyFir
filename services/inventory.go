@@ -2,7 +2,7 @@ package services
 
 // The CyFir server maintains a database of tools. Artifacts
 // may simply ask to use a particular tool by name, and if the tool is
-// previously known or uploaded, Velociraptor will make that tool
+// previously known or uploaded, CyFir will make that tool
 // available to the artifact.
 
 // This service maintains the internal tools database.

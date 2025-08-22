@@ -4,7 +4,7 @@ package reporting
 // artifacts.
 
 // The reporting is defined within the artifact using a
-// template. Velociraptor will format the report on the server using
+// template. CyFir will format the report on the server using
 // the template system implemented in this module.
 
 // # Report types

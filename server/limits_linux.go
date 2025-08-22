@@ -29,7 +29,7 @@ import (
 )
 
 // On linux we can use a system call to increase our file handle
-// limits. Velociraptor needs more file handles because our comms
+// limits. CyFir needs more file handles because our comms
 // protocol holds sockets open for a long time. Therefore we need to
 // hold at least 2 sockets for each provisioned client. By default the
 // limit is very low (4096 or 1024) and so we need to increase it.

@@ -1,5 +1,5 @@
 // The journal service receives events from various sources and writes
-// them to storage. Velociraptor uses the artifact name and source as
+// them to storage. CyFir uses the artifact name and source as
 // the name of the queue that will be written.
 
 // The service will also allow for registration of interested events

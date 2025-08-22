@@ -51,7 +51,7 @@
 
 // GRR flows maintain state while processing each response. The server
 // will load the state from the database and prepare it for the worker
-// to process. In contrast, Velociraptor does not maintain state
+// to process. In contrast, CyFir does not maintain state
 // between invocations. If the flow needs to keep state, they should
 // mainain that themselves.
 

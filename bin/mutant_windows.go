@@ -15,7 +15,7 @@ var (
 	procCreateMutex = kernel32.NewProc("CreateMutexW")
 )
 
-// This is useful when Velociraptor is run from GPO or another
+// This is useful when CyFir is run from GPO or another
 // mechanism that may start multiple copies of it. The first copy will
 // succeed and the other copied will exit.
 func checkMutex() error {

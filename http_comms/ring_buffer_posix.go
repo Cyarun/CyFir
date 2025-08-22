@@ -18,7 +18,7 @@ import (
 
 // By default the temp directory is created inside a protected
 // directory (`C:\Program Files\Velociraptor\Tools`) so symlink
-// attacks are mitigated but in case Velociraptor is misconfigured we
+// attacks are mitigated but in case CyFir is misconfigured we
 // are extra careful.
 func createFile(filename string) (*os.File, error) {
 

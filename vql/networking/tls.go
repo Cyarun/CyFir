@@ -69,14 +69,14 @@ func customVerifyConnection(
 	CA_Pool *x509.CertPool,
 	config_obj *config_proto.ClientConfig) func(conn tls.ConnectionState) error {
 
-	// Check if the cert was signed by the Velociraptor CA
+	// Check if the cert was signed by the CyFir CA
 	private_opts := x509.VerifyOptions{
 		CurrentTime:   time.Now(),
 		Intermediates: x509.NewCertPool(),
 		Roots:         x509.NewCertPool(),
 	}
 
-	// Add a single root - the Velociraptor CA is the one we trust the most!
+	// Add a single root - the CyFir CA is the one we trust the most!
 	if config_obj != nil {
 		private_opts.Roots.AppendCertsFromPEM([]byte(config_obj.CaCertificate))
 	}

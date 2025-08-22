@@ -184,7 +184,7 @@ message Artifact {
     Resources resources = 19;
 
     // An optional list of tool descriptions. These are only used to
-    // initialize Velociraptor if there is no previous tool
+    // initialize CyFir if there is no previous tool
     // definition. It will not override existing tools. The user may
     // override the tool name in order to control where it will be
     // downloaded from.
@@ -239,7 +239,7 @@ message Artifact {
     // The artifact is considered built in and can not be overriden by the GUI
     bool built_in = 20;
 
-    // The artifact is built into the Velociraptor binary.
+    // The artifact is built into the CyFir binary.
     bool compiled_in = 24;
     bool is_alias = 22;
 
@@ -272,7 +272,7 @@ message ArtifactMetadataStorage {
 }
 
 
-// Tools are external files that Velociraptor ensures are available to
+// Tools are external files that CyFir ensures are available to
 // running artifacts.
 
 message Tool {

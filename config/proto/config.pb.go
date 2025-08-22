@@ -706,7 +706,7 @@ type ClientConfig struct {
 	LogfileName string `protobuf:"bytes,47,opt,name=logfile_name,json=logfileName,proto3" json:"logfile_name,omitempty"`
 	LogfileSize uint64 `protobuf:"varint,48,opt,name=logfile_size,json=logfileSize,proto3" json:"logfile_size,omitempty"`
 	PanicFile   string `protobuf:"bytes,49,opt,name=panic_file,json=panicFile,proto3" json:"panic_file,omitempty"`
-	// NOTE: Velociraptor has 2 layers of encryption - this setting
+	// NOTE: CyFir has 2 layers of encryption - this setting
 	// bypasses the outer TLS layer to expose the underlying HTTP
 	// communications. Client->server communication still remain
 	// encrypted however.
@@ -2637,7 +2637,7 @@ type FrontendConfig struct {
 	// Client.Crypto.root_certs or the Velociraptor built in CA
 	// itself).
 	RequireClientCertificates bool `protobuf:"varint,36,opt,name=require_client_certificates,json=requireClientCertificates,proto3" json:"require_client_certificates,omitempty"`
-	// A proxy setting to use - Velociraptor needs to connect to
+	// A proxy setting to use - CyFir needs to connect to
 	// download tools. This setting will force it to go out over this
 	// proxy. NOTE- If you dont want your server to allow outbound
 	// connections, just set this to an non existant setting.
@@ -4014,7 +4014,7 @@ type Defaults struct {
 	// How often to run the client info's house keeping thread in
 	// seconds (default 60 sec)
 	ClientInfoHousekeepingPeriod int64 `protobuf:"varint,48,opt,name=client_info_housekeeping_period,json=clientInfoHousekeepingPeriod,proto3" json:"client_info_housekeeping_period,omitempty"`
-	// Disable unicode usernames. By default Velociraptor allows
+	// Disable unicode usernames. By default CyFir allows
 	// usernames to consist of any Unicode character for i8n support,
 	// however this opens the possibility for Homoglyph
 	// attacks. Setting the following to true will restrict usernames
@@ -4460,7 +4460,7 @@ type CryptoConfig struct {
 	//   - PKI_OR_THUMBPRINT: the same as PKI with the addition that certificates
 	//     which have a thumbprint that is present in
 	//     certificate_thumbprints will be accepted as well
-	//   - THUMBPRINT_ONLY: Velociraptor only accepts certificates which have a
+	//   - THUMBPRINT_ONLY: CyFir only accepts certificates which have a
 	//     matching thumbprint in certificate_thumbprints. All
 	//     other certificates will be rejected. This mode is
 	//     also known as certificate pinning.

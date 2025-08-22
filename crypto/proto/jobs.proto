@@ -1,4 +1,4 @@
-// These are the messages used in Velociraptor's encrypted
+// These are the messages used in CyFir's encrypted
 // communication protocol.
 syntax = "proto3";
 
@@ -226,13 +226,13 @@ message FlowStatsSummaryItem {
 }
 
 // This is a status response that is sent for each complete
-// query. Velociraptor collections consist of multiple queries (for
+// query. CyFir collections consist of multiple queries (for
 // example collecting multiple artifacts or artifacts with multiple
 // sources). Each query request ellicits a status message when
 // finished to indicate the query's success status and send stats
 // about it.
 message VeloStatus {
-    // Velociraptor only uses OK and GENERIC_ERROR right now.
+    // CyFir only uses OK and GENERIC_ERROR right now.
     enum ReturnedStatus {
         // Query completed successfully
         OK = 0;
@@ -290,7 +290,7 @@ message MessageList {
 // This is the protobuf which is transmitted on the wire
 message PackedMessageList {
 
-  // Currently Velociraptor always compresses all message lists.
+  // Currently CyFir always compresses all message lists.
   enum CompressionType {
     UNCOMPRESSED = 0;
     // Compressed using the zlib.compress() function.

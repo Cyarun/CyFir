@@ -137,7 +137,7 @@ func (self *CertAuthenticator) AuthRedirectTemplate() string {
 }
 
 func (self *CertAuthenticator) getUserNameFromTLSCerts(r *http.Request) (string, error) {
-	// We only trust certs issued by the Velociraptor CA.
+	// We only trust certs issued by the CyFir CA.
 	x509_opts := x509.VerifyOptions{
 		CurrentTime: time.Now(),
 		Roots:       self.x509_roots,

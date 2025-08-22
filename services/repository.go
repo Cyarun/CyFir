@@ -124,7 +124,7 @@ type RepositoryManager interface {
 	// Make a new empty repository
 	NewRepository() Repository
 
-	// Get the global repository - Velociraptor uses a global
+	// Get the global repository - CyFir uses a global
 	// repository containing all artifacts it knows about. The
 	// frontend loads the repository at startup from:
 	//

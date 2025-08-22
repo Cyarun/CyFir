@@ -79,7 +79,7 @@ message UserRequest {
 }
 
 // These traits are used to control the GUI App. Many of these fields
-// are constructed from the VelociraptorUser, the config file, the
+// are constructed from the CyFirUser, the config file, the
 // GUIOptions etc.
 message ApiUserInterfaceTraits {
     ApiClientACL Permissions = 9;

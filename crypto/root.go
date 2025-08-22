@@ -18,9 +18,9 @@ import (
 
 // We support two distinct modes:
 
-// 1. Self signed mode - means that Velociraptor will only trust it's
+// 1. Self signed mode - means that CyFir will only trust it's
 //    own CA to sign certs.
-// 2. Public PKI mode - Velociraptor will trust only known root CAs to
+// 2. Public PKI mode - CyFir will trust only known root CAs to
 //    sign. Root CA store is built into the binary in addition to the
 //    system store.
 

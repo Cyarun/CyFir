@@ -9,7 +9,7 @@ package proto;
 
 option go_package = "www.velocidex.com/golang/velociraptor/config/proto";
 
-// Information about Velociraptor. This is a pseudo config item - it
+// Information about CyFir. This is a pseudo config item - it
 // will never be read from config files, but can be used in VQL
 // queries. It will be written to config files as metadata about the
 // version that produced the config file.
@@ -195,7 +195,7 @@ message ClientConfig {
     string tempdir_darwin = 3;
 
     // Number of seconds to wait between polls (default 1
-    // second). NOTE: Velociraptor typically holds the connection up
+    // second). NOTE: CyFir typically holds the connection up
     // for at least max_poll time and then refreshes the
     // connection. The min poll is used to determine how quickly
     // connections should resume.
@@ -249,7 +249,7 @@ message ClientConfig {
 
     bool use_self_signed_ssl = 24 [(sem_type) = {
             description: "If this is set, the client will expect a self signed certificate from the server."
-            "NOTE: The self signed certificate must be signed by the Velociraptor CA which is embedded above."
+            "NOTE: The self signed certificate must be signed by the CyFir CA which is embedded above."
         }];
 
     string pinned_server_name = 28 [(sem_type) = {
@@ -340,7 +340,7 @@ message ClientConfig {
     // disable TLS verification for the server name so it will be
     // possible to MITM the client->server connection.
 
-    // NOTE: Velociraptor has 2 layers of encryption - this setting
+    // NOTE: CyFir has 2 layers of encryption - this setting
     // bypasses the outer TLS layer to expose the underlying HTTP
     // communications. Client->server communication still remain
     // encrypted however.
@@ -468,10 +468,10 @@ message OIDCClaims {
     // allow roles to be set via OIDC.
     string roles = 2;
 
-    // A mapping between OIDC claim roles and Velociraptor roles.
+    // A mapping between OIDC claim roles and CyFir roles.
     // For example:
     // role_map:
-    //    Velociraptor.Reader:
+    //    CyFir.Reader:
     //      roles:
     //        - reader
     map<string, OIDCACL> role_map = 3;
@@ -812,11 +812,11 @@ message FrontendConfig {
 
     // Enabling this requires the clients to present a valid
     // certificate (signed by one of the Root CAs listed in
-    // Client.Crypto.root_certs or the Velociraptor built in CA
+    // Client.Crypto.root_certs or the CyFir built in CA
     // itself).
     bool require_client_certificates = 36;
 
-    // A proxy setting to use - Velociraptor needs to connect to
+    // A proxy setting to use - CyFir needs to connect to
     // download tools. This setting will force it to go out over this
     // proxy. NOTE- If you dont want your server to allow outbound
     // connections, just set this to an non existant setting.
@@ -829,7 +829,7 @@ message FrontendConfig {
 
     // These are used to secure the client/server communications -
     // Even when using external TLS certificates! This certificate
-    // must be signed by the Velociraptor rooot CA in all cases. If
+    // must be signed by the CyFir root CA in all cases. If
     // using an external TLS configuration this layer of encryption
     // happens **in addition** to the external TLS certificates.
     string certificate = 3 [(sem_type) = {
@@ -844,8 +844,8 @@ message FrontendConfig {
     // alternative to Autocert, then you can set those here. These
     // certificates will be used for TLS on both the frontend and
     // GUI. NOTE: We expect these to be proper certificates - i.e. NOT
-    // self signed. Velociraptor only supports self signed
-    // certificates issued by the Velociraptor CA embedded in the
+    // self signed. CyFir only supports self signed
+    // certificates issued by the CyFir CA embedded in the
     // client's config file.
 
     // Be sure to set Client.use_self_signed_ssl=false when you set this.
@@ -1273,7 +1273,7 @@ message Defaults {
     // seconds (default 60 sec)
     int64 client_info_housekeeping_period = 48;
 
-    // Disable unicode usernames. By default Velociraptor allows
+    // Disable unicode usernames. By default CyFir allows
     // usernames to consist of any Unicode character for i8n support,
     // however this opens the possibility for Homoglyph
     // attacks. Setting the following to true will restrict usernames
@@ -1344,7 +1344,7 @@ message CryptoConfig {
     //   openssl s_client -connect www.google.com:443 < /dev/null | openssl x509 -fingerprint -sha256 -noout
     //
     // Certificate thumbprints may or may not include colon characters. Capitalization
-    // of the hex digits is ignored by Velociraptor. A thumbprint of any of the
+    // of the hex digits is ignored by CyFir. A thumbprint of any of the
     // following forms (or combinations thereof) is fine:
     //   E6:E2:8B:35:CE:C5:BA:C4:53:C5:AF:BF:2B:76:34:62:40:5C:D0:60:80:E1:30:1A:A7:A5:A9:DA:0C:8B:11:E1
     //   E6E28B35CEC5BAC453C5AFBF2B763462405CD06080E1301AA7A5A9DA0C8B11E1
@@ -1353,7 +1353,7 @@ message CryptoConfig {
             description: "SHA256 thumbprints of certificates that the client will trust."
         }];
 
-    // Velociraptor supports several ways of verifying TLS certificates. The
+    // CyFir supports several ways of verifying TLS certificates. The
     // certificate_verification_mode specifies which of the three modes is applied.
     // Currently, three modes are available:
     //   - PKI (the default): verify TLS certs against public CA lists, the list
@@ -1361,7 +1361,7 @@ message CryptoConfig {
     //   - PKI_OR_THUMBPRINT: the same as PKI with the addition that certificates
     //                        which have a thumbprint that is present in
     //                        certificate_thumbprints will be accepted as well
-    //   - THUMBPRINT_ONLY: Velociraptor only accepts certificates which have a
+    //   - THUMBPRINT_ONLY: CyFir only accepts certificates which have a
     //                      matching thumbprint in certificate_thumbprints. All
     //                      other certificates will be rejected. This mode is
     //                      also known as certificate pinning.
@@ -1370,7 +1370,7 @@ message CryptoConfig {
         }];
 
     // If this is set we do not enforce minimum configuration for TLS
-    // servers. This is required when connecting to Velociraptor with
+    // servers. This is required when connecting to CyFir with
     // some legacy clients (like Powershell) who do not support TLS13
     bool allow_weak_tls_server = 4;
 
@@ -1602,10 +1602,10 @@ message Config {
     // the server.
     Security security = 42;
 
-    // The Velociraptor server may be placed into "lockdown"
+    // The CyFir server may be placed into "lockdown"
     // mode. While in lockdown mode certain permissions are denied -
     // even for administrators. This additional protection mode helps
-    // to mitigate the case when a Velociraptor administrator's
+    // to mitigate the case when a CyFir administrator's
     // account is compromised. The server can be taken out of lockdown
     // mode by setting lockdown to false and restarting the server.
     bool lockdown = 39;

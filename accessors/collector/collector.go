@@ -34,7 +34,7 @@ import (
 // specially formated conatiners. In particular the collector accessor
 // handles the following two properties transparently:
 
-// 1. Zip encryption: Velociraptor uses an ecnryption scheme to work
+// 1. Zip encryption: CyFir uses an ecnryption scheme to work
 // around Zip encryption limitations. All data is stored in an
 // encrypted file called "data.zip" inside the main zip archive. This
 // is because Zip encryption does not protect the central directory or
