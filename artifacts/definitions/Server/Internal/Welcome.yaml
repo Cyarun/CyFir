@@ -1,6 +1,6 @@
 name: Server.Internal.Welcome
 description: |
-  This is the welcome screen in the Velociraptor GUI. You can
+  This is the welcome screen in the CyFir GUI. You can
   customize this screen by editing this artifact.
 
   When editing the artifact in the main `View Artifacts` screen you
@@ -22,7 +22,7 @@ reports:
       <div class="card-body">
       {{ $X := Query "LET DebugLink <= link_to(type='debug', org='root')" | Expand }}
 
-      # Welcome to Velociraptor!
+      # Welcome to CyFir!
 
       ## Common tasks:
 
@@ -38,7 +38,7 @@ reports:
       Or simply search for a client in the search bar above.
 
       You can always get back to this welcome screen by clicking the
-      little green reptile above!
+      CyFir logo above!
 
       ## Tips
 

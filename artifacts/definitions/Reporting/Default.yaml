@@ -5,7 +5,7 @@ type: SERVER
 description: |
   A default template for HTML export.  This template will be used to
   host HTML exports such as the notebook and the reporting
-  templates. Velociraptor will evaluate this template on the following
+  templates. CyFir will evaluate this template on the following
   dict:
 
     - key main: contains a string with all the results of rendering
@@ -206,8 +206,8 @@ reports:
          </head>
          <body>
            <nav class="header navbar navbar-expand-lg navbar-dark fixed-top">
-             <a class="navbar-brand" href="#" aria-label="CyberCX">
-               <img src="https://cynorsense.com/images/logos/velo_word_on_side.svg" class="logo"/>
+             <a class="navbar-brand" href="#" aria-label="CyFir">
+               <img src="https://cynorsense.com/images/logos/cyfir_logo.svg" class="logo"/>
              </a>
              <button class="navbar-toggler" type="button"
                      data-toggle="collapse"
@@ -222,7 +222,7 @@ reports:
                    <a class="nav-link" href="#">Top <span class="sr-only">(top)</span></a>
                  </li>
                  <li class="nav-item">
-                   <a class="nav-link" href="https://github.com/Velocidex/velociraptor">GitHub</a>
+                   <a class="nav-link" href="https://github.com/Cyarun/CyFir">GitHub</a>
                  </li>
                  <li class="nav-item">
                    <a class="nav-link" href="#" id="print-button">Print</a>
