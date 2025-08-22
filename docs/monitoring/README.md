@@ -1,16 +1,16 @@
 # Setting up monitoring.
 
-To set up monitoring for Velociraptor servers you will need to install
+To set up monitoring for CyFir servers you will need to install
 both Graphana and Prometheus.
 
 ## Setting up Prometheus
 
-Prometheus will scrape the Velociraptor server monitoring port and
+Prometheus will scrape the CyFir server monitoring port and
 record time series of critical server state. You can use the provided
 prometheus.yaml file without change and launch prometheus like this:
 
 ```
-$ prometheus  --config.file velociraptor.yml
+$ prometheus  --config.file cyfir.yml
 ```
 
 ## Setting up Graphana

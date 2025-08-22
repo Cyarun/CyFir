@@ -1,11 +1,11 @@
-# Velociraptor SAML support
+# CyFir SAML support
 
-Velociraptor SAML support was built with [crewjam's SAML Go library](https://github.com/crewjam/saml).
+CyFir SAML support was built with [crewjam's SAML Go library](https://github.com/crewjam/saml).
 *NOTE: still WIP, tested only with Simple SAML and Microsoft ADFS*
 
-## Setting up Velociraptor with SAML login
+## Setting up CyFir with SAML login
 
-There are four configuration values that need to be set in order to activate the Velociraptor SAML login feature:
+There are four configuration values that need to be set in order to activate the CyFir SAML login feature:
 - `saml_certificate`
   - SAML public certificate in PEM format
 - `saml_private_key`
@@ -13,7 +13,7 @@ There are four configuration values that need to be set in order to activate the
 - `saml_idp_metadata_url`
   - URL to IDP XML metadata
 - `saml_root_url`
-  - Velociraptor URL
+  - CyFir URL
 
 These are expected to be set inside `server.config.yaml` under `GUI` key.
 
@@ -26,7 +26,7 @@ There are also optional parameters:
 ### Setting up Simple SAML
 
 Easiest approach to test the SAML login feature is to use [test-saml-idp](https://hub.docker.com/r/kristophjunge/test-saml-idp/) docker image. 
-Start the docker image by specifying the Velociraptor metadata URL as `SIMPLESAMLPHP_SP_ENTITY_ID` and Velociraptor ACS URL as `SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE`:
+Start the docker image by specifying the CyFir metadata URL as `SIMPLESAMLPHP_SP_ENTITY_ID` and CyFir ACS URL as `SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE`:
 
 ```
 docker pull kristophjunge/test-saml-idp
@@ -37,33 +37,33 @@ The docker image provides with two users which you can use to test the feature o
 - user1@example.com:user1pass
 - user2@example.com:user2pass
 
-Therefore, you need to have these users present in the Velociraptor users database.
+Therefore, you need to have these users present in the CyFir users database.
 
-### Configuring Velociraptor
+### Configuring CyFir
 
-To configure Velociraptor for SAML logins you would need to generate your own SAML certificate and private key.
+To configure CyFir for SAML logins you would need to generate your own SAML certificate and private key.
 
-This is tricky because Velociraptor does not trust unknown certificates, so you would need to sign your certificate with Velociraptor's CA.
-You can find the Velociraptor CA inside `server.config.yaml` under `CA.private_key` - copy it into a separate file. After you have the
-CA in a separate file (let's assume that the name is `VelociraptorCA.key`) you need to execute several commands 
+This is tricky because CyFir does not trust unknown certificates, so you would need to sign your certificate with CyFir's CA.
+You can find the CyFir CA inside `server.config.yaml` under `CA.private_key` - copy it into a separate file. After you have the
+CA in a separate file (let's assume that the name is `CyFirCA.key`) you need to execute several commands 
 to obtain SAML certificate and SAML private key (adapted from [fntlnz's gist](https://gist.github.com/fntlnz/cf14feb5a46b2eda428e000157447309) \[2\]):
 
 ```
-openssl req -x509 -new -nodes -key VelociraptorCA.key -sha256 -days 1024 -out VelociraptorCA.crt
+openssl req -x509 -new -nodes -key CyFirCA.key -sha256 -days 1024 -out CyFirCA.crt
 openssl genrsa -out example.com.key 2048
 openssl req -new -key example.com.key -out example.com.csr
-openssl x509 -req -in example.com.csr -CA VelociraptorCA.crt -CAkey VelociraptorCA.key -CAcreateserial -out example.com.crt -days 500 -sha256
+openssl x509 -req -in example.com.csr -CA CyFirCA.crt -CAkey CyFirCA.key -CAcreateserial -out example.com.crt -days 500 -sha256
 ```
 
 The `example.com.crt` content is set as `saml_certificate` and `example.com.key` is set as `saml_private_key`.
 
 If we assume that you've set up the Simple SAML on `localhost:8080`, you should be able to get the IDP metadata at `http://localhost:8080/simplesaml/saml2/idp/metadata.php`.
-This URL should be specified as the `saml_idp_metadata_url` value. The `saml_root_url` is specified as the Velociraptor 
+This URL should be specified as the `saml_idp_metadata_url` value. The `saml_root_url` is specified as the CyFir 
 root URL which should be `https://localhost:8889` when testing locally.
 
-To link user emails in Velociraptor database with SimpleSAML users, set `saml_user_attribute` to `email`.
+To link user emails in CyFir database with SimpleSAML users, set `saml_user_attribute` to `email`.
 
-At this point, you should be presented with Simple SAML login page when trying to visit the Velociraptor home page.
+At this point, you should be presented with Simple SAML login page when trying to visit the CyFir home page.
 
 ### Setting up with Microsoft ADFS
 

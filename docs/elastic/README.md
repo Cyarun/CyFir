@@ -8,7 +8,7 @@ ecosystem. Certain log forwarding agents (e.g. Winlogbeats) transform
 the raw event data into ECS formatted objects. This mostly requires
 renaming fields and adding some enrichments.
 
-Velociraptor can also produce ECS compatible objects using the
+CyFir can also produce ECS compatible objects using the
 `Elastic.EventLogs.Sysmon` artifact which may be forwarded to an
 Elastic database.
 

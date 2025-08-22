@@ -1,7 +1,7 @@
-# Customizing Velociraptor deployments.
+# Customizing CyFir deployments.
 
 This directory contains the WiX XML configuration file that can be
-used to tailor your Velociraptor deployment. The configuration file
+used to tailor your CyFir deployment. The configuration file
 can be used to build a Windows installer package (MSI) which
 automatically installs the service.
 
@@ -20,7 +20,7 @@ Next, follow these steps:
 
 1. Edit the XML file (`velociraptor_amd64.xml` or
    `velociraptor_x86.xml`). Near the top, make sure the version
-   variable of the MSI matches the version of Velociraptor you are
+   variable of the MSI matches the version of CyFir you are
    packaging. The version is found in the Product XML tag (e.g. 0.68.0
    corresponds to 0.6.8). NOTE: MSI will refuse to upgrade a version
    which is not higher than an installed version, so you need to
@@ -42,7 +42,7 @@ Next, follow these steps:
 5. Save the customized XML file in a new directory for this new MSI
    build (e.g. `C:\temp\msi-build`).
 
-6. Place your Velociraptor client configuration file in a subdirectory
+6. Place your CyFir client configuration file in a subdirectory
    called `output/client.config.yaml`. WiX will package this file into
    the MSI. You can package the placeholder configuration file instead
    which will allow you later to repack the MSI with the real
@@ -75,7 +75,7 @@ have Wix installed and can be done on any operating system.
 
 If you install the official MSI, the placeholder config file will be
 installed in place of the `client.config.yaml`. Since the placeholder
-is **not** a valid configuration file, Velociraptor will wait before
+is **not** a valid configuration file, CyFir will wait before
 starting and attempt to reload the file every few seconds. This
 provides you the opportunity to manually replace the file at a later
 stage with a correctly formatted file specific for your deployment.
@@ -102,10 +102,10 @@ need to use the placeholder config file (located in the
 `output/client.config.yaml` file) in the MSI, then the repacking code
 can find it and replace it with the final config as needed.
 
-# Official Velociraptor MSI
+# Official CyFir MSI
 
-The standard MSI which is distributed in the Velociraptor releases
+The standard MSI which is distributed in the CyFir releases
 contains the placeholder configuration file and so can be repacked
 using the above procedure. The standard package will install a service
-with the name "Velociraptor Service" into the location "c:\Program
-Files\Velociraptor\Velociraptor.exe".
+with the name "CyFir Service" into the location "c:\Program
+Files\CyFir\CyFir.exe".
