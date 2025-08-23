@@ -275,12 +275,29 @@ func (self *Loader) WithEnvLoader(env_var string) *Loader {
 	self.loaders = append(self.loaders, loaderFunction{
 		name: "WithEnvLoader",
 		loader_func: func(self *Loader) (*config_proto.Config, error) {
-			env_config := os.Getenv(env_var)
+			// For backward compatibility, check both old and new env vars
+			env_config := ""
+			checked_vars := []string{}
+			
+			// If this is a VELOCIRAPTOR_* var, also check CYFIR_* equivalent
+			if env_var == "VELOCIRAPTOR_CONFIG" {
+				env_config = os.Getenv("CYFIR_CONFIG")
+				if env_config != "" {
+					self.Log("Loading config from env CYFIR_CONFIG (%v)", env_config)
+					return read_config_from_file(env_config)
+				}
+				checked_vars = append(checked_vars, "CYFIR_CONFIG")
+			}
+			
+			// Check the original env var
+			env_config = os.Getenv(env_var)
 			if env_config != "" {
 				self.Log("Loading config from env %v (%v)", env_var, env_config)
 				return read_config_from_file(env_config)
 			}
-			return nil, fmt.Errorf("Env var %v is not set", env_var)
+			checked_vars = append(checked_vars, env_var)
+			
+			return nil, fmt.Errorf("Env vars %v not set", checked_vars)
 		}})
 
 	return self
@@ -291,7 +308,27 @@ func (self *Loader) WithEnvLiteralLoader(env_var string) *Loader {
 	self.loaders = append(self.loaders, loaderFunction{
 		name: "WithEnvLiteralLoader",
 		loader_func: func(self *Loader) (*config_proto.Config, error) {
-			env_config := os.Getenv(env_var)
+			// For backward compatibility, check both old and new env vars
+			env_config := ""
+			checked_vars := []string{}
+			
+			// If this is a VELOCIRAPTOR_* var, also check CYFIR_* equivalent
+			if env_var == "VELOCIRAPTOR_LITERAL_CONFIG" {
+				env_config = os.Getenv("CYFIR_LITERAL_CONFIG")
+				if env_config != "" {
+					self.Log("Loading literal config from env CYFIR_LITERAL_CONFIG")
+					result := &config_proto.Config{}
+					err := yaml.UnmarshalStrict([]byte(env_config), result)
+					if err != nil {
+						return nil, errors.Wrap(err, 0)
+					}
+					return result, nil
+				}
+				checked_vars = append(checked_vars, "CYFIR_LITERAL_CONFIG")
+			}
+			
+			// Check the original env var
+			env_config = os.Getenv(env_var)
 			if env_config != "" {
 				self.Log("Loading literal config from env %v", env_var)
 				result := &config_proto.Config{}
@@ -301,7 +338,9 @@ func (self *Loader) WithEnvLiteralLoader(env_var string) *Loader {
 				}
 				return result, nil
 			}
-			return nil, fmt.Errorf("Env var %v is not set", env_var)
+			checked_vars = append(checked_vars, env_var)
+			
+			return nil, fmt.Errorf("Env vars %v not set", checked_vars)
 		}})
 
 	return self
@@ -364,7 +403,20 @@ func (self *Loader) WithEnvApiLoader(env_var string) *Loader {
 	self.loaders = append(self.loaders, loaderFunction{
 		name: "WithApiLoader",
 		loader_func: func(self *Loader) (*config_proto.Config, error) {
-			env_config := os.Getenv(env_var)
+			// For backward compatibility, check both old and new env vars
+			env_config := ""
+			
+			// If this is a VELOCIRAPTOR_* var, also check CYFIR_* equivalent
+			if env_var == "VELOCIRAPTOR_API_CONFIG" {
+				env_config = os.Getenv("CYFIR_API_CONFIG")
+				if env_config != "" {
+					self.Log("Loading config from env CYFIR_API_CONFIG (%v)", env_config)
+					return read_api_config_from_file(env_config)
+				}
+			}
+			
+			// Check the original env var
+			env_config = os.Getenv(env_var)
 			if env_config != "" {
 				self.Log("Loading config from env %v (%v)", env_var, env_config)
 				return read_api_config_from_file(env_config)

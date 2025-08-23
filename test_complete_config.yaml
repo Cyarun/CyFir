@@ -1,0 +1,17 @@
+version:
+  name: CyFir Test
+  version: 0.75.1
+  
+Client:
+  server_urls:
+    - https://localhost:8000/
+  ca_certificate: |
+    -----BEGIN CERTIFICATE-----
+    TEST CERTIFICATE
+    -----END CERTIFICATE-----
+    
+CA:
+  private_key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    TEST KEY
+    -----END RSA PRIVATE KEY-----
