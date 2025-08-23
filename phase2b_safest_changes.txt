@@ -1,0 +1,21 @@
+# Safest String Changes for Phase 2B-1
+
+## 1. Survey/Setup Tool Messages (User sees during setup)
+./tools/survey/frontend.go:48: Title("Welcome to the Velociraptor multi-frontend configuration generator").
+./tools/survey/server.go:13: Title("Welcome to the Velociraptor configuration generator").
+
+## 2. Comments (No runtime impact)
+./vql/server/downloads/downloads.go: // _Components : these are the Velociraptor filestore
+./vql/tools/smb_upload.go: // 6. Copy the "Blob SAS URL" into the Velociraptor UI
+./vql/tools/azure_upload.go: // 6. Copy the "Blob SAS URL" into the Velociraptor UI
+./vql/networking/tls.go: // If we deployed Velociraptor using self signed certificates
+./config/proto/config.pb.go: // Information about Velociraptor. This is a pseudo config item
+./config/proto/config.pb.go: // A mapping between OIDC claim roles and Velociraptor roles.
+
+## 3. Help/Description Text (User documentation)
+./accessors/zip/me.go: Description: `Access files bundled inside the Velociraptor binary itself...`
+
+## DEFER THESE (Need more investigation):
+- ./vql/windows/etw/watch_etw.go:114: arg.Name = "Velociraptor" (might be ETW provider name)
+- ./bin/service_compat.go:11: if config_obj.Client.WindowsInstaller.ServiceName == "Velociraptor" (service name check)
+- ./bin/installer_windows.go:454: name := "Velociraptor" (installer default)

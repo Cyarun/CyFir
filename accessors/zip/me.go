@@ -178,7 +178,7 @@ func (self MEFileSystemAccessor) New(scope vfilter.Scope) (
 func (self MEFileSystemAccessor) Describe() *accessors.AccessorDescriptor {
 	return &accessors.AccessorDescriptor{
 		Name:        "me",
-		Description: `Access files bundled inside the Velociraptor binary itself. This is used for unpacking extra files delivered by the Offline Collector`,
+		Description: `Access files bundled inside the CyFir binary itself. This is used for unpacking extra files delivered by the Offline Collector`,
 	}
 }
 

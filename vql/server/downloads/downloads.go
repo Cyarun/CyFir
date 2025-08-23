@@ -450,7 +450,7 @@ func copyUploadFiles(
 			// already. We use this to write the upload metadata table
 			// for each upload. That table contains:
 
-			// _Components : these are the Velociraptor filestore
+			// _Components : these are the CyFir filestore
 			// components that specify where to write the file in the
 			// filestore. These include the client's prefix,
 			// collection id etc.

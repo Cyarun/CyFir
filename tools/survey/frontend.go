@@ -45,7 +45,7 @@ func GenerateFrontendPackages(config_obj *config_proto.Config) error {
 
 	items := []huh.Field{
 		huh.NewNote().
-			Title("Welcome to the Velociraptor multi-frontend configuration generator").
+			Title("Welcome to the CyFir multi-frontend configuration generator").
 			Description(`Warning: This configuration is currently experimental. Read more about
 it here https://cyfir.cynorsense.com/docs/deployment/cloud/multifrontend/
 

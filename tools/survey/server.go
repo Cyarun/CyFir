@@ -10,7 +10,7 @@ func getServerConfig(config *ConfigSurvey) error {
 	form := huh.NewForm(
 		huh.NewGroup(
 			huh.NewNote().
-				Title("Welcome to the Velociraptor configuration generator").
+				Title("Welcome to the CyFir configuration generator").
 				Description(`
 This wizard creates a configuration file for a new deployment.
 

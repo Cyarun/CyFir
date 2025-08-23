@@ -8,7 +8,7 @@
 // 3. Under "Containers" Create a new container
 // 4. Right click on the container and select Generate SAS
 // 5. Signing method is User Delegation, Permissions are: Read, Write, Create
-// 6. Copy the "Blob SAS URL" into the Velociraptor UI
+// 6. Copy the "Blob SAS URL" into the CyFir UI
 
 package tools
 
