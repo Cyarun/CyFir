@@ -1,5 +1,9 @@
 package config
 
+import (
+	config_proto "github.com/Cyarun/CyFir/config/proto"
+)
+
 // BrandingConfig allows gradual migration from Velociraptor to CyFir
 type BrandingConfig struct {
 	// Display name for UI
@@ -29,8 +33,10 @@ type BrandingConfig struct {
 }
 
 // GetBranding returns appropriate branding based on configuration
-func GetBranding(legacyMode bool) *BrandingConfig {
-	if legacyMode {
+func GetBranding(config_obj *config_proto.Config) *BrandingConfig {
+	// TODO: Enable when protobuf is regenerated
+	// if config_obj != nil && config_obj.UseLegacyBranding {
+	if false {
 		return &BrandingConfig{
 			DisplayName:        "Velociraptor",
 			FullName:          "Velociraptor - Dig Deeper",

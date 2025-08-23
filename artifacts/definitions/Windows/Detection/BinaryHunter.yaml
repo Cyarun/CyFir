@@ -19,7 +19,7 @@ parameters:
     description: Glob to target.
     default: "C:/Users/**/*"
   - name: Accessor
-    description: Velociraptor accessor to use. Changing to ntfs will increase scan time.
+    description: CyFir accessor to use. Changing to ntfs will increase scan time.
     default: auto
   - name: UnexpectedExtension
     description: "Exclude binaries with expected extension: com|cpl|dll|drv|exe|mui|scr|sfx|sys|winmd"

@@ -68,7 +68,7 @@ parameters:
   - name: opt_banner
     default: Y
     type: bool
-    description: Show Velociraptor banner.
+    description: Show CyFir banner.
 
   - name: opt_prompt
     default: N

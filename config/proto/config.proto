@@ -1609,4 +1609,10 @@ message Config {
     // account is compromised. The server can be taken out of lockdown
     // mode by setting lockdown to false and restarting the server.
     bool lockdown = 39;
+
+    // Branding configuration - when true, use legacy Velociraptor branding
+    // for backward compatibility with existing installations.
+    bool use_legacy_branding = 54 [(sem_type) = {
+            description: "Use legacy Velociraptor branding for backward compatibility"
+        }];
 }

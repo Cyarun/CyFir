@@ -1,6 +1,6 @@
 # Interactive configuration wizard.
 
-The aim of the wizard is to make it easy to configure Velociraptor in
+The aim of the wizard is to make it easy to configure CyFir in
 the most common deployment scenarios. Even though these scenarios will
 not be a perfect fit for everyone, most users should be able to start
 with these deploment modes and tweak the configuration to their
@@ -16,12 +16,12 @@ There are currently 3 separate deployment types:
 1. Self Signed:
   * Frontend will listen on port 8000 with self signed TLS certificate
   * GUI will listen on port 8889 with self signed TLS certificate
-  * Basic authentication: Velociraptor will manage passwords for user accounts.
+  * Basic authentication: CyFir will manage passwords for user accounts.
 
 2. AutoCert:
   * Frontend and GUI are both listening with TLS on port 443
   * Certificates will be automatically minted with Let's Encrypt.
-  * Basic authentication: Velociraptor will manage passwords for user accounts.
+  * Basic authentication: CyFir will manage passwords for user accounts.
 
 3. AutoCert with SSO
   * Frontend and GUI are both listening with TLS on port 443
