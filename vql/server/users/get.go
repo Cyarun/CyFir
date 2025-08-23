@@ -63,7 +63,7 @@ func (self UserFunction) Call(
 func (self UserFunction) Info(scope vfilter.Scope, type_map *vfilter.TypeMap) *vfilter.FunctionInfo {
 	return &vfilter.FunctionInfo{
 		Name:    "user",
-		Doc:     "Retrieves information about the Velociraptor user.",
+		Doc:     "Retrieves information about the CyFir user.",
 		ArgType: type_map.AddType(scope, &UserFunctionArgs{}),
 	}
 }

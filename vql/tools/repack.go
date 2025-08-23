@@ -60,7 +60,7 @@ const (
 
 type RepackFunctionArgs struct {
 	Target       string            `vfilter:"optional,field=target,doc=The name of the target OS to repack (VelociraptorWindows, VelociraptorLinux, VelociraptorDarwin)"`
-	Version      string            `vfilter:"optional,field=version,doc=Velociraptor Version to repack"`
+	Version      string            `vfilter:"optional,field=version,doc=CyFir Version to repack"`
 	Exe          *accessors.OSPath `vfilter:"optional,field=exe,doc=Alternative a path to the executable to repack"`
 	Accessor     string            `vfilter:"optional,field=accessor,doc=The accessor to use to read the file."`
 	Binaries     []string          `vfilter:"optional,field=binaries,doc=List of tool names that will be repacked into the target"`

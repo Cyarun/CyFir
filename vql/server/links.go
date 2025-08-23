@@ -240,7 +240,7 @@ func (self *LinkToFunction) Info(
 	scope vfilter.Scope, type_map *vfilter.TypeMap) *vfilter.FunctionInfo {
 	return &vfilter.FunctionInfo{
 		Name:     "link_to",
-		Doc:      "Create a url linking to a particular part in the Velociraptor GUI.",
+		Doc:      "Create a url linking to a particular part in the CyFir GUI.",
 		ArgType:  type_map.AddType(scope, &LinkToFunctionArgs{}),
 		Metadata: vql.VQLMetadata().Build(),
 	}

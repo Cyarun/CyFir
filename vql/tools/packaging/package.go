@@ -25,7 +25,7 @@ import (
 
 type CreatePackageArgs struct {
 	Target      string            `vfilter:"optional,field=target,doc=The name of the target OS to repack (default VelociraptorLinux)"`
-	Version     string            `vfilter:"optional,field=version,doc=Velociraptor Version to repack"`
+	Version     string            `vfilter:"optional,field=version,doc=CyFir Version to repack"`
 	Release     string            `vfilter:"optional,field=release,doc=Rpm package release version (A)"`
 	Server      bool              `vfilter:"optional,field=server,doc=Build a server rpm if true, otherwise we build a client rpm"`
 	Exe         *accessors.OSPath `vfilter:"optional,field=exe,doc=Alternative a path to the executable to repack"`
