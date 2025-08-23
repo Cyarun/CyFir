@@ -146,7 +146,7 @@ func (self RepackFunction) Call(ctx context.Context,
 			exe_bytes, []byte(arg.Config))
 	}
 
-	scope.Log("client_repack: Will Repack the Velociraptor binary with %v bytes of config",
+	scope.Log("client_repack: Will Repack the CyFir binary with %v bytes of config",
 		len(arg.Config))
 
 	// Compress the string.

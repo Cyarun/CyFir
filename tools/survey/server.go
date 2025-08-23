@@ -39,10 +39,10 @@ Let's begin by configuring the server itself.
 		huh.NewGroup(
 			// for some reason this note isn't being displayed
 			huh.NewNote().
-				Description("The datastore directory is where Velociraptor will store all files."),
+				Description("The datastore directory is where CyFir will store all files."),
 			huh.NewInput().
 				Title("Path to the datastore directory.").
-				Description(`The datastore directory is where Velociraptor will store all files.
+				Description(`The datastore directory is where CyFir will store all files.
 This should be located on a partitian large enough to contain all data you are likely to collect.
 Make sure there is sufficient disk space available!`).
 				PlaceholderFunc(func() string {
@@ -51,7 +51,7 @@ Make sure there is sufficient disk space available!`).
 				Value(&config.DatastoreLocation),
 			huh.NewInput().
 				Title("Path to the logs directory.").
-				Description("Velociraptor will write logs to this directory. By default it resides within the datastore directory but you can place it anywhere.").
+				Description("CyFir will write logs to this directory. By default it resides within the datastore directory but you can place it anywhere.").
 				PlaceholderFunc(func() string {
 					return path.Join(config.DatastoreLocation, "logs")
 				}, &config.DatastoreLocation).
@@ -89,7 +89,7 @@ consider extending the default validation.`).
 
 			huh.NewConfirm().
 				Title("Use registry for client writeback?").
-				Description(`Traditionally Velociraptor uses files to store client state on all operating systems.
+				Description(`Traditionally CyFir uses files to store client state on all operating systems.
 
 You can instead use the registry on Windows. NOTE: It is your responsibility to ensure the registry keys used are properly secured!
 
