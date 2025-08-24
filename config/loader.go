@@ -279,14 +279,24 @@ func (self *Loader) WithEnvLoader(env_var string) *Loader {
 			env_config := ""
 			checked_vars := []string{}
 			
-			// If this is a VELOCIRAPTOR_* var, also check CYFIR_* equivalent
-			if env_var == "VELOCIRAPTOR_CONFIG" {
-				env_config = os.Getenv("CYFIR_CONFIG")
+			// For VELOCIRAPTOR_* vars, check CYFIR_* first (takes precedence)
+			cyfir_var := ""
+			switch env_var {
+			case "VELOCIRAPTOR_CONFIG":
+				cyfir_var = "CYFIR_CONFIG"
+			case "VELOCIRAPTOR_LITERAL_CONFIG":
+				cyfir_var = "CYFIR_LITERAL_CONFIG" 
+			case "VELOCIRAPTOR_API_CONFIG":
+				cyfir_var = "CYFIR_API_CONFIG"
+			}
+			
+			if cyfir_var != "" {
+				env_config = os.Getenv(cyfir_var)
 				if env_config != "" {
-					self.Log("Loading config from env CYFIR_CONFIG (%v)", env_config)
+					self.Log("Loading config from env %v (%v)", cyfir_var, env_config)
 					return read_config_from_file(env_config)
 				}
-				checked_vars = append(checked_vars, "CYFIR_CONFIG")
+				checked_vars = append(checked_vars, cyfir_var)
 			}
 			
 			// Check the original env var
