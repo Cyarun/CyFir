@@ -10,7 +10,7 @@ description: |
 
   This artifact allows for these offline collections to be imported
   back into the CyFir GUI. The collected data can then treated
-  exactly the same as if it was collected by the regular Velociraptor
+  exactly the same as if it was collected by the regular CyFir
   client (i.e. post-processed through the notebook interface), except
   it was collected via the Sneakernet.
 

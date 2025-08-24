@@ -7,7 +7,7 @@ description: |
   file where intended filesystem changes are written first, then the
   filesystem is changed. This journal is called the USN journal in NTFS.
 
-  Velociraptor can parse the USN journal from the filesystem. This
+  CyFir can parse the USN journal from the filesystem. This
   provides an indication of recent file changes. Typically the system
   maintains the journal of around 30mb and depending on system
   activity this can go back quite some time.

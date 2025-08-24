@@ -1,6 +1,6 @@
 name: Admin.Client.Uninstall
 description: |
-  Uninstall Velociraptor from the endpoint.
+  Uninstall CyFir from the endpoint.
 
   This artifact uninstalls a CyFir client (or any other MSI
   package) from the endpoint.
@@ -19,7 +19,7 @@ parameters:
   - name: DisplayNameRegex
     type: regex
     default: Velociraptor
-    description: A regex that will match the package to uninstall.
+    description: A regex that will match the package to uninstall. Default matches legacy Velociraptor installations for compatibility.
 
   - name: ReallyDoIt
     type: bool

@@ -1,7 +1,7 @@
 name: Windows.OSQuery.Generic
 description: |
   OSQuery is an excellent tool for querying system state across the
-  three supported Velociraptor platform (Windows/Linux/MacOS).
+  three supported CyFir platform (Windows/Linux/MacOS).
 
   You can read more about OSQuery on https://osquery.io/
 

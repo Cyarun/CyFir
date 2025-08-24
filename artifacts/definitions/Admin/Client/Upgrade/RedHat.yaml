@@ -1,8 +1,8 @@
 name: Admin.Client.Upgrade.RedHat
 description: |
-  Remotely push new client updates to Red Hat hosts.
+  Remotely push new CyFir client updates to Red Hat hosts.
 
-  NOTE: This artifact requires that you supply a client Red Hat package by using the
+  NOTE: This artifact requires that you supply a CyFir client Red Hat package by using the
   tools interface or by using the "rpm client" command. Simply click on the tool
   in the GUI and upload a package.
 
@@ -22,7 +22,7 @@ parameters:
     default: "velociraptor_client"
     type: str
     description: |
-      The name of the service to restart after the upgrade.
+      The name of the service to restart after the upgrade. Default is legacy Velociraptor service name for compatibility.
 
 implied_permissions:
   - EXECVE

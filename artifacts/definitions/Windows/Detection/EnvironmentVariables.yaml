@@ -68,7 +68,7 @@ sources:
           ## Unusual COMSPEC setting.
 
           The `COMSPEC` environment variable is usually used to launch
-          the command prompt (cmd.exe) but Velociraptor found some
+          the command prompt (cmd.exe) but CyFir found some
           hits where this is not the case. It could indicate malicious
           activity.
 

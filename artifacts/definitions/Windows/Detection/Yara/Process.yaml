@@ -90,7 +90,7 @@ sources:
       -- check which Yara to use
       LET yara_rules <= YaraUrl || YaraRule
 
-      -- find velociraptor process
+      -- find cyfir process
       LET me = SELECT Pid FROM pslist(pid=getpid())
 
       -- find all processes and add filters

@@ -50,12 +50,12 @@ sources:
 
           The Sigma standard does not define those, but they are
           critical for successfully writing Sigma rules. Therefore,
-          Velociraptor uses [a standard set of Log Sources and Field
+          CyFir uses [a standard set of Log Sources and Field
           Mappings](https://sigma.velocidex.com/).
 
           This is the purpose of this notebook! Making it easy and
           simple to write rules **within the definitions of
-          Velociraptor's curated sets**. This means that portability
+          CyFir's curated sets**. This means that portability
           of rules to other systems is **not a goal** of this
           notebook.
 

@@ -586,7 +586,7 @@ sources:
             })
 
 
-      -- find velociraptor process
+      -- find cyfir process
       LET me <= SELECT * FROM if(condition= NOT ( TargetFileGlob OR TargetBytes ),
                     then = { SELECT Pid FROM pslist(pid=getpid()) })
 

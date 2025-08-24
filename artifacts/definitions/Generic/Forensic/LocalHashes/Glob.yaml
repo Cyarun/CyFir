@@ -4,9 +4,9 @@ description: |
   hashes. It is then possible to query this database by using the
   `Generic.Forensic.LocalHashes.Query` artifact
 
-  Maintaining hashes client side allows Velociraptor to answer the
+  Maintaining hashes client side allows CyFir to answer the
   query - which machine has this hash on our network extremely
-  quickly. Velociraptor only needs to lookup the each client's local
+  quickly. CyFir only needs to lookup the each client's local
   database of file hashes.
 
   Maintaining this database case be done by using this artifact or by using

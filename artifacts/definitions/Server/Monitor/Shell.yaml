@@ -1,6 +1,6 @@
 name: Server.Monitor.Shell
 description: |
-   Velociraptor can get an interactive shell on the endpoint by using
+   CyFir can get an interactive shell on the endpoint by using
    the shell command. To use it, the user must be directly
    logged on the server.
 

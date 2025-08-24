@@ -24,7 +24,7 @@ description: |
     escape for backslash due to serialization of this field.
     E.g `C:\\\\FOLDER\\\\binary\\.exe`
     For EventIds with no EventData the Message field is queried and requires
-    standard Velociraptor escape. E.g `C:\\FOLDER\\binary\\.exe`
+    standard CyFir escape. E.g `C:\\FOLDER\\binary\\.exe`
 
 author: Matt Green - @mgreen27
 
