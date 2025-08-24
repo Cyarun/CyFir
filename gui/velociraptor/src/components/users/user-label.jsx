@@ -271,9 +271,9 @@ class UserSettings extends React.PureComponent {
                                           theme: e.currentTarget.value,
                                       });
                                   }}>
-                      <option value="veloci-light">{T("Velociraptor (light)")}</option>
-                      <option value="veloci-dark">{T("Velociraptor (dark)")}</option>
-                      <option value="no-theme">{T("Velociraptor Classic (light)")}</option>
+                      <option value="veloci-light">{T("CyFir (light)")}</option>
+                      <option value="veloci-dark">{T("CyFir (dark)")}</option>
+                      <option value="no-theme">{T("CyFir Classic (light)")}</option>
                       <option value="pink-light">{T("Strawberry Milkshake (light)")}</option>
                       <option value="ncurses-light">{T("Ncurses (light)")}</option>
                       <option value="ncurses-dark">{T("Ncurses (dark)")}</option>

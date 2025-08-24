@@ -51,6 +51,7 @@ const English = {
     "Toggle Main Menu": "Toggle Main Menu",
     "Welcome": "Welcome",
     "Velociraptor Login": "CyFir Login",
+    "Velociraptor Binary": "CyFir Binary",
     "Connected": "Connected",
     "time_ago": (value, unit) => {
         return value + ' ' + unit + ' ago';
